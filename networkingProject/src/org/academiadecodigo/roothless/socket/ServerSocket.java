@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless;
+package org.academiadecodigo.roothless.socket;
 
 import java.net.Socket;
 
