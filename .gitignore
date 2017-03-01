@@ -1,5 +1,9 @@
 reated by https://www.gitignore.io/api/osx,intellij+iml,linux,windows,vim,git
 
+**/.idea/
+**/out/
+**/*.iml
+
 ### Git ###
 *.orig
 
