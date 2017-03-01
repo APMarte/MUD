@@ -8,6 +8,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by apm on 27-02-2017.
@@ -26,14 +28,13 @@ public class Server {
 
         serverSocket = new java.net.ServerSocket(Integer.parseInt(scanner.nextLine()));
 
+        ExecutorService pool = Executors.newFixedThreadPool(5);
+
         while (true) {
             Socket clientSocket = serverSocket.accept();
             System.out.println("connecting a client...");
-            ClientHandler clientHandler = new ClientHandler(clientSocket);
             socketList.add(clientSocket);
-            Thread thread = new Thread(clientHandler);
-            thread.setName(idGenerator());
-            thread.start();
+            pool.submit(new ClientHandler(clientSocket));
         }
     }
 
