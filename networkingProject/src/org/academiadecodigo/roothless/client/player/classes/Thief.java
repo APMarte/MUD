@@ -1,15 +1,13 @@
-package org.academiadecodigo.roothless.player.classes;
+package org.academiadecodigo.roothless.client.player.classes;
 
-import org.academiadecodigo.roothless.player.Player;
-
-
+import org.academiadecodigo.roothless.client.player.Player;
 
 /**
  * Created by apm on 28-02-2017.
  */
-public class Priest extends Player {
+public class Thief extends Player {
 
-    public Priest(String name){
+    public Thief(String name){
         super(name);
         setHealth(10);
         setBaseDamage(10);
@@ -17,6 +15,6 @@ public class Priest extends Player {
         setStrength(10);
         setDexterity(10);
         setFaith(10);
-        setIntelligence(10);;
+        setIntelligence(10);
     }
 }

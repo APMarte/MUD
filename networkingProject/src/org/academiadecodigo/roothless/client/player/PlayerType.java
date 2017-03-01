@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.player;
+package org.academiadecodigo.roothless.client.player;
 
 /**
  * Created by apm on 27-02-2017.

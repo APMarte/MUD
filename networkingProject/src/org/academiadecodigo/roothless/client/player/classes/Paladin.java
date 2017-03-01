@@ -1,6 +1,6 @@
-package org.academiadecodigo.roothless.player.classes;
+package org.academiadecodigo.roothless.client.player.classes;
 
-import org.academiadecodigo.roothless.player.Player;
+import org.academiadecodigo.roothless.client.player.Player;
 
 /**
  * Created by apm on 28-02-2017.
