@@ -84,7 +84,6 @@ public class Client {
         public void run() {
 
             while (!socket.isClosed()) {
-                System.out.println(Thread.currentThread());
                 try {
                     in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
