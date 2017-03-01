@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.server;
+package org.academiadecodigo.roothless.server.gameObjects;
 
 /**
  * Created by apm on 27-02-2017.
