@@ -1,9 +1,9 @@
-package org.academiadecodigo.roothless.gameObjects;
+package org.academiadecodigo.roothless.server;
 
 /**
  * Created by apm on 27-02-2017.
  */
-public abstract class Monster {
+public class Monster {
 
     private int health;     //all
     private int baseDamage;  //all

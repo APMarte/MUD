@@ -1,6 +1,6 @@
-package org.academiadecodigo.roothless.socket;
+package org.academiadecodigo.roothless.client;
 
-import org.academiadecodigo.roothless.Game;
+import org.academiadecodigo.roothless.server.Game;
 
 import java.io.IOException;
 import java.net.ServerSocket;
