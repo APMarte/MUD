@@ -1,5 +1,6 @@
 package org.academiadecodigo.roothless.client.player;
 
+
 /**
  * Created by apm on 28-02-2017.
  */
@@ -78,4 +79,6 @@ public abstract class Player {
     public void setDead(boolean dead) {
         this.dead = dead;
     }
+
+
 }

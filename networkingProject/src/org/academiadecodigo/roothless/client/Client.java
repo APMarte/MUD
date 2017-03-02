@@ -1,5 +1,8 @@
 package org.academiadecodigo.roothless.client;
 
+import org.academiadecodigo.roothless.client.player.Player;
+import org.academiadecodigo.roothless.client.player.PlayerFactory;
+import org.academiadecodigo.roothless.client.player.PlayerType;
 import org.academiadecodigo.roothless.server.Game;
 
 import java.io.BufferedReader;
@@ -17,6 +20,8 @@ public class Client {
     private Socket socket;
     private Scanner scanner;
     private DataOutputStream out;
+    private Player player;
+
 
     private void connect() throws IOException {
         scanner = new Scanner(System.in);
@@ -26,6 +31,7 @@ public class Client {
         int port = Integer.parseInt(scanner.nextLine());
 
         socket = new Socket(host, port);
+        createPlayer();
 
         Thread thread = new Thread(new ServerListener(new BufferedReader(new InputStreamReader(socket.getInputStream()))));
         thread.start();
@@ -71,6 +77,38 @@ public class Client {
             }
         }
     }
+
+    public void createPlayer(){
+        int numClass;
+        System.out.println("Insert username: ");
+        String name = scanner.nextLine();
+        do {
+            System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
+            numClass = Integer.parseInt(scanner.nextLine());
+            chosePlayerType(numClass, name);
+        } while (numClass < 1 || numClass > 5);
+        System.out.println(player.toString());
+
+    }
+
+    private void chosePlayerType(int numClass, String name) {
+
+        if (numClass == 1){
+            player = PlayerFactory.getNewPlayer(name, PlayerType.ARCHER);
+        } else if (numClass == 2){
+            player = PlayerFactory.getNewPlayer(name, PlayerType.PALADIN);
+        } else if (numClass == 3){
+            player = PlayerFactory.getNewPlayer(name, PlayerType.PRIEST);
+        } else if (numClass == 4){
+            player = PlayerFactory.getNewPlayer(name, PlayerType.SORCERER);
+        } else if (numClass == 5){
+            player = PlayerFactory.getNewPlayer(name, PlayerType.THIEF);
+        } else {
+            System.out.println("Invalid operation!");
+        }
+
+    }
+
 
     private class ServerListener implements Runnable {
 
