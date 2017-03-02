@@ -1,5 +1,6 @@
 package org.academiadecodigo.roothless.client;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
@@ -20,10 +21,12 @@ public class Client {
     private Socket socket;
     private Scanner scanner;
     private DataOutputStream out;
+    private BufferedReader br;
     private Player player;
 
 
     private void connect() throws IOException {
+
         scanner = new Scanner(System.in);
         System.out.println("Host:");
         String host = scanner.nextLine();
@@ -79,14 +82,26 @@ public class Client {
     }
 
     public void createPlayer(){
-        int numClass;
+
+        int numClass=0;
+        br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
+
         System.out.println("Insert username: ");
         String name = scanner.nextLine();
+
         do {
             System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
-            numClass = Integer.parseInt(scanner.nextLine());
-            chosePlayerType(numClass, name);
+            try {
+                numClass = Integer.parseInt(br.readLine());
+                chosePlayerType(numClass, name);
+            }catch(NumberFormatException e) {
+                System.out.println("Invalid operation!");
+                e.getMessage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } while (numClass < 1 || numClass > 5);
+
         System.out.println(player.toString());
 
     }
