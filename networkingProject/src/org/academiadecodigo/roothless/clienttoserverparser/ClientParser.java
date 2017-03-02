@@ -10,7 +10,7 @@ public class ClientParser {
     private String commandToParse;
 
     //Recebe comando e outputstream do cliente
-    public ClientParser(String commandToParse, OutputStream clientOutputStream) {
+    public ClientParser(String commandToParse) {
 
         this.commandToParse = commandToParse;
     }
