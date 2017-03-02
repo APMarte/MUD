@@ -4,6 +4,7 @@ import org.academiadecodigo.roothless.clienttoserverparser.ClientParser;
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
+import org.academiadecodigo.roothless.clienttoserverparser.CommandEnum;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -22,6 +23,8 @@ public class Client {
     private DataOutputStream out;
     private BufferedReader br;
     private Player player;
+
+    private CommandEnum xpecialSpells;
 
 
     private void connect() throws IOException {
@@ -51,18 +54,18 @@ public class Client {
                 System.out.println("Attack or defend");
                 String outputMSG = scanner.nextLine();
 
-                //Command to ClientParser
-                ClientParser cp = new ClientParser(outputMSG,player);
-                String parsed = cp.parseCommand();
-
-                System.out.println(parsed);
 
                 if (socket.isClosed()) {
                     break;
                 }
 
-                out.write(parsed.getBytes());
-                out.flush();
+                //PARSE DO CLIENT /A 2 50
+                //comparar com hasacted
+                if(!player.getHasActed()){
+                    parseClient(outputMSG);
+                }else{
+                    System.out.println("Wait for your turn");
+                }
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -90,9 +93,9 @@ public class Client {
         }
     }
 
-    public void createPlayer(){
+    public void createPlayer() {
 
-        int numClass=0;
+        int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
 
         System.out.println("Insert username: ");
@@ -103,7 +106,7 @@ public class Client {
             try {
                 numClass = Integer.parseInt(br.readLine());
                 chosePlayerType(numClass, name);
-            }catch(NumberFormatException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
                 e.getMessage();
             } catch (IOException e) {
@@ -117,20 +120,54 @@ public class Client {
 
     private void chosePlayerType(int numClass, String name) {
 
-        if (numClass == 1){
+        if (numClass == 1) {
             player = PlayerFactory.getNewPlayer(name, PlayerType.ARCHER);
-        } else if (numClass == 2){
+        } else if (numClass == 2) {
             player = PlayerFactory.getNewPlayer(name, PlayerType.PALADIN);
-        } else if (numClass == 3){
+        } else if (numClass == 3) {
             player = PlayerFactory.getNewPlayer(name, PlayerType.PRIEST);
-        } else if (numClass == 4){
+        } else if (numClass == 4) {
             player = PlayerFactory.getNewPlayer(name, PlayerType.SORCERER);
-        } else if (numClass == 5){
+        } else if (numClass == 5) {
             player = PlayerFactory.getNewPlayer(name, PlayerType.THIEF);
         } else {
             System.out.println("Invalid operation!");
         }
 
+    }
+
+
+    private void parseClient(String message) throws IOException {
+
+        String str;
+
+        switch (message) {
+            case "/a":
+                str = message + player.getBaseDamage();
+                out.write(str.getBytes());
+                player.setHasActed(true);
+                break;
+            case "/d":
+                out.write(message.getBytes());
+                player.setHasActed(true);
+                break;
+            case "/pick":
+                out.write(message.getBytes());
+                player.setHasActed(true);
+                break;
+            case "/option":
+                System.out.println(message);
+                out.write(message.getBytes());
+                player.setHasActed(true);
+                break;
+            case "/w":
+                str = message;
+                break;
+            case "/help":
+                System.out.println("oix");
+                break;
+        }
+        out.flush();
     }
 
 

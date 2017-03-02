@@ -14,7 +14,7 @@ public abstract class Player {
     private int intelligence; //Priest and Sorcerer
     private int dexterity; // Archer and Thief and Sorcerer
     private int faith; //Priest and Paladin
-
+    private boolean hasActed;
     private boolean dead;
 
     public Player(String name){
@@ -84,6 +84,11 @@ public abstract class Player {
         this.dead = dead;
     }
 
+    public boolean getHasActed() {
+        return hasActed;
+    }
 
-
+    public void setHasActed(boolean hasActed) {
+        this.hasActed = hasActed;
+    }
 }
