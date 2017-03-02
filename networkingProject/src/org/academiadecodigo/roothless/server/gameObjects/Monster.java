@@ -2,9 +2,10 @@ package org.academiadecodigo.roothless.server.gameObjects;
 
 import org.academiadecodigo.roothless.server.Stage;
 
-/**
+*
  * Created by apm on 27-02-2017.
- */
+
+
 public abstract class Monster {
 
     private int health;     //all
