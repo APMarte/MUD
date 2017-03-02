@@ -45,7 +45,7 @@ public class Stage {
                 e.printStackTrace();
             }
         }
-        
+
         setNull();
         room2();
     }
