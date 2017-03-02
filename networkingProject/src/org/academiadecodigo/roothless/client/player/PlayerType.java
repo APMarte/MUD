@@ -6,7 +6,7 @@ package org.academiadecodigo.roothless.client.player;
 public enum PlayerType {
 
     ARCHER,
-    FIGHTER,
+    PALADIN,
     PRIEST,
     SORCERER,
     THIEF;
