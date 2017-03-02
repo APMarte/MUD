@@ -20,9 +20,15 @@ public class Stage {
     private String[] questions;
     private String question;
 
+    public int getLevel() {
+        return level;
+    }
 
-    public Stage(Game game) {
-        this.monsterArray =
+    private int level = 1;
+
+
+    public void init () {
+
     }
 
     public static void enterDungeon() {
@@ -30,10 +36,16 @@ public class Stage {
     }
 
     private void room1() {
-        String description = ;
+        String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt " +
+                "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris " +
+                "nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse " +
+                "cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa " +
+                "qui officia deserunt mollit anim id est laborum.";
         monster =;
         monsterArray.remove(monster);
         loot =;
+
+        broadcast(description);
 
         synchronized (this) {
             try {
@@ -49,7 +61,7 @@ public class Stage {
             }
         }
 
-        setNull();
+        setupNextRoom();
         room2();
     }
 
@@ -59,12 +71,12 @@ public class Stage {
         //room3();
     }
 
-    private void setNull() {
+    private void setupNextRoom() {
         monster = null;
         loot = null;
         question = null;
+        level++;
     }
-
 
 }
 */
