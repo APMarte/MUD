@@ -1,5 +1,6 @@
 package org.academiadecodigo.roothless.client;
 
+import org.academiadecodigo.roothless.clienttoserverparser.ClientParser;
 import org.academiadecodigo.roothless.server.Game;
 
 import java.io.BufferedReader;
@@ -41,9 +42,16 @@ public class Client {
             try {
                 out = new DataOutputStream(socket.getOutputStream());
                 String outputMSG = scanner.nextLine() + "\n";
+
+                //Command to ClientParser
+                ClientParser cp = new ClientParser(outputMSG);
+                cp.parseCommand();
+
+
                 if (socket.isClosed()) {
                     break;
                 }
+
                 out.write(outputMSG.getBytes());
                 out.flush();
             } catch (IOException e) {
