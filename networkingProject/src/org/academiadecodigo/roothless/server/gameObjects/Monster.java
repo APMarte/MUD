@@ -5,7 +5,7 @@ import org.academiadecodigo.roothless.server.Stage;
 /**
  * Created by apm on 27-02-2017.
  */
-public abstract class Monster implements Attacker{
+public abstract class Monster {
 
     private int health;     //all
     private int baseDamage;  //all
@@ -13,6 +13,17 @@ public abstract class Monster implements Attacker{
     private String description;
     private Stage stage;
     private boolean dead;
+
+
+    abstract public void attack();
+
+    protected void dmgScaling() {
+        int level = stage.getLevel();
+        if (level >= 1) {
+            int levelModifier = (level - 1) / 10;
+            baseDamage += baseDamage * levelModifier;
+        }
+    }
 
     public int getHealth() {
         return health;

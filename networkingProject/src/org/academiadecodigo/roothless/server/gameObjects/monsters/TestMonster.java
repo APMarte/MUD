@@ -16,21 +16,12 @@ public class TestMonster extends Monster {
         setDescription("Lorem ipsum dolor sit amet");
         setDead(false);
         setStage(stage);
-
+        super.dmgScaling();
     }
 
     @Override
-    public void Attack() {
-        dmgScaling();
+    public void attack() {
 
-    }
 
-    @Override
-    public void dmgScaling() {
-        int level = getStage().getLevel();
-        int levelModifier = level / 10;
-        if (level >= 1) {
-            setBaseDamage(getBaseDamage() + (getBaseDamage() * levelModifier));
-        }
     }
 }
