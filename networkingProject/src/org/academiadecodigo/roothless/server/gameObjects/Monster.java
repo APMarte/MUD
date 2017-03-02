@@ -1,13 +1,17 @@
 package org.academiadecodigo.roothless.server.gameObjects;
 
+import org.academiadecodigo.roothless.server.Stage;
+
 /**
  * Created by apm on 27-02-2017.
  */
-public class Monster {
+public abstract class Monster implements Attacker{
 
     private int health;     //all
     private int baseDamage;  //all
     private int defense;    //all
+    private String description;
+    private Stage stage;
     private boolean dead;
 
     public int getHealth() {
@@ -40,6 +44,22 @@ public class Monster {
 
     public void setDead(boolean dead) {
         this.dead = dead;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 }
 
