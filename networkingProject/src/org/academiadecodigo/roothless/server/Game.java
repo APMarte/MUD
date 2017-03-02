@@ -31,7 +31,7 @@ public class Game {
     }
 
 
-    public String start() {
+    public void start() {
 
         String intro = "You are part of a group of 5 brave adventurers that received a special mission from the most " +
                 "iconic Emperor that history has ever seen, his highness Trumpet Piglet, the brand new ruler of the " +
