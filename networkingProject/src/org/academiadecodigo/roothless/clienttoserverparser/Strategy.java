@@ -7,6 +7,6 @@ import org.academiadecodigo.roothless.client.player.Player;
  */
 public interface Strategy {
 
-    void processCommand(Player P1);
+    String processCommand(Player P1);
 
 }

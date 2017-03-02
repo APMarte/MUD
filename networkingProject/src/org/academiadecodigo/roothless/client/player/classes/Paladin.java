@@ -17,4 +17,6 @@ public class Paladin extends Player {
         setFaith(10);
         setIntelligence(10);
     }
+
+
 }

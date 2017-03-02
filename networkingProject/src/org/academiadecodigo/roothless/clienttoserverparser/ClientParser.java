@@ -1,5 +1,7 @@
 package org.academiadecodigo.roothless.clienttoserverparser;
 
+import org.academiadecodigo.roothless.client.player.Player;
+
 import java.io.OutputStream;
 
 /**
@@ -8,36 +10,37 @@ import java.io.OutputStream;
 public class ClientParser {
 
     private String commandToParse;
+    private Player player;
 
-    //Recebe comando e outputstream do cliente
-    public ClientParser(String commandToParse) {
 
+    public ClientParser(String commandToParse, Player player) {
+        this.player = player;
         this.commandToParse = commandToParse;
+
     }
 
-    public void parseCommand() {
-
-        for (CommandEnum ce : CommandEnum.values()) {
-
-            if (ce.getCommandType() == commandToParse) {
-
-                //ATIVA ESTRATEGIA E PASSA NO ARGUMENTO DO HANDLEBYPLAYER O OUTPUTSTREAM
-                //OU NO ARGUMENTO DA STRATEGY? UHMUHMUHMUHMUHMUHMHUMH
-
-                switch (commandToParse) {
-                    case "/a":
-                        new Situation(new Attack()).handleByPlayer(commandToParse);
-                        break;
-                    case "/d":
-                        new Situation(new Defend()).handleByPlayer(commandToParse);
-                        break;
-                    default:
-                        System.out.println("Command not valid");
-
-                }
 
 
-            }
+    public String parseCommand() {
+
+        System.out.println("cmd:"+commandToParse);
+
+        switch (commandToParse) {
+
+            case "/a":
+                return new Situation(new Attack()).handleByPlayer(player);
+
+
+            case "/d":
+                return new Situation(new Defend()).handleByPlayer(player);
+
+
+            default:
+                return "Command not valid";
+
         }
+
+
     }
+
 }

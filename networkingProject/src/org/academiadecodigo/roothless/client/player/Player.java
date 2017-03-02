@@ -44,6 +44,10 @@ public abstract class Player {
         return faith;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -79,6 +83,7 @@ public abstract class Player {
     public void setDead(boolean dead) {
         this.dead = dead;
     }
+
 
 
 }

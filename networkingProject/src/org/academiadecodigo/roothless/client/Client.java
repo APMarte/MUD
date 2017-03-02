@@ -48,19 +48,22 @@ public class Client {
         while (!socket.isClosed()) {
             try {
                 out = new DataOutputStream(socket.getOutputStream());
-                String outputMSG = scanner.nextLine() + "\n";
+                System.out.println("Attack or defend");
+                String outputMSG = scanner.nextLine();
 
                 //Command to ClientParser
-                ClientParser cp = new ClientParser(outputMSG);
-                cp.parseCommand();
+                ClientParser cp = new ClientParser(outputMSG,player);
+                String parsed = cp.parseCommand();
 
+                System.out.println(parsed);
 
                 if (socket.isClosed()) {
                     break;
                 }
 
-                out.write(outputMSG.getBytes());
+                out.write(parsed.getBytes());
                 out.flush();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

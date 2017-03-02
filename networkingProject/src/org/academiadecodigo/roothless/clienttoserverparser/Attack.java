@@ -9,11 +9,10 @@ import java.io.OutputStream;
  */
 public class Attack implements Strategy {
 
-
     @Override
-    public void processCommand(Player P1) {
-        P1.getBaseDamage();
+    public String processCommand(Player player) {
 
+        return String.valueOf(player.getName()+" atacou com dano "+player.getBaseDamage());
     }
 
 

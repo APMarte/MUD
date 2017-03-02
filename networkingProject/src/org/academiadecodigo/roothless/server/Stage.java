@@ -1,12 +1,15 @@
+/*
 package org.academiadecodigo.roothless.server;
 
 import org.academiadecodigo.roothless.server.gameObjects.Monster;
 
 import java.util.ArrayList;
 
+*/
 /**
  * Created by codecadet on 01/03/17.
- */
+ *//*
+
 public class Stage {
 
     private Game game;
@@ -53,7 +56,7 @@ public class Stage {
     private void room2() {
 
 
-        room3();
+        //room3();
     }
 
     private void setNull() {
@@ -64,3 +67,4 @@ public class Stage {
 
 
 }
+*/
