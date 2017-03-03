@@ -95,13 +95,11 @@ public class Client {
         String name = scanner.nextLine();
 
         do {
-            System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
+            System.out.println("Choose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
             try {
-
                 numClass = Integer.parseInt(br.readLine());
-
-                name+= " " + identifyClass(numClass) + "\n";
-                out.write(name.getBytes());
+                String str=name+ " " + identifyClass(numClass) + "\n"; // string auxiliar
+                out.write(str.getBytes());
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
@@ -110,8 +108,6 @@ public class Client {
                 e.printStackTrace();
             }
         } while (numClass < 1 || numClass > 5);
-
-        System.out.println(player.toString());
 
     }
 
@@ -162,12 +158,11 @@ public class Client {
             out.write(message.getBytes());
             out.flush();
         }
-
         else {
 
 
             switch (command) {
-                case "/a":
+                case "/skill":
                     if (!player.getHasActed()) {
                         str = message +" "+ player.getBaseDamage()+"\n";
                         out.write(str.getBytes());
@@ -176,7 +171,7 @@ public class Client {
                         System.out.println("Wait for your turn");
                     }
                         break;
-                case "/d":
+                case "/defense":
                     if(!player.getHasActed()){
                     out.write((message+"\n").getBytes());
                     player.setHasActed(true);

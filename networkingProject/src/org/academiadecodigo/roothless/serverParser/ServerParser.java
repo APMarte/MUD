@@ -15,7 +15,7 @@ public class ServerParser {
 
             //COMBAT PARSER
             case "/a":
-                return new Situation(new Attack()).handleByServer(commandToParse);
+                return new Situation(new Skill()).handleByServer(commandToParse);
 
             case "/d":
                 return new Situation(new Defend()).handleByServer(commandToParse);
