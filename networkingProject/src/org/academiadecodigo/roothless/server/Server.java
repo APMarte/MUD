@@ -1,5 +1,8 @@
 package org.academiadecodigo.roothless.server;
 
+import org.academiadecodigo.roothless.client.player.Player;
+import org.academiadecodigo.roothless.client.player.PlayerType;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,9 +20,14 @@ import java.util.concurrent.Executors;
 public class Server {
 
 
-    private CopyOnWriteArrayList<Socket> socketList = new CopyOnWriteArrayList<>();
+    //private CopyOnWriteArrayList<Socket> socketList = new CopyOnWriteArrayList<>();
+    private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
     private int counter = 1;
+    private Game game;
+    private boolean listFull; //will be true when all player are in
+
+
 
     private void listen() throws IOException {
 
@@ -33,8 +41,9 @@ public class Server {
         while (true) {
             Socket clientSocket = serverSocket.accept();
             System.out.println("connecting a client...");
-            socketList.add(clientSocket);
-            pool.submit(new ClientHandler(clientSocket));
+            ClientHandler clientHandler = new ClientHandler(player.getName(), playerType, clientSocket); //TODO: change the arguments
+            clientHandlersList.add(clientHandler);
+            pool.submit(clientHandler);
         }
     }
 
@@ -50,12 +59,29 @@ public class Server {
         return clientID;
     }
 
+    private void gameStart(){
+        game = new Game();
+
+        /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
+            if(!(game.isGameOn()) && listFull) {
+                break; }
+        }*/
+
+    while(true){                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
+            if(game.canIStart(listFull)){
+                break; }
+        }
+    }
+
 
     public static void main(String[] args) {
 
         Server server = new Server();
         try {
             server.listen();
+            if (server.clientHandlersList.size() == 5){
+                server.gameStart();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -75,10 +101,31 @@ public class Server {
         private Socket clientSocket;
         private BufferedReader in;
         private String inputMSG;
+        private String playerName;
+        private PlayerType playerType;
 
-        public ClientHandler(Socket clientSocket) {
+        public ClientHandler(String playerName, PlayerType playerType, Socket clientSocket) {
+            this.playerName = playerName;
+            this.playerType = playerType;
             this.clientSocket = clientSocket;
 
+        }
+
+        public Socket getClientSocket() {
+            return clientSocket;
+        }
+
+        public String getPlayerName() {
+            return playerName;
+        }
+
+        public PlayerType getPlayerType() {
+            return playerType;
+        }
+
+        public String stringPlayerType(PlayerType playerType){
+            String str = playerType.toString();
+            return str.toLowerCase();
         }
 
         @Override
@@ -101,8 +148,8 @@ public class Server {
                     e.printStackTrace();
                 }
             }
-            socketList.remove(clientSocket);
-            System.out.println(socketList.size());
+            clientHandlersList.remove(this); //TODO
+            System.out.println(clientHandlersList.size());
         }
 
         private void broadcast() {
@@ -112,8 +159,8 @@ public class Server {
                 String author = Thread.currentThread().getName() + ": ";
                 String message = author + inputMSG + "\n";
 
-                for (Socket s : socketList) {
-                    OutputStream out = s.getOutputStream();
+                for (ClientHandler c : clientHandlersList) { //TODO
+                    OutputStream out = c.getClientSocket().getOutputStream();
                     out.write(message.getBytes());
                     out.flush();
                 }
