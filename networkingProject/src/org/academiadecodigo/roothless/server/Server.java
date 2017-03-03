@@ -45,7 +45,9 @@ public class Server {
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             System.out.println("connecting a client...");
             String name = in.readLine();
-            ClientHandler clientHandler = new ClientHandler(name, clientSocket); //TODO: change the arguments
+
+
+            ClientHandler clientHandler = new ClientHandler(name.split(" ")[0], name.split(" ")[1],clientSocket); //TODO: change the arguments
             clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
             pool.submit(clientHandler);             ///w contruir string para mostrar class e name ou
         }
@@ -109,7 +111,7 @@ public class Server {
         private String playerName;
         ServerParser parser;
 
-        public ClientHandler(String playerName, Socket clientSocket) {
+        public ClientHandler(String playerName, String playerType, Socket clientSocket) {
             this.playerName = playerName;
             this.clientSocket = clientSocket;
 

@@ -94,16 +94,14 @@ public class Client {
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
-        try {
-            out.write((name+"\n").getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         do {
             System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
             try {
+
                 numClass = Integer.parseInt(br.readLine());
+
+                name+= " " + identifyClass(numClass) + "\n";
+                out.write(name.getBytes());
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
@@ -115,6 +113,23 @@ public class Client {
 
         System.out.println(player.toString());
 
+    }
+
+    public String identifyClass(int num){
+
+        switch (num){
+            case 1:
+                return "Archer";
+            case 2:
+                return "Paladin";
+            case 3:
+                return "Priest";
+            case 4:
+                return "Sorcerer";
+            case 5:
+                return "Thief";
+        }
+        return null;
     }
 
     private void chosePlayerType(int numClass, String name) {
