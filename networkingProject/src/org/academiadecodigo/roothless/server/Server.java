@@ -1,6 +1,7 @@
 package org.academiadecodigo.roothless.server;
 
 import org.academiadecodigo.roothless.client.player.PlayerType;
+import org.academiadecodigo.roothless.serverParser.ServerParser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,9 +25,13 @@ public class Server {
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
     private int counter = 1;
+<<<<<<< HEAD
     private GameManager game;
+=======
+    private BufferedReader in;
+    private Game game;
+>>>>>>> f0ae4e3e1b48126d4171d5a8b30f85b4d5d2fed1
     private boolean listFull; //will be true when all player are in
-
 
 
     private void listen() throws IOException {
@@ -40,10 +45,14 @@ public class Server {
 
         while (true) {
             Socket clientSocket = serverSocket.accept();
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             System.out.println("connecting a client...");
-            ClientHandler clientHandler = new ClientHandler(player.getName(), playerType, clientSocket); //TODO: change the arguments
-            clientHandlersList.add(clientHandler);
-            pool.submit(clientHandler);
+            String name = in.readLine();
+
+
+            ClientHandler clientHandler = new ClientHandler(name.split(" ")[0], name.split(" ")[1],clientSocket); //TODO: change the arguments
+            clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
+            pool.submit(clientHandler);             ///w contruir string para mostrar class e name ou
         }
     }
 
@@ -59,17 +68,23 @@ public class Server {
         return clientID;
     }
 
+<<<<<<< HEAD
     private void gameStart(){
         game = new GameManager();
+=======
+    private void gameStart() {
+        game = new Game();
+>>>>>>> f0ae4e3e1b48126d4171d5a8b30f85b4d5d2fed1
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
             if(!(game.isGameOn()) && listFull) {
                 break; }
         }*/
 
-    while(true){                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
-            if(game.canIStart(listFull)){
-                break; }
+        while (true) {                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
+            if (game.canIStart(listFull)) {
+                break;
+            }
         }
     }
 
@@ -79,13 +94,13 @@ public class Server {
         Server server = new Server();
         try {
             server.listen();
-            if (server.clientHandlersList.size() == 5){
+            if (server.clientHandlersList.size() == 5) {
                 server.gameStart();
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (server.getServerSocket()!= null) {
+            if (server.getServerSocket() != null) {
                 try {
                     server.getServerSocket().close();
                 } catch (IOException e) {
@@ -102,11 +117,10 @@ public class Server {
         private BufferedReader in;
         private String inputMSG;
         private String playerName;
-        private PlayerType playerType;
+        ServerParser parser;
 
-        public ClientHandler(String playerName, PlayerType playerType, Socket clientSocket) {
+        public ClientHandler(String playerName, String playerType, Socket clientSocket) {
             this.playerName = playerName;
-            this.playerType = playerType;
             this.clientSocket = clientSocket;
 
         }
@@ -119,14 +133,6 @@ public class Server {
             return playerName;
         }
 
-        public PlayerType getPlayerType() {
-            return playerType;
-        }
-
-        public String stringPlayerType(PlayerType playerType){
-            String str = playerType.toString();
-            return str.toLowerCase();
-        }
 
         @Override
         public void run() {
@@ -135,11 +141,21 @@ public class Server {
 
                 try {
 
+                    parser = new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
                     inputMSG = in.readLine();
 
-                    if (inputMSG != null) {
+                    System.out.println(inputMSG);
+
+                    if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         broadcast();
+
+                    } else if (inputMSG != null) {
+
+                        String result = parser.parseCommand(inputMSG);
+                        System.out.println(result);
+
                     } else {
                         clientSocket.close();
                     }
@@ -156,7 +172,7 @@ public class Server {
 
             try {
 
-                String author = Thread.currentThread().getName() + ": ";
+                String author = getPlayerName() + ": ";
                 String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO

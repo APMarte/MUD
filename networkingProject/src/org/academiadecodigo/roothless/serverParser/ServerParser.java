@@ -5,21 +5,11 @@ package org.academiadecodigo.roothless.serverParser;
  */
 public class ServerParser {
 
-    private String commandToParse;
 
-
-
-    public ServerParser(String commandToParse) {
-
-        this.commandToParse = commandToParse;
-
-    }
-
-
-
-    public String parseCommand() {
+    public String parseCommand(String commandToParse) {
 
         String[] splited = commandToParse.split(" ");
+        System.out.println("Estou aqui");
 
         switch (splited[0]) {
 
@@ -30,11 +20,11 @@ public class ServerParser {
             case "/d":
                 return new Situation(new Defend()).handleByServer(commandToParse);
 
-            case "/p":
+            case "/pick":
                 return new Situation(new Pick()).handleByServer(commandToParse);
 
             //QUIZ PARSER
-            case "/o":
+            case "/option":
                 return new Situation(new Option()).handleByServer(commandToParse);
 
             //Command not Valid!

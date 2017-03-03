@@ -1,10 +1,8 @@
 package org.academiadecodigo.roothless.client;
 
-import org.academiadecodigo.roothless.clienttoserverparser.ClientParser;
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
-import org.academiadecodigo.roothless.clienttoserverparser.CommandEnum;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -58,11 +56,9 @@ public class Client {
 
                 //PARSE DO CLIENT /A 2 50
                 //comparar com hasacted
-
                 System.out.println(player.getName() + " choose your action: ");
                 String outputMSG = scanner.nextLine();
                 parseClient(outputMSG);
-
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -95,18 +91,17 @@ public class Client {
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
 
-        System.out.println("Insert username: ");
+        System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
-        try {
-            out.write(name.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         do {
             System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
             try {
+
                 numClass = Integer.parseInt(br.readLine());
+
+                name+= " " + identifyClass(numClass) + "\n";
+                out.write(name.getBytes());
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
@@ -118,6 +113,23 @@ public class Client {
 
         System.out.println(player.toString());
 
+    }
+
+    public String identifyClass(int num){
+
+        switch (num){
+            case 1:
+                return "Archer";
+            case 2:
+                return "Paladin";
+            case 3:
+                return "Priest";
+            case 4:
+                return "Sorcerer";
+            case 5:
+                return "Thief";
+        }
+        return null;
     }
 
     private void chosePlayerType(int numClass, String name) {
@@ -145,14 +157,19 @@ public class Client {
 
         String str;
 
-        if (command.charAt(0) != '/') {         //compare first char from command
+        if (command.charAt(0) != '/') {
+            message+="\n";
             out.write(message.getBytes());
             out.flush();
-        }else {
+        }
+
+        else {
+
+
             switch (command) {
                 case "/a":
                     if (!player.getHasActed()) {
-                        str = message + player.getBaseDamage();
+                        str = message +" "+ player.getBaseDamage()+"\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
                     } else{
@@ -161,7 +178,7 @@ public class Client {
                         break;
                 case "/d":
                     if(!player.getHasActed()){
-                    out.write(message.getBytes());
+                    out.write((message+"\n").getBytes());
                     player.setHasActed(true);
                     }else{
                         System.out.println("Wait for your turn");
@@ -169,7 +186,7 @@ public class Client {
                     break;
                 case "/pick":
                     if(!player.getHasActed()) {
-                        out.write(message.getBytes());
+                        out.write((message+"\n").getBytes());
                         player.setHasActed(true);
                     }else {
                         System.out.println("Wait for your turn");
@@ -178,7 +195,7 @@ public class Client {
                 case "/option":
                     if(player.getHasActed()) {
                         System.out.println(message);
-                        out.write(message.getBytes());
+                        out.write((message+"\n").getBytes());
                         player.setHasActed(true);
                     }else{
                         System.out.println("Wait for your turn");
