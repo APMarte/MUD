@@ -9,6 +9,7 @@ public class ServerParser {
     public String parseCommand(String commandToParse) {
 
         String[] splited = commandToParse.split(" ");
+        System.out.println("Estou aqui");
 
         switch (splited[0]) {
 

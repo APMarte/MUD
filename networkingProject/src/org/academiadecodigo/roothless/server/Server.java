@@ -133,12 +133,14 @@ public class Server {
 
                     parser = new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                    System.out.println("Queijo");
-                    inputMSG = in.readLine();//Preso aqui po chat
-                    System.out.println("Queijo2");
+
+                    inputMSG = in.readLine();
+
+                    System.out.println(inputMSG);
 
                     if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         broadcast();
+
                     } else if (inputMSG != null) {
 
                         String result = parser.parseCommand(inputMSG);
@@ -160,7 +162,7 @@ public class Server {
 
             try {
 
-                String author = Thread.currentThread().getName() + ": ";
+                String author = getPlayerName() + ": ";
                 String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
