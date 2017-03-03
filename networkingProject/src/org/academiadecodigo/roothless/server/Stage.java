@@ -16,8 +16,8 @@ public class Stage {
     private Game game;
     private ArrayList<Monster> monsterArray;
     private Monster monster;
-    private ArrayList<Loot> lootArray;
-    private Loot loot;
+    //private ArrayList<Loot> lootArray;
+    //private Loot loot;
     private String[] questions;
     private String question;
 
@@ -42,11 +42,11 @@ public class Stage {
                 "nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse " +
                 "cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa " +
                 "qui officia deserunt mollit anim id est laborum.";
-        monster =;
+        //monster =;
         monsterArray.remove(monster);
-        loot =;
+        //loot =;
 
-        broadcast(description);
+        //broadcast(description);
 
         synchronized (this) {
             try {
@@ -74,7 +74,7 @@ public class Stage {
 
     private void setupNextRoom() {
         monster = null;
-        loot = null;
+        //loot = null;
         question = null;
         level++;
     }

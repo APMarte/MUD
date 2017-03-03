@@ -2,6 +2,7 @@ package org.academiadecodigo.roothless.server;
 
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerType;
+import org.academiadecodigo.roothless.serverParser.ServerParser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class Server {
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
     private int counter = 1;
+    private BufferedReader in;
     private Game game;
     private boolean listFull; //will be true when all player are in
 
@@ -41,10 +43,12 @@ public class Server {
 
         while (true) {
             Socket clientSocket = serverSocket.accept();
+            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             System.out.println("connecting a client...");
-            ClientHandler clientHandler = new ClientHandler(player.getName(), playerType, clientSocket); //TODO: change the arguments
-            clientHandlersList.add(clientHandler);
-            pool.submit(clientHandler);
+            String name = in.readLine();
+            ClientHandler clientHandler = new ClientHandler(name, clientSocket); //TODO: change the arguments
+            clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
+            pool.submit(clientHandler);             ///w contruir string para mostrar class e name ou
         }
     }
 
@@ -103,11 +107,10 @@ public class Server {
         private BufferedReader in;
         private String inputMSG;
         private String playerName;
-        private PlayerType playerType;
+        ServerParser parser;
 
-        public ClientHandler(String playerName, PlayerType playerType, Socket clientSocket) {
+        public ClientHandler(String playerName, Socket clientSocket) {
             this.playerName = playerName;
-            this.playerType = playerType;
             this.clientSocket = clientSocket;
 
         }
@@ -120,14 +123,6 @@ public class Server {
             return playerName;
         }
 
-        public PlayerType getPlayerType() {
-            return playerType;
-        }
-
-        public String stringPlayerType(PlayerType playerType){
-            String str = playerType.toString();
-            return str.toLowerCase();
-        }
 
         @Override
         public void run() {
@@ -135,13 +130,18 @@ public class Server {
             while (!clientSocket.isClosed()) {
 
                 try {
-
+                    parser=new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                     inputMSG = in.readLine();
 
-                    if (inputMSG != null) {
+                    String result=parser.parseCommand(inputMSG);
+                    System.out.println(result);
+
+                    if (inputMSG != null && inputMSG.split(" ")[0].charAt(0)!= '/') {
                         broadcast();
-                    } else {
+                    } else if(inputMSG != null) {
+
+                    }else{
                         clientSocket.close();
                     }
 
