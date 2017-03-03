@@ -17,12 +17,12 @@ public class Game {
         stage = new Stage();
     }
 
-    public boolean isGameOn() {                         // TODO: 02/03/17  Server must have a while(true) { if(!isGameOn() && isListFull()) { break; } }
+    public boolean isGameOn() {                         // TODO: 02/03/17  Server must have a while(true) { if(!isGameOn() && listFull) { break; } }
         return gameOn;
     }
 
-    public boolean canIStart(boolean isListFull) {      // TODO: 01/03/17 Server must have a while(true){  if(game.canIStart(isListFull)){ break; }  }
-        if (isListFull) {
+    public boolean canIStart(boolean listFull) {      // TODO: 01/03/17 Server must have a while(true){  if(game.canIStart(listFull)){ break; }  }
+        if (listFull) {
             gameOn = true;
             start();
             return true;

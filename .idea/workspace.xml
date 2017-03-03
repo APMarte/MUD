@@ -28,15 +28,14 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/networkingProject/src/org/academiadecodigo/roothless/server/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+            <state relative-caret-position="225">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="e#364#365#0" expanded="true" />
                 <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
                 <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -610,12 +609,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488456552333</updated>
-      <workItem from="1488456556194" duration="7895000" />
+      <workItem from="1488456556194" duration="10153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7895000" />
+    <option name="totallyTimeSpent" value="10153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -673,15 +672,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/networkingProject/src/org/academiadecodigo/roothless/server/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+        <state relative-caret-position="225">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#364#365#0" expanded="true" />
             <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
             <element signature="e#453#454#0" expanded="true" />
             <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
           </folding>
         </state>
       </provider>
