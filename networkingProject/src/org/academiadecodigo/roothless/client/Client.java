@@ -24,10 +24,9 @@ public class Client {
     private BufferedReader br;
     private Player player;
 
-    private CommandEnum xpecialSpells;
-
 
     private void connect() throws IOException {
+
 
         scanner = new Scanner(System.in);
         System.out.println("Host:");
@@ -36,6 +35,8 @@ public class Client {
         int port = Integer.parseInt(scanner.nextLine());
 
         socket = new Socket(host, port);
+        out = new DataOutputStream(socket.getOutputStream());
+
         createPlayer();
 
         Thread thread = new Thread(new ServerListener(new BufferedReader(new InputStreamReader(socket.getInputStream()))));
@@ -50,10 +51,6 @@ public class Client {
 
         while (!socket.isClosed()) {
             try {
-                out = new DataOutputStream(socket.getOutputStream());
-                System.out.println("Attack or defend");
-                String outputMSG = scanner.nextLine();
-
 
                 if (socket.isClosed()) {
                     break;
@@ -61,11 +58,11 @@ public class Client {
 
                 //PARSE DO CLIENT /A 2 50
                 //comparar com hasacted
-                if(!player.getHasActed()){
-                    parseClient(outputMSG);
-                }else{
-                    System.out.println("Wait for your turn");
-                }
+
+                System.out.println(player.getName() + " choose your action: ");
+                String outputMSG = scanner.nextLine();
+                parseClient(outputMSG);
+
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -100,6 +97,11 @@ public class Client {
 
         System.out.println("Insert username: ");
         String name = scanner.nextLine();
+        try {
+            out.write(name.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         do {
             System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
@@ -139,65 +141,90 @@ public class Client {
 
     private void parseClient(String message) throws IOException {
 
+        String command = message.split(" ")[0];
+
         String str;
 
-        switch (message) {
-            case "/a":
-                str = message + player.getBaseDamage();
-                out.write(str.getBytes());
-                player.setHasActed(true);
-                break;
-            case "/d":
-                out.write(message.getBytes());
-                player.setHasActed(true);
-                break;
-            case "/pick":
-                out.write(message.getBytes());
-                player.setHasActed(true);
-                break;
-            case "/option":
-                System.out.println(message);
-                out.write(message.getBytes());
-                player.setHasActed(true);
-                break;
-            case "/w":
-                str = message;
-                break;
-            case "/help":
-                System.out.println("oix");
-                break;
+        if (command.charAt(0) != '/') {         //compare first char from command
+            out.write(message.getBytes());
+            out.flush();
+        }else {
+            switch (command) {
+                case "/a":
+                    if (!player.getHasActed()) {
+                        str = message + player.getBaseDamage();
+                        out.write(str.getBytes());
+                        player.setHasActed(true);
+                    } else{
+                        System.out.println("Wait for your turn");
+                    }
+                        break;
+                case "/d":
+                    if(!player.getHasActed()){
+                    out.write(message.getBytes());
+                    player.setHasActed(true);
+                    }else{
+                        System.out.println("Wait for your turn");
+                    }
+                    break;
+                case "/pick":
+                    if(!player.getHasActed()) {
+                        out.write(message.getBytes());
+                        player.setHasActed(true);
+                    }else {
+                        System.out.println("Wait for your turn");
+                    }
+                    break;
+                case "/option":
+                    if(player.getHasActed()) {
+                        System.out.println(message);
+                        out.write(message.getBytes());
+                        player.setHasActed(true);
+                    }else{
+                        System.out.println("Wait for your turn");
+                    }
+                    break;
+                case "/w":
+                    str = message;
+                    break;
+                case "/help":
+                    System.out.println("oix");
+                    break;
+                default:
+                    System.out.println("Invalid Command");
+                    break;
+            }
+            out.flush();
         }
-        out.flush();
     }
 
+        private class ServerListener implements Runnable {
 
-    private class ServerListener implements Runnable {
+            private BufferedReader in;
 
-        private BufferedReader in;
-
-        public ServerListener(BufferedReader in) {
-            this.in = in;
-        }
-
-        @Override
-        public void run() {
-
-            while (!socket.isClosed()) {
-                try {
-                    in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-                    String serverMSG = in.readLine();
-                    if (serverMSG == null) {
-                        System.out.println("Server connection is closed.");
-                        socket.close();
-                        break;
-                    }
-                    System.out.println(serverMSG);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            public ServerListener(BufferedReader in) {
+                this.in = in;
             }
 
+            @Override
+            public void run() {
+
+                while (!socket.isClosed()) {
+                    try {
+                        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+                        String serverMSG = in.readLine();
+                        if (serverMSG == null) {
+                            System.out.println("Server connection is closed.");
+                            socket.close();
+                            break;
+                        }
+                        System.out.println(serverMSG);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
         }
     }
-}
