@@ -25,12 +25,8 @@ public class Server {
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
     private int counter = 1;
-<<<<<<< HEAD
     private GameManager game;
-=======
     private BufferedReader in;
-    private Game game;
->>>>>>> f0ae4e3e1b48126d4171d5a8b30f85b4d5d2fed1
     private boolean listFull; //will be true when all player are in
 
 
@@ -68,13 +64,9 @@ public class Server {
         return clientID;
     }
 
-<<<<<<< HEAD
-    private void gameStart(){
-        game = new GameManager();
-=======
+
     private void gameStart() {
-        game = new Game();
->>>>>>> f0ae4e3e1b48126d4171d5a8b30f85b4d5d2fed1
+        game = new GameManager();
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
             if(!(game.isGameOn()) && listFull) {
