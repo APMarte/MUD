@@ -4,12 +4,11 @@ import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerType;
 import org.academiadecodigo.roothless.serverParser.ServerParser;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
@@ -27,8 +26,13 @@ public class Server {
     private ServerSocket serverSocket = null;
     private int counter = 1;
     private BufferedReader in;
-    private Game game;
+    private Game game;      // TODO: 03/03/17 mudar para GameManager gameManager
     private boolean listFull; //will be true when all player are in
+
+    public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
+        return clientHandlersList;
+    }
+    private List<String> classesChosen = new LinkedList<>();
 
 
     private void listen() throws IOException {
@@ -42,15 +46,24 @@ public class Server {
 
         while (true) {
             Socket clientSocket = serverSocket.accept();
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+            out.write("Archer");
+            out.flush();
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             System.out.println("connecting a client...");
             String name = in.readLine();
 
+            //if (!classesChosen.contains(name.split(" ")[1])) {
 
-            ClientHandler clientHandler = new ClientHandler(name.split(" ")[0], name.split(" ")[1],clientSocket); //TODO: change the arguments
-            clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
-            pool.submit(clientHandler);             ///w contruir string para mostrar class e name ou
-        }
+               // classesChosen.add(name.split(" ")[1]);
+                //System.out.println(classesChosen.get(0));
+                ///w contruir string para mostrar class e name ou
+
+                ClientHandler clientHandler = new ClientHandler(name.split(" ")[0], name.split(" ")[1], clientSocket);
+                clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
+                pool.submit(clientHandler);
+           // }
+            }
     }
 
     public ServerSocket getServerSocket() {
@@ -66,7 +79,7 @@ public class Server {
     }
 
     private void gameStart() {
-        game = new Game();
+        game = new Game(); //TODO: pôr new GameManager(this). sempre que diga game, mudar pra gameManager
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
             if(!(game.isGameOn()) && listFull) {

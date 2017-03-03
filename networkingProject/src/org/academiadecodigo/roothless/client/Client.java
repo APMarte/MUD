@@ -21,6 +21,7 @@ public class Client {
     private DataOutputStream out;
     private BufferedReader br;
     private Player player;
+    private BufferedReader bin;
 
 
     private void connect() throws IOException {
@@ -90,18 +91,23 @@ public class Client {
 
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
-
+        try {
+            bin = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
         do {
             System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
             try {
-
                 numClass = Integer.parseInt(br.readLine());
-
                 name+= " " + identifyClass(numClass) + "\n";
                 out.write(name.getBytes());
+                if (bin.equals("Archer")){
+                    System.out.println("Não da");
+                }
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
