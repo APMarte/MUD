@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.clienttoserverparser;
+package org.academiadecodigo.roothless.serverParser;
 
 /**
  * Created by codecadet on 01/03/17.

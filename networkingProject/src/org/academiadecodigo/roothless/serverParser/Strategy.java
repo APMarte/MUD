@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.clienttoserverparser;
+package org.academiadecodigo.roothless.serverParser;
 
 import org.academiadecodigo.roothless.client.player.Player;
 
@@ -7,6 +7,6 @@ import org.academiadecodigo.roothless.client.player.Player;
  */
 public interface Strategy {
 
-    String processCommand(Player P1);
+    String processCommand(String command);
 
 }

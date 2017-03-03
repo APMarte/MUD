@@ -16,6 +16,18 @@ public class Paladin extends Player {
         setDexterity(10);
         setFaith(10);
         setIntelligence(10);
+        setCritChance(15);
+    }
+
+    @Override
+    public int dmgCalc() {
+        int baseDmg = getBaseDamage();
+        int str = getStrength();
+        int fth = getFaith();
+
+        int preCritDmg = (int) (fth * 0.35 + str * 0.65) + baseDmg;
+
+        return super.critRoll(preCritDmg);
     }
 
 

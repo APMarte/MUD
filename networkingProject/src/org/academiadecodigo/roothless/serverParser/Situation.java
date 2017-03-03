@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.clienttoserverparser;
+package org.academiadecodigo.roothless.serverParser;
 
 import org.academiadecodigo.roothless.client.player.Player;
 
@@ -14,9 +14,9 @@ public class Situation {
         this.strategy = strategy;
     }
 
-    public String handleByPlayer(Player P) {
+    public String handleByServer(String comand) {
 
-        return this.strategy.processCommand(P);
+        return this.strategy.processCommand(comand);
 
     }
 }

@@ -22,15 +22,21 @@
     <favorites_list name="networkingProject" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServerParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/ServerParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="497">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,48 +46,108 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Paladin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/classes/Paladin.java">
+<<<<<<< HEAD
+      <file leaf-file-name="Strategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Strategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+=======
       <file leaf-file-name="ClientParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="CommandEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/CommandEnum.java">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/CommandEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+=======
+      <file leaf-file-name="Strategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Strategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Attack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Attack.java">
+<<<<<<< HEAD
+      <file leaf-file-name="Situation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Situation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+=======
+      <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="45" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1531#0" expanded="true" />
+                <marker date="1488497922000" expanded="false" signature="677:688" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="702:708" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="747:758" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="779:785" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="817:828" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="846:852" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="899:910" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="939:945" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="974:985" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1000:1006" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1047:1058" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1081:1087" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1116:1127" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1139:1145" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1184:1195" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1212:1218" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1254:1265" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1284:1290" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1342:1353" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1384:1390" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1419:1430" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1443:1449" placeholder=" }" />
+                <marker date="1488497922000" expanded="false" signature="1488:1499" placeholder=" { " />
+                <marker date="1488497922000" expanded="false" signature="1518:1524" placeholder=" }" />
+              </folding>
+>>>>>>> master
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Attack.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Attack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+=======
+      <file leaf-file-name="Skill.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Skill.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -90,35 +156,50 @@
       <file leaf-file-name="TestMonster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stage.java" pinned="false" current-in-tab="true">
+<<<<<<< HEAD
+      <file leaf-file-name="Defend.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Defend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding />
+=======
+      <file leaf-file-name="Stage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Stage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
+                <marker date="1488497912000" expanded="false" signature="478:489" placeholder=" { " />
+                <marker date="1488497912000" expanded="false" signature="502:508" placeholder=" }" />
               </folding>
+>>>>>>> master
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+              <folding />
+=======
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,17 +207,27 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="20" />
+            <state relative-caret-position="780">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1864#1865#0" expanded="true" />
+                <element signature="e#1895#1896#0" expanded="true" />
+                <element signature="e#1944#1945#0" expanded="true" />
+                <element signature="e#1984#1985#0" expanded="true" />
               </folding>
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -150,13 +241,31 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/classes/Paladin.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Defend.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Situation.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java" />
+=======
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Attack.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Stage.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Option.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Pick.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Skill.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Chat.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Strategy.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Situation.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/ServerParser.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Attack.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Defend.java" />
+=======
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -194,8 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -233,7 +340,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
+              <option name="myItemId" value="serverParser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,10 +363,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,7 +440,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clienttoserverparser" />
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,16 +461,64 @@
               <option name="myItemId" value="roothless" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roothless" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+<<<<<<< HEAD
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+=======
+>>>>>>> master
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="FullScreen" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="$PROJECT_DIR$/../../../../../../academiacodigo/.nvm/versions/node/v4.4.1/bin/node" />
+    <property name="js-jscs-nodeInterpreter" value="/academiacodigo/.nvm/versions/node/v4.4.1/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.academiadecodigo.roothless.clienttoserverparser" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration default="false" name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -624,6 +775,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -789,6 +941,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -825,42 +983,71 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1488455670256</updated>
+<<<<<<< HEAD
+      <workItem from="1488455671696" duration="13772000" />
+=======
       <workItem from="1488455671696" duration="6336000" />
+      <workItem from="1488493181127" duration="6382000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6336000" />
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="13772000" />
+=======
+    <option name="totallyTimeSpent" value="12718000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+>>>>>>> master
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -875,10 +1062,692 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java.orig">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/classes/Paladin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> master
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">java.applet</node>
+            <node x="" y="">com.sun.openpisces</node>
+            <node x="" y="">com.sun.naming</node>
+            <node x="" y="">com.oracle.deploy</node>
+            <node x="" y="">com.sun.corba</node>
+            <node x="" y="">java.nio</node>
+            <node x="" y="">org.academiadecodigo</node>
+            <node x="" y="">java.time</node>
+            <node x="" y="">com.sun.media</node>
+            <node x="" y="">com.sun.xml</node>
+            <node x="" y="">sun.tools</node>
+            <node x="" y="">com.sun.crypto</node>
+            <node x="" y="">org.xml</node>
+            <node x="" y="">sun.audio</node>
+            <node x="" y="">com.sun.applet2</node>
+            <node x="" y="">oracle.jrockit</node>
+            <node x="" y="">com.sun.glass</node>
+            <node x="" y="">javax.activation</node>
+            <node x="" y="">com.sun.nio</node>
+            <node x="" y="">META-INF.services</node>
+            <node x="" y="">java.security</node>
+            <node x="" y="">org.omg</node>
+            <node x="" y="">com.oracle.tools</node>
+            <node x="" y="">sun.java2d</node>
+            <node x="" y="">org.w3c</node>
+            <node x="" y="">com.sun.rowset</node>
+            <node x="" y="">javax.imageio</node>
+            <node x="" y="">com.sun.demo</node>
+            <node x="" y="">javafx.concurrent</node>
+            <node x="" y="">com.oracle.xmlns</node>
+            <node x="" y="">com.sun.jarsigner</node>
+            <node x="" y="">resources.web-files</node>
+            <node x="" y="">com.sun.javadoc</node>
+            <node x="" y="">com.sun.activation</node>
+            <node x="" y="">java.lang</node>
+            <node x="" y="">javafx.print</node>
+            <node x="" y="">com.sun.pisces</node>
+            <node x="" y="">javafx.scene</node>
+            <node x="" y="">resources.classes</node>
+            <node x="" y="">javax.transaction</node>
+            <node x="" y="">apple.security</node>
+            <node x="" y="">javafx.embed</node>
+            <node x="" y="">netscape.security</node>
+            <node x="" y="">apple.launcher</node>
+            <node x="" y="">javax.crypto</node>
+            <node x="" y="">javax.xml</node>
+            <node x="" y="">java.sql</node>
+            <node x="" y="">java.util</node>
+            <node x="" y="">com.sun.istack</node>
+            <node x="" y="">javafx.collections</node>
+            <node x="" y="">com.apple.concurrent</node>
+            <node x="" y="">com.sun.scenario</node>
+            <node x="" y="">javafx.event</node>
+            <node x="" y="">sun.nio</node>
+            <node x="" y="">jdk.jfr</node>
+            <node x="" y="">com.sun.prism</node>
+            <node x="" y="">com.sun.deploy</node>
+            <node x="" y="">com.sun.swing</node>
+            <node x="" y="">sun.lwawt</node>
+            <node x="" y="">jdk.nashorn</node>
+            <node x="" y="">sun.launcher</node>
+            <node x="" y="">jdk.net</node>
+            <node x="" y="">org.jcp</node>
+            <node x="" y="">com.oracle.util</node>
+            <node x="" y="">com.oracle.net</node>
+            <node x="" y="">com.sun.java_cup</node>
+            <node x="" y="">sun.text</node>
+            <node x="" y="">java.math</node>
+            <node x="" y="">com.sun.image</node>
+            <node x="" y="">toolbarButtonGraphics.general</node>
+            <node x="" y="">sun.security</node>
+            <node x="" y="">com.sun.tools</node>
+            <node x="" y="">sun.awt</node>
+            <node x="" y="">com.sun.rmi</node>
+            <node x="" y="">jdk.packager</node>
+            <node x="" y="">sun.plugin2</node>
+            <node x="" y="">com.sun.java</node>
+            <node x="" y="">javax.activity</node>
+            <node x="" y="">java.awt</node>
+            <node x="" y="">java.text</node>
+            <node x="" y="">com.sun.management</node>
+            <node x="" y="">sun.applet</node>
+            <node x="" y="">com.sun.tracing</node>
+            <node x="" y="">javax.print</node>
+            <node x="" y="">jdk.internal</node>
+            <node x="" y="">com.sun.jdi</node>
+            <node x="" y="">sun.font</node>
+            <node x="" y="">sun.swing</node>
+            <node x="" y="">javafx.beans</node>
+            <node x="" y="">java.rmi</node>
+            <node x="" y="">sun.dc</node>
+            <node x="" y="">sun.management</node>
+            <node x="" y="">com.oracle.javafx</node>
+            <node x="" y="">com.sun.accessibility</node>
+            <node x="" y="">java.beans</node>
+            <node x="" y="">javax.sql</node>
+            <node x="" y="">sun.invoke</node>
+            <node x="" y="">javax.jws</node>
+            <node x="" y="">javax.annotation</node>
+            <node x="" y="">toolbarButtonGraphics.development</node>
+            <node x="" y="">javax.accessibility</node>
+            <node x="" y="">java.net</node>
+            <node x="" y="">com.sun.net</node>
+            <node x="" y="">javafx.css</node>
+            <node x="" y="">javax.lang</node>
+            <node x="" y="">sun.corba</node>
+            <node x="" y="">toolbarButtonGraphics.navigation</node>
+            <node x="" y="">com.sun.beans</node>
+            <node x="" y="">toolbarButtonGraphics.text</node>
+            <node x="" y="">com.sun.jmx</node>
+            <node x="" y="">sun.misc</node>
+            <node x="" y="">javafx.util</node>
+            <node x="" y="">com.oracle.jrockit</node>
+            <node x="" y="">com.sun.security</node>
+            <node x="" y="">sun.tracing</node>
+            <node x="" y="">javafx.application</node>
+            <node x="" y="">oracle.jvm</node>
+            <node x="" y="">javafx.stage</node>
+            <node x="" y="">sun.util</node>
+            <node x="" y="">com.apple.laf</node>
+            <node x="" y="">javafx.fxml</node>
+            <node x="" y="">javax.net</node>
+            <node x="" y="">com.oracle.webservices</node>
+            <node x="" y="">sun.plugin</node>
+            <node x="" y="">jdk.Exported</node>
+            <node x="" y="">sun.reflect</node>
+            <node x="" y="">sun.jvmstat</node>
+            <node x="" y="">sun.net</node>
+            <node x="" y="">com.sun.jndi</node>
+            <node x="" y="">javax.smartcardio</node>
+            <node x="" y="">sun.jvm</node>
+            <node x="" y="">com.sun.javafx</node>
+            <node x="" y="">javax.security</node>
+            <node x="" y="">javafx.animation</node>
+            <node x="" y="">javax.rmi</node>
+            <node x="" y="">javax.naming</node>
+            <node x="" y="">com.sun.javaws</node>
+            <node x="" y="">com.sun.jnlp</node>
+            <node x="" y="">com.sun.org</node>
+            <node x="" y="">com.sun.source</node>
+            <node x="" y="">com.apple.eawt</node>
+            <node x="" y="">sun.rmi</node>
+            <node x="" y="">javafx.geometry</node>
+            <node x="" y="">sun.instrument</node>
+            <node x="" y="">com.oracle.nio</node>
+            <node x="" y="">com.sun.codemodel</node>
+            <node x="" y="">netscape.javascript</node>
+            <node x="" y="">apple.applescript</node>
+            <node x="" y="">apple.laf</node>
+            <node x="" y="">javax.sound</node>
+            <node x="" y="">org.relaxng</node>
+            <node x="" y="">javax.management</node>
+            <node x="" y="">javax.tools</node>
+            <node x="" y="">com.sun.imageio</node>
+            <node x="" y="">com.apple.eio</node>
+            <node x="" y="">javax.script</node>
+            <node x="" y="">jdk.management</node>
+            <node x="" y="">com.sun.webkit</node>
+            <node x="" y="">java.io</node>
+            <node x="" y="">com.sun.awt</node>
+            <node x="" y="">sun.print</node>
+            <node x="" y="">javax.jnlp</node>
+            <node x="" y="">org.ietf</node>
+            <node x="" y="">javax.swing</node>
+            <node x="" y="">sun.usagetracker</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.13128960119269475" x="5356.0" y="1885.8090844570615" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Pick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/CommandEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Attack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="uml://JAVA/org.academiadecodigo.roothless">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.academiadecodigo.roothless</OriginalElement>
+          <nodes>
+            <node x="605.7744708994709" y="99.0">org.academiadecodigo.roothless.client.player.Player</node>
+            <node x="144.0" y="761.0">org.academiadecodigo.roothless.server.level.BasicLevel</node>
+            <node x="93.0" y="99.0">org.academiadecodigo.roothless.serverParser.Defend</node>
+            <node x="21.5" y="450.0">org.academiadecodigo.roothless.server.Game</node>
+            <node x="155.0" y="529.0">org.academiadecodigo.roothless.server.Server.ClientHandler</node>
+            <node x="275.3716931216931" y="0.0">org.academiadecodigo.roothless.serverParser.Strategy</node>
+            <node x="691.4613095238095" y="208.0">org.academiadecodigo.roothless.client.player.classes.Sorcerer</node>
+            <node x="0.0" y="687.0">org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster</node>
+            <node x="637.1845238095239" y="297.0">org.academiadecodigo.roothless.client.player.PlayerFactory</node>
+            <node x="0.0" y="99.0">org.academiadecodigo.roothless.serverParser.Attack</node>
+            <node x="413.3888888888889" y="208.0">org.academiadecodigo.roothless.client.player.classes.Archer</node>
+            <node x="494.0" y="450.0">org.academiadecodigo.roothless.server.level.LevelDecor</node>
+            <node x="526.7744708994709" y="99.0">org.academiadecodigo.roothless.serverParser.Skill</node>
+            <node x="259.75" y="297.0">org.academiadecodigo.roothless.client.Client</node>
+            <node x="0.0" y="761.0">org.academiadecodigo.roothless.client.player.PlayerType</node>
+            <node x="794.4613095238095" y="208.0">org.academiadecodigo.roothless.client.player.classes.Thief</node>
+            <node x="179.0" y="450.0">org.academiadecodigo.roothless.server.Server</node>
+            <node x="318.0" y="450.0">org.academiadecodigo.roothless.serverParser.CommandEnum</node>
+            <node x="234.25" y="376.0">org.academiadecodigo.roothless.client.Client.ServerListener</node>
+            <node x="190.0" y="99.0">org.academiadecodigo.roothless.serverParser.Pick</node>
+            <node x="13.5" y="608.0">org.academiadecodigo.roothless.server.gameObjects.Monster</node>
+            <node x="208.75" y="208.0">org.academiadecodigo.roothless.serverParser.ClientParser</node>
+            <node x="22.0" y="529.0">org.academiadecodigo.roothless.server.Stage</node>
+            <node x="878.4613095238095" y="208.0">org.academiadecodigo.roothless.client.player.classes.Paladin</node>
+            <node x="268.0" y="99.0">org.academiadecodigo.roothless.serverParser.Option</node>
+            <node x="418.7744708994709" y="99.0">org.academiadecodigo.roothless.serverParser.Situation</node>
+            <node x="604.4613095238095" y="208.0">org.academiadecodigo.roothless.client.player.classes.Priest</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Paladin">
+              <point x="46.0" y="-14.5" />
+              <point x="740.6845238095239" y="277.0" />
+              <point x="916.9613095238095" y="277.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Archer">
+              <point x="-46.0" y="-14.5" />
+              <point x="648.6845238095239" y="277.0" />
+              <point x="449.8888888888889" y="277.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.serverParser.Pick">
+              <point x="-8.916666666666629" y="-14.5" />
+              <point x="253.33333333333337" y="168.0" />
+              <point x="219.0" y="168.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Skill" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="556.2744708994709" y="69.0" />
+              <point x="351.4550264550265" y="69.0" />
+              <point x="34.58333333333337" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Sorcerer" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="732.9613095238095" y="188.0" />
+              <point x="650.1316137566137" y="188.0" />
+              <point x="9.857142857142833" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Paladin" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="916.9613095238095" y="168.0" />
+              <point x="669.8458994708994" y="168.0" />
+              <point x="29.571428571428555" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Option" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="305.5" y="79.0" />
+              <point x="323.78835978835974" y="79.0" />
+              <point x="6.916666666666629" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.gameObjects.Monster" target="org.academiadecodigo.roothless.server.Stage">
+              <point x="-27.66666666666667" y="-14.5" />
+              <point x="27.33333333333333" y="583.0" />
+              <point x="33.0" y="583.0" />
+              <point x="-22.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.serverParser.Defend">
+              <point x="-26.75" y="-14.5" />
+              <point x="235.5" y="178.0" />
+              <point x="131.5" y="178.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Situation" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="462.7744708994709" y="79.0" />
+              <point x="337.6216931216931" y="79.0" />
+              <point x="20.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client" target="org.academiadecodigo.roothless.serverParser.ClientParser">
+              <point x="-17.25" y="-14.5" />
+              <point x="277.0" y="277.0" />
+              <point x="262.25" y="277.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Defend" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="131.5" y="59.0" />
+              <point x="296.1216931216931" y="59.0" />
+              <point x="-20.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Priest" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="637.9613095238095" y="188.0" />
+              <point x="640.2744708994709" y="188.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Pick" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="219.0" y="69.0" />
+              <point x="309.9550264550265" y="69.0" />
+              <point x="-6.916666666666629" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server.ClientHandler" target="org.academiadecodigo.roothless.server.Server">
+              <point x="-29.5" y="-14.5" />
+              <point x="184.5" y="504.0" />
+              <point x="196.5" y="504.0" />
+              <point x="-17.5" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client" target="org.academiadecodigo.roothless.client.Client.ServerListener">
+              <point x="17.25" y="14.5" />
+              <point x="311.5" y="351.0" />
+              <point x="324.25" y="351.0" />
+              <point x="30.0" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Thief" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="826.4613095238095" y="178.0" />
+              <point x="659.9887566137565" y="178.0" />
+              <point x="19.714285714285722" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="17.25" y="-14.5" />
+              <point x="311.5" y="277.0" />
+              <point x="402.8888888888889" y="277.0" />
+              <point x="402.8888888888889" y="178.0" />
+              <point x="620.5601851851852" y="178.0" />
+              <point x="-19.714285714285722" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.serverParser.Option">
+              <point x="8.916666666666629" y="-14.5" />
+              <point x="271.16666666666663" y="148.0" />
+              <point x="305.5" y="148.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="44.58333333333337" y="-14.5" />
+              <point x="306.83333333333337" y="168.0" />
+              <point x="610.7030423280423" y="168.0" />
+              <point x="-29.571428571428555" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.serverParser.Attack">
+              <point x="-44.58333333333337" y="-14.5" />
+              <point x="217.66666666666663" y="188.0" />
+              <point x="36.5" y="188.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Archer" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="449.8888888888889" y="188.0" />
+              <point x="630.417328042328" y="188.0" />
+              <point x="-9.85714285714289" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Sorcerer">
+              <point x="0.0" y="-14.5" />
+              <point x="694.6845238095239" y="257.0" />
+              <point x="732.9613095238095" y="257.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server" target="org.academiadecodigo.roothless.server.Server.ClientHandler">
+              <point x="17.5" y="14.5" />
+              <point x="231.5" y="504.0" />
+              <point x="243.5" y="504.0" />
+              <point x="29.5" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster" target="org.academiadecodigo.roothless.server.gameObjects.Monster">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Thief">
+              <point x="23.0" y="-14.5" />
+              <point x="717.6845238095239" y="267.0" />
+              <point x="826.4613095238095" y="267.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Priest">
+              <point x="-23.0" y="-14.5" />
+              <point x="671.6845238095239" y="267.0" />
+              <point x="637.9613095238095" y="267.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Stage" target="org.academiadecodigo.roothless.server.Game">
+              <point x="0.0" y="-14.5" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client.ServerListener" target="org.academiadecodigo.roothless.client.Client">
+              <point x="-30.0" y="-14.5" />
+              <point x="264.25" y="351.0" />
+              <point x="277.0" y="351.0" />
+              <point x="-17.25" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Stage" target="org.academiadecodigo.roothless.server.gameObjects.Monster">
+              <point x="0.0" y="14.5" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Attack" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="36.5" y="49.0" />
+              <point x="282.28835978835974" y="49.0" />
+              <point x="-34.58333333333337" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ClientParser" target="org.academiadecodigo.roothless.serverParser.Situation">
+              <point x="26.75" y="-14.5" />
+              <point x="289.0" y="158.0" />
+              <point x="462.7744708994709" y="158.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9504424778761061" x="118.51396648044695" y="184.51396648044695" />
+          <SelectedNodes>
+            <node>org.academiadecodigo.roothless.serverParser.CommandEnum</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#1531#0" expanded="true" />
+            <marker date="1488497922000" expanded="false" signature="677:688" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="702:708" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="747:758" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="779:785" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="817:828" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="846:852" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="899:910" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="939:945" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="974:985" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1000:1006" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1047:1058" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1081:1087" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1116:1127" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1139:1145" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1184:1195" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1212:1218" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1254:1265" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1284:1290" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1342:1353" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1384:1390" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1419:1430" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1443:1449" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1488:1499" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1518:1524" placeholder=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1488497912000" expanded="false" signature="478:489" placeholder=" { " />
+            <marker date="1488497912000" expanded="false" signature="502:508" placeholder=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1944#1945#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java.orig" />
+>>>>>>> master
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/classes/Paladin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Attack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="false" />
+>>>>>>> master
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/CommandEnum.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/CommandEnum.java">
+>>>>>>> master
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Strategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Defend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Pick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -891,21 +1760,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Defend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Skill.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -918,88 +1776,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/classes/Paladin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/CommandEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="20" />
-          <folding>
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/ClientParser.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> master
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/ServerParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Situation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding>
+            <element signature="e#1864#1865#0" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="true" />
+            <element signature="e#1944#1945#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/clienttoserverparser/Attack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Chat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Defend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+<<<<<<< HEAD
+        <state relative-caret-position="180">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Attack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+=======
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
+            <marker date="1488497912000" expanded="false" signature="478:489" placeholder=" { " />
+            <marker date="1488497912000" expanded="false" signature="502:508" placeholder=" }" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1531#0" expanded="true" />
+            <marker date="1488497922000" expanded="false" signature="677:688" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="702:708" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="747:758" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="779:785" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="817:828" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="846:852" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="899:910" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="939:945" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="974:985" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1000:1006" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1047:1058" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1081:1087" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1116:1127" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1139:1145" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1184:1195" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1212:1218" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1254:1265" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1284:1290" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1342:1353" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1384:1390" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1419:1430" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1443:1449" placeholder=" }" />
+            <marker date="1488497922000" expanded="false" signature="1488:1499" placeholder=" { " />
+            <marker date="1488497922000" expanded="false" signature="1518:1524" placeholder=" }" />
+          </folding>
+>>>>>>> master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
