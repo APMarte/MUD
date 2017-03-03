@@ -6,13 +6,12 @@ package org.academiadecodigo.roothless.serverParser;
 public enum CommandEnum {
 
     CHAT("/"),
-    ATTACK("/a"),
-    DEFEND("/d"),
-    SKILL("/s"),
-    PICK("/p"),
-    OPTION("/o"),
+    ATTACK("/skill"),
+    DEFEND("/defense"),
+    PICK("/pick"),
+    OPTION("/option"),
     WHISPER("/w"),
-    HELP("/h"),
+    HELP("/help"),
     STATUS("/status"),
     QUIT("/quit");
 
