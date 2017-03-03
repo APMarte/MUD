@@ -2,7 +2,7 @@ package org.academiadecodigo.roothless.server.gameObjects;
 
 import org.academiadecodigo.roothless.server.Stage;
 
-*
+**
  * Created by apm on 27-02-2017.
 
 
@@ -18,11 +18,13 @@ public abstract class Monster {
 
     abstract public void attack();
 
-    protected void dmgScaling() {
+    protected void lvlScaling() {
         int level = stage.getLevel();
         if (level >= 1) {
             int levelModifier = (level - 1) / 10;
             baseDamage += baseDamage * levelModifier;
+            health += health * levelModifier * 2;
+            defense += defense * levelModifier / 2;
         }
     }
 

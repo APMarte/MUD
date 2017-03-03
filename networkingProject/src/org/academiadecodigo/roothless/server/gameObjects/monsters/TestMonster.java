@@ -16,7 +16,7 @@ public class TestMonster extends Monster {
         setDescription("Lorem ipsum dolor sit amet");
         setDead(false);
         setStage(stage);
-        super.dmgScaling();
+        super.lvlScaling();
     }
 
     @Override
