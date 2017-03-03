@@ -4,9 +4,6 @@ import org.academiadecodigo.roothless.server.gameObjects.Monster;
 
 import java.util.ArrayList;
 
-*
- * Created by codecadet on 01/03/17.
-
 
 public class Stage {
 

@@ -16,5 +16,17 @@ public class Thief extends Player {
         setDexterity(10);
         setFaith(10);
         setIntelligence(10);
+        setCritChance(35);
+    }
+
+    @Override
+    public int dmgCalc() {
+        int baseDmg = getBaseDamage();
+        int str = getStrength();
+        int dex = getDexterity();
+
+        int preCritDmg = (int) (str * 0.5 + dex * 0.5) + baseDmg;
+
+        return super.critRoll(preCritDmg);
     }
 }
