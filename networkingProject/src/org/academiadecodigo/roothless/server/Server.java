@@ -1,6 +1,5 @@
 package org.academiadecodigo.roothless.server;
 
-import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerType;
 
 import java.io.BufferedReader;
@@ -25,7 +24,7 @@ public class Server {
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
     private int counter = 1;
-    private Game game;
+    private GameManager game;
     private boolean listFull; //will be true when all player are in
 
 
@@ -61,7 +60,7 @@ public class Server {
     }
 
     private void gameStart(){
-        game = new Game();
+        game = new GameManager();
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
             if(!(game.isGameOn()) && listFull) {

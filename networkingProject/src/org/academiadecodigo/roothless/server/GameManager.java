@@ -3,17 +3,17 @@ package org.academiadecodigo.roothless.server;
 /**
  * Created by apm on 27-02-2017.
  */
-public class Game {
+public class GameManager {
 
     private Stage stage;
     private boolean gameOn;         //if False when game is over and when the 5 players aren't on yet
     private boolean hasNewMessage;  //to check if there's a new message to deliver to the Server
 
-    public Game(Stage stage) {
+    public GameManager(Stage stage) {
         this.stage = stage;
     }
 
-    public Game(){
+    public GameManager(){
         stage = new Stage();
     }
 

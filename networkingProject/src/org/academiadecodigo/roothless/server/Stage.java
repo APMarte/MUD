@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Stage {
 
-    private Game game;
+    private GameManager game;
     private ArrayList<Monster> monsterArray;
     private Monster monster;
     private ArrayList<Loot> lootArray;
