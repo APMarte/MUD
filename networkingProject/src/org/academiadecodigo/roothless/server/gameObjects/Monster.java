@@ -2,8 +2,12 @@ package org.academiadecodigo.roothless.server.gameObjects;
 
 import org.academiadecodigo.roothless.server.Stage;
 
-*
- * Created by apm on 27-02-2017.
+
+
+/**
+/* Created by apm on 27-02-2017.
+*/
+/**/
 
 
 public abstract class Monster {
@@ -74,4 +78,5 @@ public abstract class Monster {
         this.stage = stage;
     }
 }
+
 
