@@ -3,8 +3,9 @@ package org.academiadecodigo.roothless.server.gameObjects.monsters;
 import org.academiadecodigo.roothless.server.Stage;
 import org.academiadecodigo.roothless.server.gameObjects.Monster;
 
-*
- * Created by codecadet on 02/03/17.
+/**
+/* Created by codecadet on 02/03/17.
+/**/
 
 public class TestMonster extends Monster {
 
@@ -16,7 +17,7 @@ public class TestMonster extends Monster {
         setDescription("Lorem ipsum dolor sit amet");
         setDead(false);
         setStage(stage);
-        super.dmgScaling();
+        super.lvlScaling();
     }
 
     @Override
@@ -25,3 +26,4 @@ public class TestMonster extends Monster {
 
     }
 }
+

@@ -17,5 +17,17 @@ public class Sorcerer extends Player {
         setDexterity(10);
         setFaith(10);
         setIntelligence(10);
+        setCritChance(20);
+    }
+
+    @Override
+    public int dmgCalc() {
+        int baseDmg = getBaseDamage();
+        int intel = getIntelligence();
+        int dex = getDexterity();
+
+        int preCritDmg = (int) (dex * 0.35 + intel * 0.65) + baseDmg;
+
+        return super.critRoll(preCritDmg);
     }
 }
