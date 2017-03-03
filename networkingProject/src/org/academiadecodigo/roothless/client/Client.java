@@ -142,14 +142,19 @@ public class Client {
 
         String str;
 
-        if (command.charAt(0) != '/') {         //compare first char from command
+        if (command.charAt(0) != '/') {
+
+            //compare first char from command
+
             out.write(message.getBytes());
             out.flush();
-        }else {
+        }
+
+        else {
             switch (command) {
                 case "/a":
                     if (!player.getHasActed()) {
-                        str = message + player.getBaseDamage() + "\n";
+                        str = message +" "+ player.getBaseDamage() + "\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
                     } else{

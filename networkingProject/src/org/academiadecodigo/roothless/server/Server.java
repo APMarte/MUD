@@ -31,7 +31,6 @@ public class Server {
     private boolean listFull; //will be true when all player are in
 
 
-
     private void listen() throws IOException {
 
         Scanner scanner = new Scanner(System.in);
@@ -64,7 +63,7 @@ public class Server {
         return clientID;
     }
 
-    private void gameStart(){
+    private void gameStart() {
         game = new Game();
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
@@ -72,9 +71,10 @@ public class Server {
                 break; }
         }*/
 
-    while(true){                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
-            if(game.canIStart(listFull)){
-                break; }
+        while (true) {                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
+            if (game.canIStart(listFull)) {
+                break;
+            }
         }
     }
 
@@ -84,13 +84,13 @@ public class Server {
         Server server = new Server();
         try {
             server.listen();
-            if (server.clientHandlersList.size() == 5){
+            if (server.clientHandlersList.size() == 5) {
                 server.gameStart();
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (server.getServerSocket()!= null) {
+            if (server.getServerSocket() != null) {
                 try {
                     server.getServerSocket().close();
                 } catch (IOException e) {
@@ -130,18 +130,21 @@ public class Server {
             while (!clientSocket.isClosed()) {
 
                 try {
-                    parser=new ServerParser();
+
+                    parser = new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                    inputMSG = in.readLine();
+                    System.out.println("Queijo");
+                    inputMSG = in.readLine();//Preso aqui po chat
+                    System.out.println("Queijo2");
 
-                    String result=parser.parseCommand(inputMSG);
-                    System.out.println(result);
-
-                    if (inputMSG != null && inputMSG.split(" ")[0].charAt(0)!= '/') {
+                    if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         broadcast();
-                    } else if(inputMSG != null) {
+                    } else if (inputMSG != null) {
 
-                    }else{
+                        String result = parser.parseCommand(inputMSG);
+                        System.out.println(result);
+
+                    } else {
                         clientSocket.close();
                     }
 

@@ -44,6 +44,7 @@ public class Game {
                 "\nBasically there's this evil guild called DAESH (Dangerous Armed Enemies with Strange Habits). " +
                 "Your mission is to penetrate their HQ and just obliterate them!\n\n[You can chat with each other at anytime, " +
                 "but for executing commands type \"/[name of command]\". Try typing \"help\" for the full list of commands].";
+        System.out.println(intro);
 
         //stage.enterdungeon(intro);
 

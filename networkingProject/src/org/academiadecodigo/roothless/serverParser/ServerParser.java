@@ -5,17 +5,6 @@ package org.academiadecodigo.roothless.serverParser;
  */
 public class ServerParser {
 
-    /*private String commandToParse;
-
-
-
-    public ServerParser(String commandToParse) {
-
-        this.commandToParse = commandToParse;
-
-    }*/
-
-
 
     public String parseCommand(String commandToParse) {
 
