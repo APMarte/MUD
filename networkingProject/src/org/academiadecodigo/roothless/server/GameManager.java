@@ -5,16 +5,19 @@ package org.academiadecodigo.roothless.server;
  */
 public class GameManager {
 
-    private Stage stage;
+    private Dungeon dungeon;
     private boolean gameOn;         //if False when game is over and when the 5 players aren't on yet
     private boolean hasNewMessage;  //to check if there's a new message to deliver to the Server
+    private Server server;
 
-    public GameManager(Stage stage) {
-        this.stage = stage;
+    public GameManager(Dungeon dungeon, Server server) {
+        this.dungeon = dungeon;
+        this.server = server;
     }
 
-    public GameManager(){
-        stage = new Stage();
+    public GameManager(Server server){
+        this.dungeon = new Dungeon();
+        this.server = server;
     }
 
     public boolean isGameOn() {                         // TODO: 02/03/17  Server must have a while(true) { if(!isGameOn() && listFull) { break; } }
@@ -46,10 +49,10 @@ public class GameManager {
                 "but for executing commands type \"/[name of command]\". Try typing \"help\" for the full list of commands].";
         System.out.println(intro);
 
-        //stage.enterdungeon(intro);
+        //dungeon.enterdungeon(intro);
 
 
-        //// TODO: 02/03/17 For the stage to start the first room (enter Dungeon), it will first receive this intro, broadcast it and then start the first room.
+        //// TODO: 02/03/17 For the dungeon to start the first room (enter Dungeon), it will first receive this intro, broadcast it and then start the first room.
 
     }
 

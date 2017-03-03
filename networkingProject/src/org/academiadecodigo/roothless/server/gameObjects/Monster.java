@@ -1,6 +1,6 @@
 package org.academiadecodigo.roothless.server.gameObjects;
 
-import org.academiadecodigo.roothless.server.Stage;
+import org.academiadecodigo.roothless.server.Dungeon;
 
 /**
 /* Created by apm on 27-02-2017.
@@ -14,14 +14,14 @@ public abstract class Monster {
     private int baseDamage;  //all
     private int defense;    //all
     private String description;
-    private Stage stage;
+    private Dungeon dungeon;
     private boolean dead;
 
 
     abstract public void attack();
 
     protected void lvlScaling() {
-        int level = stage.getLevel();
+        int level = dungeon.getLevel();
         if (level >= 1) {
             int levelModifier = (level - 1) / 10;
             baseDamage += baseDamage * levelModifier;
@@ -70,12 +70,12 @@ public abstract class Monster {
         this.description = description;
     }
 
-    public Stage getStage() {
-        return stage;
+    public Dungeon getDungeon() {
+        return dungeon;
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
+    public void setDungeon(Dungeon dungeon) {
+        this.dungeon = dungeon;
     }
 }
 
