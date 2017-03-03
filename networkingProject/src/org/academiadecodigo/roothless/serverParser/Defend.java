@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.clienttoserverparser;
+package org.academiadecodigo.roothless.serverParser;
 
 import org.academiadecodigo.roothless.client.player.Player;
 
@@ -9,7 +9,8 @@ public class Defend implements Strategy{
 
 
     @Override
-    public String processCommand(Player P1) {
+    public String processCommand(String command) {
+        //Aumentar contador de açoes
         return null;
     }
 }

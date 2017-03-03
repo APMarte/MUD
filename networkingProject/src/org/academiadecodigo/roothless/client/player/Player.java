@@ -14,33 +14,52 @@ public abstract class Player {
     private int intelligence; //Priest and Sorcerer
     private int dexterity; // Archer and Thief and Sorcerer
     private int faith; //Priest and Paladin
+    private int critChance; // all
     private boolean hasActed;
     private boolean dead;
 
-    public Player(String name){
+    public Player(String name) {
         this.name = name;
-
     }
 
-    public int getHealth(){
+    abstract public int dmgCalc();
+
+    protected int critRoll(int dmg) {
+        int returnValue = dmg;
+        double rng = Math.random() * 100;
+
+        if (rng <= critChance) {
+            returnValue = dmg * 2;
+        }
+
+        return returnValue;
+    }
+
+    public int getHealth() {
         return health;
     }
-    public int getBaseDamage(){
+
+    public int getBaseDamage() {
         return baseDamage;
     }
-    public int getdefense(){
+
+    public int getdefense() {
         return defense;
     }
-    public int getStrength(){
+
+    public int getStrength() {
         return strength;
     }
-    public int getIntelligence(){
+
+    public int getIntelligence() {
         return intelligence;
     }
-    public int getDexterity(){
+
+    public int getDexterity() {
         return dexterity;
     }
-    public int getFaith(){
+
+    public int getFaith() {
         return faith;
     }
 
@@ -90,5 +109,25 @@ public abstract class Player {
 
     public void setHasActed(boolean hasActed) {
         this.hasActed = hasActed;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public int getCritChance() {
+        return critChance;
+    }
+
+    public void setCritChance(int critChance) {
+        this.critChance = critChance;
+    }
+
+    public boolean isHasActed() {
+        return hasActed;
+    }
+
+    public boolean isDead() {
+        return dead;
     }
 }
