@@ -53,7 +53,7 @@ public class Client {
                 if (socket.isClosed()) {
                     break;
                 }
-                //comparar com hasacted
+
                 if(!isChating){
                     System.out.println(player.getName() + " choose your action: ");
                 }
