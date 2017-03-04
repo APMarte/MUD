@@ -110,6 +110,10 @@ public class Server {
             return playerName;
         }
 
+        public String getPlayerType() {
+            return playerType;
+        }
+
 
         @Override
         public void run() {
@@ -171,6 +175,8 @@ public class Server {
 
                         String result = ServerParser.parseCommand(inputMSG);
 
+                        inputMSG = ServerParser.parseCommand(inputMSG);
+                        broadcast();
 
                     } else {
                         clientSocket.close();
@@ -188,8 +194,8 @@ public class Server {
 
             try {
 
-
-                String message = getPlayerName() +" says: "+ inputMSG + "\n";
+                String author = getPlayerName() + " <" + getPlayerType() +"> :";
+                String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();

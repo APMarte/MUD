@@ -14,6 +14,6 @@ public class Skill implements Strategy {
         String[] parsed = command.split(" ");
         String dmg = parsed[1];
 
-        return "Player X"+" has atacked with "+dmg+"\n";
+        return "has atacked with "+dmg+"\n";
     }
 }

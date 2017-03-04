@@ -17,10 +17,10 @@ public class ServerParser {
         switch (splited[0]) {
 
             //COMBAT PARSER
-            case "/a":
+            case "/skill":
                 return new Situation(new Skill()).handleByServer(commandToParse);
 
-            case "/d":
+            case "/defense":
                 return new Situation(new Defend()).handleByServer(commandToParse);
 
             case "/pick":
