@@ -11,6 +11,7 @@ public class Priest extends Player {
 
     public Priest(String name){
         super(name);
+        setChoosenClass("priest");
         setHealth(10);
         setBaseDamage(10);
         setDefense(10);

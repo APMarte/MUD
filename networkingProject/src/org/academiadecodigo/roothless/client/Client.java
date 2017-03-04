@@ -24,6 +24,8 @@ public class Client {
     private BufferedReader bin;
 
 
+
+
     private void connect() throws IOException {
 
 
@@ -70,6 +72,8 @@ public class Client {
     public static void main(String[] args) {
         Client client = new Client();
 
+
+
         try {
             client.connect();
             client.sendMessage();
@@ -99,26 +103,21 @@ public class Client {
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
-        try {
-            do {
-                System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
-                try {
-                    numClass = Integer.parseInt(br.readLine());
-                    name+= " " + identifyClass(numClass) + "\n";
-                    out.write(name.getBytes());
-                    chosePlayerType(numClass, name);
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid operation!");
-                    e.getMessage();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } while (numClass < 1 || numClass > 5 && bin.readLine() != "OK");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        do {
+            System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
+            try {
+                numClass = Integer.parseInt(br.readLine());
+                name+= " " + identifyClass(numClass) + "\n";
+                out.write(name.getBytes());
+                chosePlayerType(numClass, name);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid operation!");
+                e.getMessage();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } while (numClass < 1 || numClass > 5 /*&& bin.readLine() != "OK"*/);
 
-        System.out.println(player.toString());
 
     }
 
@@ -176,7 +175,7 @@ public class Client {
             switch (command) {
                 case "/a":
                     if (!player.getHasActed()) {
-                        str = message +" "+ player.getBaseDamage()+"\n";
+                        str = message +" "+ player.dmgCalc()+" "+player.getChoosenClass()+"\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
                     } else{

@@ -17,7 +17,7 @@ public class PlayerFactory {
         boolean paladin = false;
         boolean priest = false;
         boolean sorcerer = false;
-        boolean thif = false;
+        boolean thief = false;
 
 
         switch (playerType){
@@ -54,9 +54,9 @@ public class PlayerFactory {
                 }
                 break;
             case THIEF:
-                if (!thif){
+                if (!thief){
                     player = new Thief(nome);
-                    thif = true;
+                    thief = true;
                 } else{
                     System.out.println("Chose another Player Type");
                 }

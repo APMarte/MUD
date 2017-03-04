@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Dungeon {
 
-    private GameManager game;
+
     private List<Monster> monsterArray;
     private List<Loot> lootArray;
     private String[] questions;
@@ -43,13 +43,6 @@ public class Dungeon {
         }
     }*/
 
-    public GameManager getGame() {
-        return game;
-    }
-
-    public void setGame(GameManager game) {
-        this.game = game;
-    }
 
     public List<Monster> getMonsterArray() {
         return monsterArray;

@@ -26,9 +26,6 @@ public class Server {
 
         try {
             server.listen();
-            if (server.clientHandlersList.size() == 5) {
-                server.gameStart();
-            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -43,13 +40,11 @@ public class Server {
 
     }
 
-    //private CopyOnWriteArrayList<Socket> socketList = new CopyOnWriteArrayList<>();
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
-    private int counter = 1;
-    private GameManager gameManager;
+    private int counter = 0;
     private BufferedReader in;
-    private boolean listFull; //will be true when all player are in
+    private Dungeon dungeon = new Dungeon();
 
     public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
         return clientHandlersList;
@@ -66,20 +61,17 @@ public class Server {
 
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
-        while (true) {
+        while (counter < 5) {
             Socket clientSocket = serverSocket.accept();
-            ClientHandler clientHandler = new ClientHandler(/*name.split(" ")[0], name.split(" ")[1],*/ clientSocket);
-            clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
+            ClientHandler clientHandler = new ClientHandler(clientSocket);
+            clientHandlersList.add(clientHandler);
             pool.submit(clientHandler);
-
-            //if (!classesChosen.contains(name.split(" ")[1])) {
-
-            // classesChosen.add(name.split(" ")[1]);
-            //System.out.println(classesChosen.get(0));
-            ///w contruir string para mostrar class e name ou
-
-            // }
+            counter++;
         }
+
+        //dungeon.enterDungeon(); //todo is it blocking?
+
+
     }
 
     public ServerSocket getServerSocket() {
@@ -88,25 +80,10 @@ public class Server {
 
     private String idGenerator() {
 
-        String clientID = "Client-" + counter;
-        counter++;
+        String clientID = "Client-" + (counter+1);
+
 
         return clientID;
-    }
-
-    private void gameStart() {
-        gameManager = new GameManager(this);
-
-        /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
-            if(!(game.isGameOn()) && listFull) {
-                break; }
-        }*/
-
-        while (true) {                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
-            if (gameManager.canIStart(listFull)) {
-                break;
-            }
-        }
     }
 
 
@@ -117,11 +94,10 @@ public class Server {
         private String inputMSG;
         private String playerName;
         private String playerType;
-        ServerParser parser;
 
-        public ClientHandler(/*String playerName, String playerType, */Socket clientSocket) {
-            /*this.playerName = playerName;
-            this.playerType = playerType;*/
+
+        public ClientHandler(Socket clientSocket) {
+
             this.clientSocket = clientSocket;
 
         }
@@ -141,12 +117,38 @@ public class Server {
             BufferedWriter out = null;
             try {
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
-                out.write("Archer");
-                out.flush();
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 System.out.println("connecting a client...");
-                String name = in.readLine();
 
+               /* do {*/
+                    String name = in.readLine();
+
+                    playerName = name.split(" ")[0];
+                    playerType = name.split(" ")[1];
+                    classesChosen.add(playerType);
+
+
+                    /////////
+                    //try {
+
+                        /*String classCheck = in.readLine();
+                        playerType = classCheck;
+
+                        System.out.println(playerType);
+
+                        out.write("Escolhe essa merda" + "\n");
+                        out.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } while (!classesChosen.contains(playerType));
+                try {
+                    out.write("OK" + "\n");
+                    out.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }*/
+/////////////////////////////////////
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -154,24 +156,8 @@ public class Server {
 
             while (!clientSocket.isClosed()) {
 
-                while (classesChosen.contains(playerType)) {
-
-                    try {
-                        out.write("Escolhe essa merda");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-                try {
-                    out.write("OK");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-
                 try {
 
-                    parser = new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
                     inputMSG = in.readLine();
@@ -183,8 +169,8 @@ public class Server {
 
                     } else if (inputMSG != null) {
 
-                        String result = parser.parseCommand(inputMSG);
-                        System.out.println(result);
+                        String result = ServerParser.parseCommand(inputMSG);
+
 
                     } else {
                         clientSocket.close();
@@ -202,8 +188,8 @@ public class Server {
 
             try {
 
-                String author = getPlayerName() + ": ";
-                String message = author + inputMSG + "\n";
+
+                String message = getPlayerName() +" says: "+ inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();

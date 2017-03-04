@@ -10,6 +10,7 @@ public class Sorcerer extends Player {
 
     public Sorcerer(String name){
         super(name);
+        setChoosenClass("sorcerer");
         setHealth(10);
         setBaseDamage(10);
         setDefense(10);
