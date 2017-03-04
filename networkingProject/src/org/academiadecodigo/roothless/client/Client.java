@@ -22,6 +22,10 @@ public class Client {
     private BufferedReader br;
     private Player player;
     private boolean isChating; //se esta no chat ou não
+    private BufferedReader bin;
+
+
+
 
     private void connect() throws IOException {
 
@@ -90,13 +94,18 @@ public class Client {
 
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
-
+        try {
+            bin = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
         do {
             System.out.println("Choose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF ");
             try {
+
                 numClass = Integer.parseInt(br.readLine());
                 String str=name+ " " + identifyClass(numClass) + "\n"; // string auxiliar
                 out.write(str.getBytes());
@@ -107,7 +116,8 @@ public class Client {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while (numClass < 1 || numClass > 5);
+        } while (numClass < 1 || numClass > 5 /*&& bin.readLine() != "OK"*/);
+
 
     }
 
@@ -159,13 +169,14 @@ public class Client {
             out.write(message.getBytes());
             out.flush();
         }
+
         else {
 
             isChating=false;
             switch (command) {
                 case "/skill":
                     if (!player.getHasActed()) {
-                        str = message +" "+ player.getBaseDamage()+"\n";
+                        str = message +" "+ player.dmgCalc()+" "+player.getChoosenClass()+"\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
                     } else{

@@ -9,6 +9,7 @@ public class Paladin extends Player {
 
     public Paladin(String name){
         super(name);
+        setChoosenClass("paladin");
         setHealth(10);
         setBaseDamage(10);
         setDefense(10);

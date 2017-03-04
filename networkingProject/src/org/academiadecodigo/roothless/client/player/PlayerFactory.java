@@ -7,25 +7,59 @@ import org.academiadecodigo.roothless.client.player.classes.*;
  */
 public class PlayerFactory {
 
+
+
     public static Player getNewPlayer(String nome, PlayerType playerType){
 
         Player player = null;
 
+        boolean archer = false;
+        boolean paladin = false;
+        boolean priest = false;
+        boolean sorcerer = false;
+        boolean thief = false;
+
+
         switch (playerType){
             case ARCHER:
-                player = new Archer(nome);
+                if (!archer){
+                    player = new Archer(nome);
+                    archer = true;
+                } else{
+                    System.out.println("Chose another Player Type");
+                }
                 break;
             case PALADIN:
-                player = new Paladin(nome);
+                if (!paladin){
+                    player = new Paladin(nome);
+                    paladin = true;
+                } else{
+                    System.out.println("Chose another Player Type");
+                }
                 break;
             case PRIEST:
-                player = new Priest(nome);
+                if (!priest){
+                    player = new Priest(nome);
+                    priest = true;
+                } else{
+                    System.out.println("Chose another Player Type");
+                }
                 break;
             case SORCERER:
-                player = new Sorcerer(nome);
+                if (!sorcerer){
+                    player = new Sorcerer(nome);
+                    sorcerer = true;
+                } else{
+                    System.out.println("Chose another Player Type");
+                }
                 break;
             case THIEF:
-                player = new Thief(nome);
+                if (!thief){
+                    player = new Thief(nome);
+                    thief = true;
+                } else{
+                    System.out.println("Chose another Player Type");
+                }
                 break;
         }
         return player;

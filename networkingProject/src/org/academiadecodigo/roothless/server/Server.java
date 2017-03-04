@@ -1,14 +1,13 @@
 package org.academiadecodigo.roothless.server;
 
-import org.academiadecodigo.roothless.client.player.PlayerType;
+
 import org.academiadecodigo.roothless.serverParser.ServerParser;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
@@ -20,75 +19,13 @@ import java.util.concurrent.Executors;
 
 public class Server {
 
-
-    //private CopyOnWriteArrayList<Socket> socketList = new CopyOnWriteArrayList<>();
-    private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
-    private ServerSocket serverSocket = null;
-    private int counter = 1;
-    private GameManager game;
-    private BufferedReader in;
-    private boolean listFull; //will be true when all player are in
-
-
-    private void listen() throws IOException {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Port number:");
-
-        serverSocket = new java.net.ServerSocket(Integer.parseInt(scanner.nextLine()));
-
-        ExecutorService pool = Executors.newFixedThreadPool(5);
-
-        while (true) {
-            Socket clientSocket = serverSocket.accept();
-            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            System.out.println("connecting a client...");
-            String name = in.readLine();
-
-
-            ClientHandler clientHandler = new ClientHandler(name.split(" ")[0], name.split(" ")[1],clientSocket); //TODO: change the arguments
-            clientHandlersList.add(clientHandler); //não passar classe e sempre que alguem falar no chat ou
-            pool.submit(clientHandler);             ///w contruir string para mostrar class e name ou
-        }
-    }
-
-    public ServerSocket getServerSocket() {
-        return serverSocket;
-    }
-
-    private String idGenerator() {
-
-        String clientID = "Client-" + counter;
-        counter++;
-
-        return clientID;
-    }
-
-
-    private void gameStart() {
-        //game = new GameManager();
-
-        /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
-            if(!(game.isGameOn()) && listFull) {
-                break; }
-        }*/
-
-        while (true) {                                    //method to start the game as soon as all the 5 players are on and their names and classes defined (it sets the gameon to true)
-            if (game.canIStart(listFull)) {
-                break;
-            }
-        }
-    }
-
-
     public static void main(String[] args) {
 
+
         Server server = new Server();
+
         try {
             server.listen();
-            if (server.clientHandlersList.size() == 5) {
-                server.gameStart();
-            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -103,6 +40,53 @@ public class Server {
 
     }
 
+    private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
+    private ServerSocket serverSocket = null;
+    private int counter = 0;
+    private BufferedReader in;
+    private Dungeon dungeon = new Dungeon();
+
+    public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
+        return clientHandlersList;
+    }
+
+    private List<String> classesChosen = new LinkedList<>();
+
+    private void listen() throws IOException {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Port number:");
+
+        serverSocket = new java.net.ServerSocket(Integer.parseInt(scanner.nextLine()));
+
+        ExecutorService pool = Executors.newFixedThreadPool(5);
+
+        while (counter < 5) {
+            Socket clientSocket = serverSocket.accept();
+            ClientHandler clientHandler = new ClientHandler(clientSocket);
+            clientHandlersList.add(clientHandler);
+            pool.submit(clientHandler);
+            counter++;
+        }
+
+        //dungeon.enterDungeon(); //todo is it blocking?
+
+
+    }
+
+    public ServerSocket getServerSocket() {
+        return serverSocket;
+    }
+
+    private String idGenerator() {
+
+        String clientID = "Client-" + (counter+1);
+
+
+        return clientID;
+    }
+
+
     private class ClientHandler implements Runnable {
 
         private Socket clientSocket;
@@ -112,12 +96,9 @@ public class Server {
         private String playerType;
 
 
-        ServerParser parser;
+        public ClientHandler(Socket clientSocket) {
 
-        public ClientHandler(String playerName, String playerType, Socket clientSocket) {
-            this.playerName = playerName;
             this.clientSocket = clientSocket;
-            this.playerType=playerType;
 
         }
 
@@ -137,11 +118,50 @@ public class Server {
         @Override
         public void run() {
 
+            BufferedWriter out = null;
+            try {
+                out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
+                in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                System.out.println("connecting a client...");
+
+               /* do {*/
+                    String name = in.readLine();
+
+                    playerName = name.split(" ")[0];
+                    playerType = name.split(" ")[1];
+                    classesChosen.add(playerType);
+
+
+                    /////////
+                    //try {
+
+                        /*String classCheck = in.readLine();
+                        playerType = classCheck;
+
+                        System.out.println(playerType);
+
+                        out.write("Escolhe essa merda" + "\n");
+                        out.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } while (!classesChosen.contains(playerType));
+                try {
+                    out.write("OK" + "\n");
+                    out.flush();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }*/
+/////////////////////////////////////
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
             while (!clientSocket.isClosed()) {
 
                 try {
 
-                    parser = new ServerParser();
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
                     inputMSG = in.readLine();
@@ -153,7 +173,9 @@ public class Server {
 
                     } else if (inputMSG != null) {
 
-                        inputMSG = parser.parseCommand(inputMSG);
+                        String result = ServerParser.parseCommand(inputMSG);
+
+                        inputMSG = ServerParser.parseCommand(inputMSG);
                         broadcast();
 
                     } else {

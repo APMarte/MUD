@@ -7,6 +7,7 @@ package org.academiadecodigo.roothless.client.player;
 public abstract class Player {
 
     private String name;    //all
+    private String choosenClass;
     private int health;     //all
     private int baseDamage;  //all
     private int defense;    //all
@@ -19,6 +20,7 @@ public abstract class Player {
     private boolean dead;
 
     public Player(String name) {
+
         this.name = name;
     }
 
@@ -130,4 +132,13 @@ public abstract class Player {
     public boolean isDead() {
         return dead;
     }
+
+    public String getChoosenClass() {
+        return choosenClass;
+    }
+
+    public void setChoosenClass(String choosenClass) {
+        this.choosenClass = choosenClass;
+    }
+
 }

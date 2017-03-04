@@ -13,7 +13,7 @@ public class TestMonster extends Monster {
         setHealth(60);
         setBaseDamage(20);
         setDefense(10);
-        setDescription("Lorem ipsum dolor sit amet");
+        setDescription("Bobi");
         setDead(false);
         setDungeon(dungeon);
         super.lvlScaling();
