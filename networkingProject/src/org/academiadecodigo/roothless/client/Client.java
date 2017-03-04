@@ -187,6 +187,8 @@ public class Client {
                     if(!player.getHasActed()){
                     out.write((message+"\n").getBytes());
                     player.setHasActed(true);
+                        player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
+                        System.out.println(player.getName() + " has gain 10 in Defense" + player.getDefense());
                     }else{
                         System.out.println("Wait for your turn");
                     }

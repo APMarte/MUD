@@ -26,6 +26,7 @@ public class ServerParser {
                 return new Situation(new Defend()).handleByServer(commandToParse,dungeon);
 
             case "/pick":
+                System.out.println("entrei");
                 return new Situation(new Pick()).handleByServer(commandToParse,dungeon);
 
             //QUIZ PARSER
