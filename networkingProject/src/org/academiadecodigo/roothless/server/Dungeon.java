@@ -1,15 +1,14 @@
 
 package org.academiadecodigo.roothless.server;
 
-import org.academiadecodigo.roothless.server.gameObjects.Monster;
+import org.academiadecodigo.roothless.server.gameObjects.monsters.Monster;
 import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
-import org.academiadecodigo.roothless.server.level.CombatRoom;
-import org.academiadecodigo.roothless.server.level.MixedRoom;
-import org.academiadecodigo.roothless.server.level.QuizRoom;
 import org.academiadecodigo.roothless.server.level.Room;
+import org.academiadecodigo.roothless.serverParser.Strategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * /* Created by codecadet on 01/03/17.
@@ -27,7 +26,11 @@ public class Dungeon {
     private int level = 1;
     private boolean hasEnded;
     private int maxRooms = 1;
+    private LinkedBlockingQueue<Strategy> queue;
 
+    public Dungeon(LinkedBlockingQueue queue){
+        this.queue = queue;
+    }
 
    /* public void enterDungeon() {
         while ((level - 1) < maxRooms) {
@@ -83,5 +86,22 @@ public class Dungeon {
     public void setHasEnded(boolean hasEnded) {
         this.hasEnded = hasEnded;
     }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public String readStrategy(){
+
+        System.out.println("oix");
+        String str = queue.poll().run();
+
+        return str;
+    }
+
 }
 

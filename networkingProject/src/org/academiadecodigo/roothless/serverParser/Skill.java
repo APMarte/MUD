@@ -1,19 +1,30 @@
 package org.academiadecodigo.roothless.serverParser;
 
 import org.academiadecodigo.roothless.client.player.Player;
+import org.academiadecodigo.roothless.server.Dungeon;
 
 /**
  * Created by codecadet on 01/03/17.
  */
 public class Skill implements Strategy {
 
+    private String dmg;
+    private String client;
+    private Dungeon dungeon;
+
     @Override
-    public String processCommand(String command) {
+    public Strategy processCommand(String command,Dungeon dungeon) {
+        this.dungeon=dungeon;
+        String dmg = command.split(" ")[1];
 
-        //Parsing Attack model /a dmg
-        String[] parsed = command.split(" ");
-        String dmg = parsed[1];
-
-        return "has atacked with "+dmg+"\n";
+        return this;
     }
+
+    @Override
+    public String run() {
+
+        return "in run | after pipe";//dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg)) + "| has atacked with " + dmg ;
+    }
+
+
 }

@@ -1,7 +1,7 @@
 package org.academiadecodigo.roothless.server.level;
 
 import org.academiadecodigo.roothless.server.Dungeon;
-import org.academiadecodigo.roothless.server.gameObjects.Monster;
+import org.academiadecodigo.roothless.server.gameObjects.monsters.Monster;
 import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
 
 /**

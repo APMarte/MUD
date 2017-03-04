@@ -2,16 +2,16 @@ package org.academiadecodigo.roothless.server;
 
 
 import org.academiadecodigo.roothless.serverParser.ServerParser;
+import org.academiadecodigo.roothless.serverParser.Strategy;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created by apm on 27-02-2017.
@@ -44,7 +44,8 @@ public class Server {
     private ServerSocket serverSocket = null;
     private int counter = 0;
     private BufferedReader in;
-    private Dungeon dungeon = new Dungeon();
+    private LinkedBlockingQueue<Strategy> queue = new LinkedBlockingQueue<Strategy>();
+    private Dungeon dungeon = new Dungeon(queue);
 
     public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
         return clientHandlersList;
@@ -94,6 +95,7 @@ public class Server {
         private String inputMSG;
         private String playerName;
         private String playerType;
+
 
 
         public ClientHandler(Socket clientSocket) {
@@ -163,20 +165,17 @@ public class Server {
                 try {
 
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
                     inputMSG = in.readLine();
-
                     System.out.println(inputMSG);
 
                     if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
-                        broadcast();
+                        chatBroadcast();
 
                     } else if (inputMSG != null) {
-
-                        String result = ServerParser.parseCommand(inputMSG);
-
-                        inputMSG = ServerParser.parseCommand(inputMSG);
-                        broadcast();
+                        queue.add(ServerParser.parseCommand(inputMSG, dungeon));
+                        inputMSG = dungeon.readStrategy();
+                        System.out.println(inputMSG);
+                        systemBroadcast();
 
                     } else {
                         clientSocket.close();
@@ -190,12 +189,30 @@ public class Server {
             System.out.println(clientHandlersList.size());
         }
 
-        private void broadcast() {
+        private void chatBroadcast() {
 
             try {
 
                 String author = getPlayerName() + " <" + getPlayerType() +"> :";
                 String message = author + inputMSG + "\n";
+
+                for (ClientHandler c : clientHandlersList) { //TODO
+                    OutputStream out = c.getClientSocket().getOutputStream();
+                    out.write(message.getBytes());
+                    out.flush();
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        private void systemBroadcast() {
+
+            try {
+
+                String message = inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();

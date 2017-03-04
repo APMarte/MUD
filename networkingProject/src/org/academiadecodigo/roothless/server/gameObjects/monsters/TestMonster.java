@@ -1,7 +1,6 @@
 package org.academiadecodigo.roothless.server.gameObjects.monsters;
 
 import org.academiadecodigo.roothless.server.Dungeon;
-import org.academiadecodigo.roothless.server.gameObjects.Monster;
 
 /**
 /* Created by codecadet on 02/03/17.

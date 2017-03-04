@@ -1,4 +1,4 @@
-package org.academiadecodigo.roothless.server.gameObjects;
+package org.academiadecodigo.roothless.server.gameObjects.monsters;
 
 import org.academiadecodigo.roothless.server.Dungeon;
 
@@ -76,6 +76,13 @@ public abstract class Monster {
 
     public void setDungeon(Dungeon dungeon) {
         this.dungeon = dungeon;
+    }
+
+    public String monsterHealth(int dmg){
+
+        setHealth(getHealth() - dmg);
+
+        return "Monster Health: " + getHealth();
     }
 }
 
