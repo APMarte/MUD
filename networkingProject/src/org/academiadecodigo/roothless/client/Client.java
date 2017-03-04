@@ -103,7 +103,7 @@ public class Client {
         String name = scanner.nextLine();
 
         do {
-            System.out.println("Choose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF ");
+            System.out.println("Choose your Class: \n  (1) Archer  (2) Paladin  (3) Priest  (4) Sorcerer  (5) Thief");
             try {
 
                 numClass = Integer.parseInt(br.readLine());
@@ -209,7 +209,7 @@ public class Client {
                     }
                     break;
                 case "/w":
-                    str = message;
+                    out.write((message+"\n").getBytes());
                     break;
                 case "/help":
                     System.out.println("oix");

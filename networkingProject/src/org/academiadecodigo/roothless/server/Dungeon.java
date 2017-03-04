@@ -103,5 +103,12 @@ public class Dungeon {
         return str;
     }
 
+    public void checkActions(int countAction) {
+
+        if(countAction<5){
+            readStrategy();
+        }
+
+    }
 }
 
