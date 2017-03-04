@@ -46,7 +46,7 @@ public class Server {
     private BufferedReader in;
     private LinkedBlockingQueue<Strategy> queue = new LinkedBlockingQueue<Strategy>();
     private Dungeon dungeon = new Dungeon(queue);
-    private int countAction;
+
 
     public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
         return clientHandlersList;
@@ -173,13 +173,11 @@ public class Server {
                         chatBroadcast();
 
                     } else if (inputMSG != null && inputMSG.split(" ")[0].equals("/w")) {
-                        System.out.println("oix");
                         whispering();
 
                     } else if (inputMSG != null) {
-                        dungeon.checkActions(countAction);
                         queue.add(ServerParser.parseCommand(inputMSG, dungeon));
-                        inputMSG = dungeon.readStrategy();
+                        inputMSG = dungeon.checkActions();
                         System.out.println(inputMSG);
                         systemBroadcast();
 
@@ -232,7 +230,7 @@ public class Server {
                 e.printStackTrace();
             }
 
-            countAction++;
+            dungeon.setCountAction(dungeon.getCountAction() + 1);
         }
 
         private void whispering() {
@@ -255,7 +253,6 @@ public class Server {
                 e.printStackTrace();
             }
 
-            countAction++;
         }
     }
 }
