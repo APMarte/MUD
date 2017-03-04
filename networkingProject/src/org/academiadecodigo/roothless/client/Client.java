@@ -99,23 +99,24 @@ public class Client {
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
-        do {
-            System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
-            try {
-                numClass = Integer.parseInt(br.readLine());
-                name+= " " + identifyClass(numClass) + "\n";
-                out.write(name.getBytes());
-                if (bin.equals("Archer")){
-                    System.out.println("Não da");
+        try {
+            do {
+                System.out.println("Chose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
+                try {
+                    numClass = Integer.parseInt(br.readLine());
+                    name+= " " + identifyClass(numClass) + "\n";
+                    out.write(name.getBytes());
+                    chosePlayerType(numClass, name);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid operation!");
+                    e.getMessage();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                chosePlayerType(numClass, name);
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid operation!");
-                e.getMessage();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } while (numClass < 1 || numClass > 5);
+            } while (numClass < 1 || numClass > 5 && bin.readLine() != "OK");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         System.out.println(player.toString());
 
