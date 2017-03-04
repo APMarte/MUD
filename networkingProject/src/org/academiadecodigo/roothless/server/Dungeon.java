@@ -1,4 +1,3 @@
-
 package org.academiadecodigo.roothless.server;
 
 import org.academiadecodigo.roothless.server.gameObjects.Monster;
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class Dungeon {
 
-    private Game game;
+    private GameManager game;
     private List<Monster> monsterArray;
     private List<Loot> lootArray;
     private String[] questions;
@@ -33,21 +32,21 @@ public class Dungeon {
         while ((level - 1) < maxRooms) {
             double rng = Math.random();
             if (rng <= 0.33) {
-                room = new CombatRoom().run();
+                //room = new CombatRoom().run();
             } else if (rng >= 0.34 && rng <= 0.66) {
-                room = new QuizRoom().run();
+                //room = new QuizRoom().run();
             } else {
-                room = new MixedRoom().run();
+                //room = new MixedRoom().run();
             }
             level++;
         }
     }
 
-    public Game getGame() {
+    public GameManager getGame() {
         return game;
     }
 
-    public void setGame(Game game) {
+    public void setGame(GameManager game) {
         this.game = game;
     }
 

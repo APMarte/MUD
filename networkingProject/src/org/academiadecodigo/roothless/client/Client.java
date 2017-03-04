@@ -21,7 +21,7 @@ public class Client {
     private DataOutputStream out;
     private BufferedReader br;
     private Player player;
-
+    private boolean isChating; //se esta no chat ou não
 
     private void connect() throws IOException {
 
@@ -53,10 +53,10 @@ public class Client {
                 if (socket.isClosed()) {
                     break;
                 }
-
-                //PARSE DO CLIENT /A 2 50
                 //comparar com hasacted
-                System.out.println(player.getName() + " choose your action: ");
+                if(!isChating){
+                    System.out.println(player.getName() + " choose your action: ");
+                }
                 String outputMSG = scanner.nextLine();
                 parseClient(outputMSG);
 
@@ -95,7 +95,7 @@ public class Client {
         String name = scanner.nextLine();
 
         do {
-            System.out.println("Choose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF \n");
+            System.out.println("Choose your Class: \n 1- ARCHER  2-PALADIN   3-PRIEST    4-SORCERER  5-THIEF ");
             try {
                 numClass = Integer.parseInt(br.readLine());
                 String str=name+ " " + identifyClass(numClass) + "\n"; // string auxiliar
@@ -154,13 +154,14 @@ public class Client {
         String str;
 
         if (command.charAt(0) != '/') {
+            isChating=true;
             message+="\n";
             out.write(message.getBytes());
             out.flush();
         }
         else {
 
-
+            isChating=false;
             switch (command) {
                 case "/skill":
                     if (!player.getHasActed()) {
@@ -193,7 +194,7 @@ public class Client {
                         out.write((message+"\n").getBytes());
                         player.setHasActed(true);
                     }else{
-                        System.out.println("Wait for your turn");
+                        System.out.println("Please wait for your turn");
                     }
                     break;
                 case "/w":

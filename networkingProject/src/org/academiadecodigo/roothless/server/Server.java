@@ -66,7 +66,7 @@ public class Server {
 
 
     private void gameStart() {
-        game = new GameManager();
+        //game = new GameManager();
 
         /*while(true) {                               //method to turn the game off // TODO: 03/03/17 implement things to turn everything off?
             if(!(game.isGameOn()) && listFull) {
@@ -109,11 +109,15 @@ public class Server {
         private BufferedReader in;
         private String inputMSG;
         private String playerName;
+        private String playerType;
+
+
         ServerParser parser;
 
         public ClientHandler(String playerName, String playerType, Socket clientSocket) {
             this.playerName = playerName;
             this.clientSocket = clientSocket;
+            this.playerType=playerType;
 
         }
 
@@ -123,6 +127,10 @@ public class Server {
 
         public String getPlayerName() {
             return playerName;
+        }
+
+        public String getPlayerType() {
+            return playerType;
         }
 
 
@@ -145,8 +153,8 @@ public class Server {
 
                     } else if (inputMSG != null) {
 
-                        String result = parser.parseCommand(inputMSG);
-                        System.out.println(result);
+                        inputMSG = parser.parseCommand(inputMSG);
+                        broadcast();
 
                     } else {
                         clientSocket.close();
@@ -164,7 +172,7 @@ public class Server {
 
             try {
 
-                String author = getPlayerName() + ": ";
+                String author = getPlayerName() + " <" + getPlayerType() +"> :";
                 String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
