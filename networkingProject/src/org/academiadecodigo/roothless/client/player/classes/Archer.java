@@ -11,7 +11,7 @@ public class Archer extends Player {
     public Archer(String name) {
         super(name);
         setChoosenClass("archer");
-        super.setHealth(10);
+        super.setHealth(100);
         setBaseDamage(10);
         setDefense(10);
         setStrength(10);

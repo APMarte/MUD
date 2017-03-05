@@ -90,7 +90,7 @@ public class Client {
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
         String name = "";
-        while (name.equals("")){
+        while (name.equals("")) {
             System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
             name = scanner.nextLine();
         }
@@ -164,70 +164,73 @@ public class Client {
                 out.flush();
             } else {
 
-                isChating = false;
-                switch (command) {
-                    case "/skill":
-                        if (!player.getHasActed()) {
-                            str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + " " + player.getName() + "\n";
-                            out.write(str.getBytes());
-                            player.setHasActed(true);
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/defense":
-                        if (!player.getHasActed()) {
+                if (!player.isDead()) {
+
+                    isChating = false;
+                    switch (command) {
+                        case "/skill":
+                            if (!player.getHasActed()) {
+                                str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + " " + player.getName() + "\n";
+                                out.write(str.getBytes());
+                                player.setHasActed(true);
+                            } else {
+                                System.out.println("Wait for your turn");
+                            }
+                            break;
+                        case "/defense":
+                            if (!player.getHasActed()) {
+                                out.write((message + "\n").getBytes());
+                                player.setHasActed(true);
+                                player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
+                                System.out.println(player.getName() + " has gain 10 in Defense " + player.getDefense());
+                            } else {
+                                System.out.println("Wait for your turn");
+                            }
+                            break;
+                        case "/pick":
+                            if (!player.getHasActed()) {
+                                str = message + " " + player.getName() + "\n";
+                                out.write(str.getBytes());
+                            } else {
+                                System.out.println("Wait for your turn");
+                            }
+                            break;
+                        case "/option":
+                            if (player.getHasActed()) {
+                                System.out.println(message);
+                                out.write((message + "\n").getBytes());
+                                player.setHasActed(true);
+                            } else {
+                                System.out.println("Please wait for your turn");
+                            }
+                            break;
+                        case "/w":
                             out.write((message + "\n").getBytes());
-                            player.setHasActed(true);
-                            player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
-                            System.out.println(player.getName() + " has gain 10 in Defense " + player.getDefense());
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/pick":
-                        if (!player.getHasActed()) {
-                            str = message + " " + player.getName() + "\n";
-                            out.write(str.getBytes());
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/option":
-                        if (player.getHasActed()) {
-                            System.out.println(message);
-                            out.write((message + "\n").getBytes());
-                            player.setHasActed(true);
-                        } else {
-                            System.out.println("Please wait for your turn");
-                        }
-                        break;
-                    case "/w":
-                        out.write((message + "\n").getBytes());
-                        break;
-                    case "/help":
-                        String line = "";
-                        String result = "";
-                        while ((line = reader.readLine()) != null) {
-                            result += line + "\n";
-                        }
-                        System.out.println(result);
-                        reader.close();
-                        break;
-                    default:
-                        System.out.println("Invalid Command");
-                        break;
+                            break;
+                        case "/help":
+                            String line = "";
+                            String result = "";
+                            while ((line = reader.readLine()) != null) {
+                                result += line + "\n";
+                            }
+                            System.out.println(result);
+                            reader.close();
+                            break;
+                        default:
+                            System.out.println("Invalid Command");
+                            break;
+                    }
+                    out.flush();
+                } else {
+                    System.out.println("Not accepted.");
                 }
-                out.flush();
             }
-        } else {
-            System.out.println("Not accepted.");
         }
     }
 
     private void serverParser(String message) {
 
-        if(message.contains("|")){
+        if (message.contains("|")) {
             System.out.println(message.split("[|]")[1]);
         }
 
@@ -236,10 +239,10 @@ public class Client {
             case "hp":
                 player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
                 System.out.println(player.getName() + " Health " + player.getHealth());
-                /*if (player.getHealth()< 0){
+                if (player.getHealth() < 0) {
                     player.setDead(true);
                     System.out.println("entrei");
-                }*/
+                }
                 break;
             case "dmg":
                 player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
