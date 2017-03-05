@@ -3,13 +3,12 @@ package org.academiadecodigo.roothless.client.player.classes;
 import org.academiadecodigo.roothless.client.player.Player;
 
 
-
 /**
  * Created by apm on 28-02-2017.
  */
 public class Priest extends Player {
 
-    public Priest(String name){
+    public Priest(String name) {
         super(name);
         setChoosenClass("priest");
         setHealth(10);
@@ -28,8 +27,14 @@ public class Priest extends Player {
         int intel = getIntelligence();
         int fth = getFaith();
 
-        int preCritDmg = (int) (intel * 0.35 + fth * 0.65) + baseDmg;
+        if (hitCheck(getDexterity())) {
 
-        return super.critRoll(preCritDmg);
+            int temp = preCritDmg ((int) (intel * 0.35 + fth * 0.65) + baseDmg);
+
+            return super.critRoll(temp);
+        }
+
+        return 0;
+
     }
 }

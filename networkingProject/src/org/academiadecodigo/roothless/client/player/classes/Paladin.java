@@ -26,9 +26,14 @@ public class Paladin extends Player {
         int str = getStrength();
         int fth = getFaith();
 
-        int preCritDmg = (int) (fth * 0.35 + str * 0.65) + baseDmg;
+        if (hitCheck(getDexterity())) {
 
-        return super.critRoll(preCritDmg);
+            int temp = preCritDmg ((int) (fth * 0.35 + str * 0.65) + baseDmg);
+
+            return super.critRoll(temp);
+        }
+
+        return 0;
     }
 
 

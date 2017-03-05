@@ -13,9 +13,9 @@ public class Skill implements Strategy {
     private Dungeon dungeon;
 
     @Override
-    public Strategy processCommand(String command,Dungeon dungeon) {
-        this.dungeon=dungeon;
-        String dmg = command.split(" ")[1];
+    public Strategy processCommand(String command, Dungeon dungeon) {
+        this.dungeon = dungeon;
+        dmg = command.split(" ")[1];
 
         return this;
     }
@@ -23,7 +23,9 @@ public class Skill implements Strategy {
     @Override
     public String run() {
 
-        return "in run | after pipe";//dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg)) + "| has atacked with " + dmg ;
+        dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg));
+
+        return "in run | after pipe";
     }
 
 

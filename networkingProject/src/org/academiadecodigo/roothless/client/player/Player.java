@@ -37,6 +37,20 @@ public abstract class Player {
         return returnValue;
     }
 
+    protected boolean hitCheck (int dex) {
+        int hitChance = 60 + dex;
+
+        if (Math.random() * 100 >= hitChance) {
+            return true;
+        }
+        return false;
+    }
+
+    protected int preCritDmg (int dmg) {
+
+        return (int) (Math.random() * ((dmg + 5) - (dmg - 5)) + (dmg - 5));
+    }
+
     public int getHealth() {
         return health;
     }

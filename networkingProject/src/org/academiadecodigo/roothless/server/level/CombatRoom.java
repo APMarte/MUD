@@ -15,15 +15,23 @@ public class CombatRoom extends Room {
 
     @Override
     public void run() {
-        synchronized (getDungeon()) {
-            try {
-                while (getMonster() != null) {
-                    wait();
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        Loot loot = getLoot();
+        setLoot(null);
+        //broadcast - > getMonster().getDescription();
+        while (getMonster() != null) {
+            getDungeon().getQueue().poll().run();
         }
+        //broadcast - > monster is dead ou broadcast no strategy?
+        getDungeon().getQueue().clear();
+        setLoot(loot);
+        //broadcast loot description
+        while (loot != null) {
+            getDungeon().getQueue().poll().run();
+        }
+        getDungeon().getQueue().clear();
+        //broadcast your party is moving to the next room
     }
 }
+
+
 

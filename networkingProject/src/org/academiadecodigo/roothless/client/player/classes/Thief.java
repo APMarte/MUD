@@ -7,7 +7,7 @@ import org.academiadecodigo.roothless.client.player.Player;
  */
 public class Thief extends Player {
 
-    public Thief(String name){
+    public Thief(String name) {
         super(name);
         setChoosenClass("thief");
         setHealth(10);
@@ -26,8 +26,14 @@ public class Thief extends Player {
         int str = getStrength();
         int dex = getDexterity();
 
-        int preCritDmg = (int) (str * 0.5 + dex * 0.5) + baseDmg;
+        if (hitCheck(getDexterity())) {
 
-        return super.critRoll(preCritDmg);
+            int temp = preCritDmg ((int) (str * 0.5 + dex * 0.5) + baseDmg);
+
+            return super.critRoll(temp);
+        }
+
+        return 0;
+
     }
 }

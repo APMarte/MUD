@@ -27,9 +27,16 @@ public class Archer extends Player {
         int str = getStrength();
         int dex = getDexterity();
 
-        int preCritDmg = (int) (str * 0.35 + dex * 0.65) + baseDmg;
+        if (hitCheck(getDexterity())) {
 
-        return super.critRoll(preCritDmg);
+            int temp = preCritDmg ((int) (str * 0.35 + dex * 0.65) + baseDmg);
+
+            return super.critRoll(temp);
+        }
+
+        return 0;
+
+
     }
 }
 

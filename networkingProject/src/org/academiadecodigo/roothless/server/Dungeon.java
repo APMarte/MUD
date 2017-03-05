@@ -3,6 +3,9 @@ package org.academiadecodigo.roothless.server;
 
 import org.academiadecodigo.roothless.server.gameObjects.monsters.Monster;
 import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
+import org.academiadecodigo.roothless.server.level.CombatRoom;
+import org.academiadecodigo.roothless.server.level.MixedRoom;
+import org.academiadecodigo.roothless.server.level.QuizRoom;
 import org.academiadecodigo.roothless.server.level.Room;
 import org.academiadecodigo.roothless.serverParser.Strategy;
 
@@ -26,26 +29,32 @@ public class Dungeon {
     private int level = 1;
     private boolean hasEnded;
     private int maxRooms = 1;
+
+
     private LinkedBlockingQueue<Strategy> queue;
 
-    public Dungeon(LinkedBlockingQueue queue){
+    public Dungeon(LinkedBlockingQueue queue) {
         this.queue = queue;
     }
 
-   /* public void enterDungeon() {
+    public void enterDungeon() {
         while ((level - 1) < maxRooms) {
-            double rng = Math.random();
-            if (rng <= 0.33) {
-                room = new CombatRoom().run();
-            } else if (rng >= 0.34 && rng <= 0.66) {
+            //double rng = Math.random();
+            //if (rng <= 0.33) {
+            room = new CombatRoom(randomMonster(), randomLoot(), this);
+            room.run();
+            /*} else if (rng >= 0.34 && rng <= 0.66) {
                 room = new QuizRoom().run();
             } else {
                 room = new MixedRoom().run();
-            }
+            }*/
             level++;
         }
-    }*/
+    }
 
+    public LinkedBlockingQueue<Strategy> getQueue() {
+        return queue;
+    }
 
     public List<Monster> getMonsterArray() {
         return monsterArray;
@@ -95,20 +104,37 @@ public class Dungeon {
         this.room = room;
     }
 
-    public String readStrategy(){
+    public String readStrategy() {
 
         System.out.println("oix");
-        String str = queue.poll().run();
 
-        return str;
+        return queue.poll().run();
     }
 
     public void checkActions(int countAction) {
 
-        if(countAction<5){
+        if (countAction < 5) {
             readStrategy();
+        } else if (countAction >= 5) {
+            countAction = 0;
+            o monstro ataca
+            envia string para player
         }
 
+    }
+
+    private Monster randomMonster() {
+        int randomIndex = (int) (Math.random() * (monsterArray.size() - 1));
+        Monster returnMonster = monsterArray.get(randomIndex);
+        monsterArray.remove(randomIndex);
+        return returnMonster;
+    }
+
+    private Loot randomLoot() {
+        int randomIndex = (int) (Math.random() * (lootArray.size() - 1));
+        Loot returnLoot = lootArray.get(randomIndex);
+        lootArray.remove(randomIndex);
+        return returnLoot;
     }
 }
 
