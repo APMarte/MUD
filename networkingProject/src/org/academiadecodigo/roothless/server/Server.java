@@ -71,8 +71,9 @@ public class Server {
             counter++;
         }
 
-        dungeon.enterDungeon(); //todo is it blocking?
-        System.out.println("enter dungeon");
+        dungeon.enterDungeon();
+        System.out.println("left the dungeon");
+
 
     }
 
