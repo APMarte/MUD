@@ -49,6 +49,7 @@ public class Dungeon {
             //if (rng <= 0.33) {
             room = new CombatRoom(randomMonster(), randomLoot(), this);
             room.run();
+            System.out.println("room cleared");
             /*} else if (rng >= 0.34 && rng <= 0.66) {
                 room = new QuizRoom().run();
             } else {
@@ -125,15 +126,24 @@ public class Dungeon {
 
     public String checkActions() {
 
-        System.out.println(countAction);
+        System.out.println("-----------------pre if count action"+countAction);
 
-            if (countAction < 4) {
-                countAction++;
+            if (countAction < 5) {
+                System.out.println("-------------------------post if count action"+countAction);
                 String strategy = readStrategy();
-                if (room.getMonster() != null && room.getQuestion() != null) {
+                System.out.println("--------------- strategy to var");
+                countAction++;
+                if (countAction == 5) {
+                    System.out.println("---------------count action if");
+                    countAction = 0;
+                    return "/modify hasActed \n";
+                }
+                if (room.getMonster() != null) {
+                    System.out.println("----------------- returning strategy");
                     return strategy;
                 }
         }
+        System.out.println("------------------count action reset");
         countAction = 0;
         return "/modify hasActed \n";
     }

@@ -22,16 +22,17 @@ public class CombatRoom extends Room {
         //broadcast - > getMonster().getDescription();
         while (getMonster().getHealth() > 0) {
         }
+        System.out.println("before null");
         setMonster(null);
         System.out.println("ta morto caralho");
         //broadcast - > monster is dead ou broadcast no strategy?
-        getDungeon().getQueue().clear();
+        /*getDungeon().getQueue().clear();
         setLoot(loot);
         //broadcast loot description
         while (loot != null) {
         }
         getDungeon().getQueue().clear();
-        //broadcast your party is moving to the next room
+        //broadcast your party is moving to the next room*/
     }
 }
 

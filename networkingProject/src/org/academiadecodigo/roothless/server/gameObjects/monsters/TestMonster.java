@@ -10,7 +10,7 @@ public class TestMonster extends Monster {
 
 
     public TestMonster(Dungeon dungeon) {
-        setHealth(1);
+        setHealth(100);
         setBaseDamage(20);
         setDefense(10);
         setDescription("Bobi");
