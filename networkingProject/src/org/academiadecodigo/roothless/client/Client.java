@@ -168,7 +168,7 @@ public class Client {
             switch (command) {
                 case "/skill":
                     if (!player.getHasActed()) {
-                        str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + "\n";
+                        str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + " "+player.getName()+ "\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
                     } else {
