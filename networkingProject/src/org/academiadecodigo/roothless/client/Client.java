@@ -19,6 +19,8 @@ public class Client {
     private BufferedReader br;
     private Player player;
     private boolean isChating; //se esta no chat ou não
+    private String str;
+
 
 
     private void connect() throws IOException {
@@ -155,7 +157,7 @@ public class Client {
 
         String str;
 
-        if (command.charAt(0) != '/') {
+        if (command.charAt(0) != '/' || command == null) {
             isChating = true;
             message += "\n";
             out.write(message.getBytes());
@@ -221,6 +223,10 @@ public class Client {
     }
 
     private void serverParser(String message) {
+
+        if(message.contains("|")){
+            System.out.println(message.split("[|]")[1]);
+        }
 
         switch (message.split(" ")[1]) {
 

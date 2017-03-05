@@ -81,14 +81,6 @@ public class Server {
         return serverSocket;
     }
 
-    private String idGenerator() {
-
-        String clientID = "Client-" + (counter+1);
-
-
-        return clientID;
-    }
-
 
     private class ClientHandler implements Runnable {
 

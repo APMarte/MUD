@@ -136,8 +136,8 @@ public class Dungeon {
 
         if (room.getMonster() == null || countAction >= 4) {
             countAction = 0;
-            System.out.println("second if / count at " + countAction);
-            return "/modify hasActed \n";
+            System.out.println("second if / count at " + countAction + " " + "/modify hasActed |" + rStrat);
+            return "/modify hasActed |" + rStrat;
         } else {
             System.out.println("else returning strat / count at " + countAction);
             countAction++;
