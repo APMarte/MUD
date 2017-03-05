@@ -126,12 +126,18 @@ public class Dungeon {
     public String checkActions() {
 
         System.out.println(countAction);
-        if (countAction < 4) {
-            return readStrategy();
-        } else {
-            return "/modify hasActed \n";
+
+            if (countAction < 4) {
+                countAction++;
+                String strategy = readStrategy();
+                if (room.getMonster() != null && room.getQuestion() != null) {
+                    return strategy;
+                }
         }
+        countAction = 0;
+        return "/modify hasActed \n";
     }
+
 
     public String monsterOutput() {
         return room.getMonster().attack();

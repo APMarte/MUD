@@ -227,7 +227,7 @@ public class Server {
                 e.printStackTrace();
             }
             //System.out.println("oix");
-            dungeon.setCountAction(dungeon.getCountAction() + 1);
+            //dungeon.setCountAction(dungeon.getCountAction() + 1);
         }
 
         private void whispering() {
