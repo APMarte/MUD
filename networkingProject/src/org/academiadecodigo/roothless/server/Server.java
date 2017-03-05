@@ -196,19 +196,19 @@ public class Server {
         private void chatBroadcast() {
 
             try {
+                    String author = getPlayerName() + " <" + getPlayerType() + ">: ";
+                    String message = author + inputMSG + "\n";
 
-                String author = getPlayerName() + " <" + getPlayerType() +">: ";
-                String message = author + inputMSG + "\n";
+                    for (ClientHandler c : clientHandlersList) { //TODO
+                        OutputStream out = c.getClientSocket().getOutputStream();
+                        out.write(message.getBytes());
+                        out.flush();
+                    }
 
-                for (ClientHandler c : clientHandlersList) { //TODO
-                    OutputStream out = c.getClientSocket().getOutputStream();
-                    out.write(message.getBytes());
-                    out.flush();
+                }catch(IOException e){
+                    e.printStackTrace();
                 }
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
         }
 
