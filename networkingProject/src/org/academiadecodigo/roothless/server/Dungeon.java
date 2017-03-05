@@ -44,9 +44,12 @@ public class Dungeon {
     public void enterDungeon() {
         monsterArray.add(new TestMonster(this));
         lootArray.add(new loot1());
+
         while ((level - 1) < maxRooms) {
             //double rng = Math.random();
-            //if (rng <= 0.33) {
+            //if (rng <= 0.33)
+            //{
+            System.out.println("entered room "+level);
             room = new CombatRoom(randomMonster(), randomLoot(), this);
             room.run();
             System.out.println("room cleared");

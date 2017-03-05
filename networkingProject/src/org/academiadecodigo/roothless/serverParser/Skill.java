@@ -9,13 +9,15 @@ import org.academiadecodigo.roothless.server.Dungeon;
 public class Skill implements Strategy {
 
     private String dmg;
-    private String client;
     private Dungeon dungeon;
+    private String name;
+
 
     @Override
     public Strategy processCommand(String command, Dungeon dungeon) {
         this.dungeon = dungeon;
         dmg = command.split(" ")[1];
+        name = command.split(" ")[3];
 
         return this;
     }
@@ -25,7 +27,7 @@ public class Skill implements Strategy {
 
         String str = dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg));
 
-        return "You have attacked with " + dmg + " | " + str;
+        return name + " have attacked with " + dmg + " | " + str; //TODO Change You by name player -->command must have player name
 
     }
 

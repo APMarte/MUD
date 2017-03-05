@@ -72,7 +72,7 @@ public class Server {
         }
 
         dungeon.enterDungeon(); //todo is it blocking?
-
+        System.out.println("enter dungeon");
 
     }
 
