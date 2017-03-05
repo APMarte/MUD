@@ -26,11 +26,14 @@ public class CombatRoom extends Room {
         setMonster(null);
         System.out.println("ta morto caralho");
         //broadcast - > monster is dead ou broadcast no strategy?
-        /*getDungeon().getQueue().clear();
+        getDungeon().getQueue().clear();
+        System.out.println("queue cleared");
         setLoot(loot);
+        System.out.println("loot was set // before while loot");
         //broadcast loot description
         while (loot != null) {
         }
+        System.out.println("loot sucessful");
         getDungeon().getQueue().clear();
         //broadcast your party is moving to the next room*/
     }

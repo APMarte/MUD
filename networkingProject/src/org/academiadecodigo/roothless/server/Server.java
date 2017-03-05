@@ -91,7 +91,6 @@ public class Server {
         private String playerType;
 
 
-
         public ClientHandler(Socket clientSocket) {
 
             this.clientSocket = clientSocket;
@@ -121,15 +120,15 @@ public class Server {
                 System.out.println("connecting a client...");
 
                /* do {*/
-                    String name = in.readLine();
+                String name = in.readLine();
 
-                    playerName = name.split(" ")[0];
-                    playerType = name.split(" ")[1];
-                    classesChosen.add(playerType);
+                playerName = name.split(" ")[0];
+                playerType = name.split(" ")[1];
+                classesChosen.add(playerType);
 
 
-                    /////////
-                    //try {
+                /////////
+                //try {
 
                         /*String classCheck = in.readLine();
                         playerType = classCheck;
@@ -160,7 +159,7 @@ public class Server {
 
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                     inputMSG = in.readLine();
-                    System.out.println(inputMSG);
+
 
                     if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         chatBroadcast();
@@ -173,15 +172,18 @@ public class Server {
                         inputMSG = dungeon.checkActions();
                         systemBroadcast();
 
-                        if(inputMSG.contains("/modify")){
+                        if (inputMSG.contains("/modify")) {
                             try {
                                 Thread.sleep(500);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-                            inputMSG=dungeon.monsterOutput();
-                            systemBroadcast();
+                            if (inputMSG.split(" ")[1].equals("hasActed")) {
+                                inputMSG = dungeon.monsterOutput();
+                                systemBroadcast();
+                            }
                         }
+
                     } else {
                         clientSocket.close();
                     }
@@ -198,7 +200,7 @@ public class Server {
 
             try {
 
-                String author = getPlayerName() + " <" + getPlayerType() +">: ";
+                String author = getPlayerName() + " <" + getPlayerType() + ">: ";
                 String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
@@ -237,11 +239,11 @@ public class Server {
             try {
                 String nameClient = inputMSG.split(" ")[1];
 
-                String message = getPlayerName() + " <" + getPlayerType() +"> whispered: " + inputMSG.substring(nameClient.length()+4) + "\n";
+                String message = getPlayerName() + " <" + getPlayerType() + "> whispered: " + inputMSG.substring(nameClient.length() + 4) + "\n";
                 System.out.println(message);
 
                 for (ClientHandler c : clientHandlersList) {
-                    if(c.getPlayerName().equals(nameClient)) {//TODO
+                    if (c.getPlayerName().equals(nameClient)) {//TODO
                         OutputStream out = c.getClientSocket().getOutputStream();
                         out.write(message.getBytes());
                         out.flush();

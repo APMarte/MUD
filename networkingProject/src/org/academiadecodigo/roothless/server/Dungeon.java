@@ -146,10 +146,13 @@ public class Dungeon {
 
         if (room.getMonster() == null || countAction >= 4) {
             countAction = 0;
+            if (room.getLoot() != null) {
+                return readStrategy();
+            }
             //monsterAttack = false;
             if (rStrat != null) {
                 return "/modify hasActed |" + rStrat;
-            } else {
+            }else{
                 return "/modify hasActed";
             }
         } else {
@@ -157,6 +160,7 @@ public class Dungeon {
             countAction++;
             return rStrat;
         }
+
     }
 
         /*System.out.println("-----------------pre if count action" + countAction);

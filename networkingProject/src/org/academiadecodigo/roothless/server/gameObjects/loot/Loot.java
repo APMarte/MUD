@@ -7,7 +7,7 @@ public abstract class Loot {
 
     private String description;
     private int buff=10;
-    private String property="Strengh";
+    private String property="str";
 
 
     public String getDescription() {
