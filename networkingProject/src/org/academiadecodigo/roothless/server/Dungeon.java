@@ -50,6 +50,7 @@ public class Dungeon {
             room = new CombatRoom(randomMonster(), randomLoot(), this);
             room.run();
             System.out.println("room cleared");
+            queue.clear();
             /*} else if (rng >= 0.34 && rng <= 0.66) {
                 room = new QuizRoom().run();
             } else {
@@ -126,27 +127,44 @@ public class Dungeon {
 
     public String checkActions() {
 
-        System.out.println("-----------------pre if count action"+countAction);
+        String rStrat = null;
 
-            if (countAction < 5) {
-                System.out.println("-------------------------post if count action"+countAction);
-                String strategy = readStrategy();
-                System.out.println("--------------- strategy to var");
-                countAction++;
-                if (countAction == 5) {
-                    System.out.println("---------------count action if");
-                    countAction = 0;
-                    return "/modify hasActed \n";
-                }
-                if (room.getMonster() != null) {
-                    System.out.println("----------------- returning strategy");
-                    return strategy;
-                }
+        if (countAction <= 4 && room.getMonster() != null) {
+            System.out.println("first if / count at " + countAction);
+            rStrat = readStrategy();
+        }
+
+        if (room.getMonster() == null || countAction >= 4) {
+            countAction = 0;
+            System.out.println("second if / count at " + countAction);
+            return "/modify hasActed \n";
+        } else {
+            System.out.println("else returning strat / count at " + countAction);
+            countAction++;
+            return rStrat;
+        }
+    }
+
+        /*System.out.println("-----------------pre if count action" + countAction);
+
+        if (countAction < 5) {
+            System.out.println("-------------------------post if count action" + countAction);
+            String strategy = readStrategy();
+            System.out.println("--------------- strategy to var");
+            countAction++;
+            if (countAction == 5) {
+                System.out.println("---------------count action if");
+                countAction = 0;
+                return "/modify hasActed\n";
+            }
+            if (room.getMonster() != null) {
+                System.out.println("----------------- returning strategy");
+                return strategy;
+            }
         }
         System.out.println("------------------count action reset");
         countAction = 0;
-        return "/modify hasActed \n";
-    }
+        return "/modify hasActed\n";*/
 
 
     public String monsterOutput() {
