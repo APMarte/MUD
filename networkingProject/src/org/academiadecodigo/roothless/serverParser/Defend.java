@@ -8,14 +8,22 @@ import org.academiadecodigo.roothless.server.Dungeon;
  */
 public class Defend implements Strategy{
 
+    private String dmg;
+    private String client;
+    private Dungeon dungeon;
 
     @Override
     public Strategy processCommand(String command, Dungeon dungeon) {
-        return null;
+        this.dungeon=dungeon;
+        String dmg = command.split(" ")[1];
+
+        return this;
     }
 
     @Override
     public String run() {
-        return null;
+
+
+        return "name defend";
     }
 }

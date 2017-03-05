@@ -25,8 +25,6 @@ public class Client {
     private BufferedReader bin;
 
 
-
-
     private void connect() throws IOException {
 
 
@@ -103,7 +101,8 @@ public class Client {
         String name = scanner.nextLine();
 
         do {
-            System.out.println("Choose your Class: \n  (1) Archer  (2) Paladin  (3) Priest  (4) Sorcerer  (5) Thief");
+            System.out.println("Choose your Class: \n  (1) Archer  (2) Paladin  (3) Priest  (4) Sorcerer" +
+                    "  (5) Thief");
             try {
 
                 numClass = Integer.parseInt(br.readLine());
@@ -187,13 +186,15 @@ public class Client {
                     if(!player.getHasActed()){
                     out.write((message+"\n").getBytes());
                     player.setHasActed(true);
+                        player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
+                        System.out.println(player.getName() + " has gain 10 in Defense" + player.getDefense());
                     }else{
                         System.out.println("Wait for your turn");
                     }
                     break;
                 case "/pick":
                     if(!player.getHasActed()) {
-                        out.write((message+"\n").getBytes());
+                        5   out.write((message+"\n").getBytes());
                         player.setHasActed(true);
                     }else {
                         System.out.println("Wait for your turn");
@@ -221,6 +222,45 @@ public class Client {
             out.flush();
         }
     }
+
+    private void serverParser(String message){
+
+        if(message.split(" ")[0].equals("/modify")){
+
+            switch (message.split(" ")[1]){
+
+                case "HP":
+                    player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "dmg":
+                    player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "int":
+                    player.setIntelligence(player.getIntelligence() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "str":
+                    player.setStrength(player.getStrength() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "def":
+                    player.setDefense(player.getDefense() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "dex":
+                    player.setDexterity(player.getDexterity() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "fth":
+                    player.setFaith(player.getFaith() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "crit":
+                    player.setCritChance(player.getCritChance() + Integer.parseInt(message.split(" ")[2]));
+                    break;
+                case "hasActed":
+                    player.setHasActed(false);
+                    break;
+            }
+        }
+
+    }
+
 
         private class ServerListener implements Runnable {
 

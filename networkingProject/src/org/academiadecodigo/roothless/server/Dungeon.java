@@ -29,9 +29,8 @@ public class Dungeon {
     private int level = 1;
     private boolean hasEnded;
     private int maxRooms = 1;
-
-
     private LinkedBlockingQueue<Strategy> queue;
+    private int countAction;
 
     public Dungeon(LinkedBlockingQueue queue) {
         this.queue = queue;
@@ -104,21 +103,28 @@ public class Dungeon {
         this.room = room;
     }
 
-    public String readStrategy() {
+    public int getCountAction() {
+        return countAction;
+    }
+
+    public void setCountAction(int countAction) {
+        this.countAction = countAction;
+    }
+
+    public String readStrategy(){
 
         System.out.println("oix");
 
         return queue.poll().run();
     }
 
-    public void checkActions(int countAction) {
+    public String checkActions() {
 
-        if (countAction < 5) {
-            readStrategy();
-        } else if (countAction >= 5) {
-            countAction = 0;
-            o monstro ataca
-            envia string para player
+        if(countAction<5){
+            return readStrategy();
+        }else{
+            countAction=0;
+            return "/modify hasActed";
         }
 
     }
