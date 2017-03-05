@@ -9,9 +9,9 @@ import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
  */
 public abstract class Room {
 
-    private Monster monster;
-    private Loot loot;
-    private String question;
+    volatile private Monster monster;
+    volatile private Loot loot;
+    volatile private String question;
     private Dungeon dungeon;
 
     public Room (Monster monster, Loot loot, String question, Dungeon dungeon) {

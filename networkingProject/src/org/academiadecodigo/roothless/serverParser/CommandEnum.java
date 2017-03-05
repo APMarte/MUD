@@ -11,7 +11,7 @@ public enum CommandEnum {
     PICK("/pick"),
     OPTION("/option"),
     WHISPER("/w"),
-    HELP("/help"),
+    HELP("/resources/help"),
     STATUS("/status"),
     QUIT("/quit");
 

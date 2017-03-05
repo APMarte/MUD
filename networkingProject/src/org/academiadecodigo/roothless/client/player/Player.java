@@ -40,7 +40,7 @@ public abstract class Player {
     protected boolean hitCheck (int dex) {
         int hitChance = 60 + dex;
 
-        if (Math.random() * 100 >= hitChance) {
+        if ( hitChance >= Math.random() * 100) {
             return true;
         }
         return false;

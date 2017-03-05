@@ -21,10 +21,6 @@ public class ServerParser {
             //COMBAT PARSER
             case "/skill":
                 return new Situation(new Skill()).handleByServer(commandToParse,dungeon);
-
-            case "/defense":
-                return new Situation(new Defend()).handleByServer(commandToParse,dungeon);
-
             case "/pick":
                 System.out.println("entrei");
                 return new Situation(new Pick()).handleByServer(commandToParse,dungeon);

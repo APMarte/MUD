@@ -23,9 +23,10 @@ public class Skill implements Strategy {
     @Override
     public String run() {
 
-        dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg));
+        String str = dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg));
 
-        return "in run | after pipe";
+        return "You have attacked with " + dmg + " | " + str;
+
     }
 
 

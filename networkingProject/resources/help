@@ -1,0 +1,43 @@
+
+/====================================================S=L=I=T=========================================================================================================/
+
+
+As you may have noticed, all the commands start with a slash "/".
+If you don't type it, you'll be sending a message to all your colleagues. Use the chat to come up with better strategies in group! 
+Below, you'll find the list of all the commands. If curly brackets "{}" are shown, it means it's an optional argument. Rectangular ones "[]" are for mandatory fields.
+But anyway, here's the list of all the commands: 
+ 
+ -------- GENERAL COMMANDS ------- 
+ /help                           => duh, you're here already? It takes you to this very text, with all the commands... so HELPful! 
+ /status                         => check your current STATUS. Very useful! 
+ /skill [skill number] {target}  => use a SKILL! Check the list of UNIQUE SKILLS 
+ /defend                         => DEFEND yourself. You'll still suffer a bit of damage if attacked. 
+ /pick                           => PICK the loot before you clear the room! But remember that each item is only useful to one of the adventurers. 
+ /w [player Name] [message]      => through it you can WHISPER whatever you want to the player that you specified. 
+ /revive                         => you can only REVIVE in specific situations (and if you're dead of course - yes your ghost will keep on watching everything). 
+ /quit                           => why would you want to QUIT the game? Do that and everybody will hate you! 
+ 
+ ---------- SKILLS LIST ---------- (to be used as an argument after /a 
+ 
+* ARCHER * 
+ /a                              => normal ATTACK to the current enemy/ies
+ /weaken                         => WEAKEN the current enemie(s) by shooting arrows to their weak points. 
+ 
+* PALADIN * 
+ /a                              => heavy ATTACK to the current enemy/ies 
+ /taunt                          => TAUNT the enemie(s), so that you'll be attacked instead of your colleagues (Paladins can endure much more damage) . 
+ 
+* PRIEST * 
+ /heal [playerName]              => HEAL a player of your choice. 
+ /all                            => HEAL ALL the other players by a little bit. 
+ 
+* SORCERER * 
+ /a                              => heaviest ATTACK to the current enemy/ies, but it consumes a bit of your . 
+ /stun                           => STUN the current enemy/ies (can only be used once every 3 turns) 
+ 
+* THIEF * 
+ /a                              => ATTACK (lightly) the current enemie(s) 
+ /crit                           => try to deal a CRITICAL HIT. It may fail and backfire a bit, but it may also reduce the enemy/ies health greatly!
+
+
+/==============>>>A=N=T=O=N=I=O=======>>>J=O=A=O========>>>L=U=I=S========>>>>P=E=D=R=O==========>>>>>R=U=I=========================================/

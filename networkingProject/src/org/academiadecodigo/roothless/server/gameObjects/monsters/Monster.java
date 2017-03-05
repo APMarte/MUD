@@ -10,15 +10,15 @@ import org.academiadecodigo.roothless.server.Dungeon;
 
 public abstract class Monster {
 
-    private int health;     //all
+    private volatile int health;     //all
     private int baseDamage;  //all
     private int defense;    //all
     private String description;
     private Dungeon dungeon;
-    private boolean dead;
+    volatile private boolean dead;
 
 
-    abstract public void attack();
+    abstract public String attack();
 
     protected void lvlScaling() {
         int level = dungeon.getLevel();
@@ -80,7 +80,11 @@ public abstract class Monster {
 
     public String monsterHealth(int dmg){
 
-        setHealth(getHealth() - dmg);
+        if (getHealth() - dmg >= 0) {
+            setHealth(getHealth() - (dmg * (1 - getDefense()/100)));
+        } else {
+            setHealth(0);
+        }
 
         return "Monster Health: " + getHealth();
     }

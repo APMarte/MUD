@@ -59,7 +59,7 @@ public class Server {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Port number:");
 
-        serverSocket = new java.net.ServerSocket(Integer.parseInt(scanner.nextLine()));
+        serverSocket = new ServerSocket(8080);//Integer.parseInt(scanner.nextLine()));
 
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
@@ -71,7 +71,7 @@ public class Server {
             counter++;
         }
 
-        //dungeon.enterDungeon(); //todo is it blocking?
+        dungeon.enterDungeon(); //todo is it blocking?
 
 
     }
@@ -178,7 +178,6 @@ public class Server {
                     } else if (inputMSG != null) {
                         queue.add(ServerParser.parseCommand(inputMSG, dungeon));
                         inputMSG = dungeon.checkActions();
-                        System.out.println(inputMSG);
                         systemBroadcast();
 
                     } else {
@@ -215,10 +214,8 @@ public class Server {
         private void systemBroadcast() {
 
             try {
-
                 String message = inputMSG + "\n"; //.split("[|]")[0] + "\n";
                 //String message2 = inputMSG.split("[|]")[1] + "\n";
-
 
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();
@@ -229,7 +226,7 @@ public class Server {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+            //System.out.println("oix");
             dungeon.setCountAction(dungeon.getCountAction() + 1);
         }
 
@@ -248,7 +245,6 @@ public class Server {
                         out.flush();
                     }
                 }
-
             } catch (IOException e) {
                 e.printStackTrace();
             }

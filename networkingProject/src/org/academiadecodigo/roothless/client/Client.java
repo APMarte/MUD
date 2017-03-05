@@ -4,10 +4,7 @@ import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -22,7 +19,6 @@ public class Client {
     private BufferedReader br;
     private Player player;
     private boolean isChating; //se esta no chat ou não
-    private BufferedReader bin;
 
 
     private void connect() throws IOException {
@@ -30,9 +26,9 @@ public class Client {
 
         scanner = new Scanner(System.in);
         System.out.println("Host:");
-        String host = scanner.nextLine();
+        String host = "localhost";//scanner.nextLine();
         System.out.println("Port:");
-        int port = Integer.parseInt(scanner.nextLine());
+        int port = 8080;//Integer.parseInt(scanner.nextLine());
 
         socket = new Socket(host, port);
         out = new DataOutputStream(socket.getOutputStream());
@@ -56,7 +52,7 @@ public class Client {
                     break;
                 }
 
-                if(!isChating){
+                if (!isChating) {
                     System.out.println(player.getName() + " choose your action: ");
                 }
                 String outputMSG = scanner.nextLine();
@@ -92,11 +88,7 @@ public class Client {
 
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
-        try {
-            bin = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
         String name = scanner.nextLine();
 
@@ -106,7 +98,7 @@ public class Client {
             try {
 
                 numClass = Integer.parseInt(br.readLine());
-                String str=name+ " " + identifyClass(numClass) + "\n"; // string auxiliar
+                String str = name + " " + identifyClass(numClass) + "\n"; // string auxiliar
                 out.write(str.getBytes());
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
@@ -120,9 +112,9 @@ public class Client {
 
     }
 
-    public String identifyClass(int num){
+    public String identifyClass(int num) {
 
-        switch (num){
+        switch (num) {
             case 1:
                 return "Archer";
             case 2:
@@ -159,61 +151,66 @@ public class Client {
     private void parseClient(String message) throws IOException {
 
         String command = message.split(" ")[0];
+        BufferedReader reader = new BufferedReader(new FileReader("resources/help"));
 
         String str;
 
         if (command.charAt(0) != '/') {
-            isChating=true;
-            message+="\n";
+            isChating = true;
+            message += "\n";
             out.write(message.getBytes());
             out.flush();
-        }
+        } else {
 
-        else {
-
-            isChating=false;
+            isChating = false;
             switch (command) {
                 case "/skill":
                     if (!player.getHasActed()) {
-                        str = message +" "+ player.dmgCalc()+" "+player.getChoosenClass()+"\n";
+                        str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + "\n";
                         out.write(str.getBytes());
                         player.setHasActed(true);
-                    } else{
+                    } else {
                         System.out.println("Wait for your turn");
                     }
-                        break;
+                    break;
                 case "/defense":
-                    if(!player.getHasActed()){
-                    out.write((message+"\n").getBytes());
-                    player.setHasActed(true);
+                    if (!player.getHasActed()) {
+                        out.write((message + "\n").getBytes());
+                        player.setHasActed(true);
                         player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
-                        System.out.println(player.getName() + " has gain 10 in Defense" + player.getDefense());
-                    }else{
+                        System.out.println(player.getName() + " has gain 10 in Defense " + player.getDefense());
+                    } else {
                         System.out.println("Wait for your turn");
                     }
                     break;
                 case "/pick":
-                    if(!player.getHasActed()) {
-                        5   out.write((message+"\n").getBytes());
+                    if (!player.getHasActed()) {
+                        out.write((message + "\n").getBytes());
                         player.setHasActed(true);
-                    }else {
+                    } else {
                         System.out.println("Wait for your turn");
                     }
                     break;
                 case "/option":
-                    if(player.getHasActed()) {
+                    if (player.getHasActed()) {
                         System.out.println(message);
-                        out.write((message+"\n").getBytes());
+                        out.write((message + "\n").getBytes());
                         player.setHasActed(true);
-                    }else{
+                    } else {
                         System.out.println("Please wait for your turn");
                     }
                     break;
                 case "/w":
-                    out.write((message+"\n").getBytes());
+                    out.write((message + "\n").getBytes());
                     break;
                 case "/help":
-                    System.out.println("oix");
+                    String line = "";
+                    String result = "";
+                    while ((line = reader.readLine()) != null) {
+                        result += line + "\n";
+                    }
+                    System.out.println(result);
+                    reader.close();
                     break;
                 default:
                     System.out.println("Invalid Command");
@@ -223,72 +220,74 @@ public class Client {
         }
     }
 
-    private void serverParser(String message){
+    private void serverParser(String message) {
 
-        if(message.split(" ")[0].equals("/modify")){
+        switch (message.split(" ")[1]) {
 
-            switch (message.split(" ")[1]){
-
-                case "HP":
-                    player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "dmg":
-                    player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "int":
-                    player.setIntelligence(player.getIntelligence() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "str":
-                    player.setStrength(player.getStrength() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "def":
-                    player.setDefense(player.getDefense() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "dex":
-                    player.setDexterity(player.getDexterity() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "fth":
-                    player.setFaith(player.getFaith() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "crit":
-                    player.setCritChance(player.getCritChance() + Integer.parseInt(message.split(" ")[2]));
-                    break;
-                case "hasActed":
-                    player.setHasActed(false);
-                    break;
-            }
+            case "hp":
+                player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "dmg":
+                player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "int":
+                player.setIntelligence(player.getIntelligence() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "str":
+                player.setStrength(player.getStrength() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "def":
+                player.setDefense(player.getDefense() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "dex":
+                player.setDexterity(player.getDexterity() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "fth":
+                player.setFaith(player.getFaith() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "crit":
+                player.setCritChance(player.getCritChance() + Integer.parseInt(message.split(" ")[2]));
+                break;
+            case "hasActed":
+                player.setHasActed(false);
+                System.out.println("Next turn");
+                break;
         }
-
     }
 
+    private class ServerListener implements Runnable {
 
-        private class ServerListener implements Runnable {
+        private BufferedReader in;
 
-            private BufferedReader in;
+        public ServerListener(BufferedReader in) {
+            this.in = in;
+        }
 
-            public ServerListener(BufferedReader in) {
-                this.in = in;
-            }
+        @Override
+        public void run() {
 
-            @Override
-            public void run() {
+            while (!socket.isClosed()) {
+                try {
+                    in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-                while (!socket.isClosed()) {
-                    try {
-                        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-                        String serverMSG = in.readLine();
-                        if (serverMSG == null) {
-                            System.out.println("Server connection is closed.");
-                            socket.close();
-                            break;
-                        }
-                        System.out.println(serverMSG);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    String serverMSG = in.readLine();
+                    if (serverMSG == null) {
+                        System.out.println("Server connection is closed.");
+                        socket.close();
+                        break;
                     }
-                }
 
+                    if (serverMSG.split(" ")[0].equals("/modify")) {
+                        serverParser(serverMSG);
+                    } else {
+                        System.out.println(serverMSG);
+                    }
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
         }
     }
+}

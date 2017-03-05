@@ -1,8 +1,10 @@
 
 package org.academiadecodigo.roothless.server;
 
+import org.academiadecodigo.roothless.server.gameObjects.loot.loot1;
 import org.academiadecodigo.roothless.server.gameObjects.monsters.Monster;
 import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
+import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster;
 import org.academiadecodigo.roothless.server.level.CombatRoom;
 import org.academiadecodigo.roothless.server.level.MixedRoom;
 import org.academiadecodigo.roothless.server.level.QuizRoom;
@@ -10,6 +12,7 @@ import org.academiadecodigo.roothless.server.level.Room;
 import org.academiadecodigo.roothless.serverParser.Strategy;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -25,18 +28,22 @@ public class Dungeon {
     private List<Monster> monsterArray;
     private List<Loot> lootArray;
     private String[] questions;
-    private Room room;
+    volatile private Room room;
     private int level = 1;
     private boolean hasEnded;
     private int maxRooms = 1;
     private LinkedBlockingQueue<Strategy> queue;
-    private int countAction;
+    volatile private int countAction;
 
     public Dungeon(LinkedBlockingQueue queue) {
         this.queue = queue;
+        monsterArray = new LinkedList<>();
+        lootArray = new LinkedList<>();
     }
 
     public void enterDungeon() {
+        monsterArray.add(new TestMonster(this));
+        lootArray.add(new loot1());
         while ((level - 1) < maxRooms) {
             //double rng = Math.random();
             //if (rng <= 0.33) {
@@ -111,22 +118,23 @@ public class Dungeon {
         this.countAction = countAction;
     }
 
-    public String readStrategy(){
-
-        System.out.println("oix");
+    public String readStrategy() {
 
         return queue.poll().run();
     }
 
     public String checkActions() {
 
-        if(countAction<5){
+        System.out.println(countAction);
+        if (countAction < 4) {
             return readStrategy();
-        }else{
-            countAction=0;
-            return "/modify hasActed";
+        } else {
+            return "/modify hasActed \n";
         }
+    }
 
+    public String monsterOutput() {
+        return room.getMonster().attack();
     }
 
     private Monster randomMonster() {

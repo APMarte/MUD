@@ -13,25 +13,28 @@ public class CombatRoom extends Room {
         super(monster, loot, dungeon);
     }
 
+
     @Override
     public void run() {
         Loot loot = getLoot();
         setLoot(null);
+        System.out.println("----------------entered run");
         //broadcast - > getMonster().getDescription();
-        while (getMonster() != null) {
-            getDungeon().getQueue().poll().run();
+        while (getMonster().getHealth() > 0) {
         }
+        setMonster(null);
+        System.out.println("ta morto caralho");
         //broadcast - > monster is dead ou broadcast no strategy?
         getDungeon().getQueue().clear();
         setLoot(loot);
         //broadcast loot description
         while (loot != null) {
-            getDungeon().getQueue().poll().run();
         }
         getDungeon().getQueue().clear();
         //broadcast your party is moving to the next room
     }
 }
+
 
 
 
