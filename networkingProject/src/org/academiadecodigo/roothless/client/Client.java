@@ -90,10 +90,11 @@ public class Client {
 
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
-
-        System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
-        String name = scanner.nextLine();
-
+        String name = "";
+        while (name.equals("")){
+            System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
+            name = scanner.nextLine();
+        }
         do {
             System.out.println("Choose your Class: \n  (1) Archer  (2) Paladin  (3) Priest  (4) Sorcerer" +
                     "  (5) Thief");
