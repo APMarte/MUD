@@ -22,10 +22,7 @@ public class ServerParser {
             case "/skill":
                 return new Situation(new Skill()).handleByServer(commandToParse,dungeon);
             case "/pick":
-                System.out.println("entrei");
                 return new Situation(new Pick()).handleByServer(commandToParse,dungeon);
-
-            //QUIZ PARSER
             case "/option":
                 return new Situation(new Option()).handleByServer(commandToParse,dungeon);
 
