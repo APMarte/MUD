@@ -195,7 +195,7 @@ public class Client {
                     break;
                 case "/pick":
                     if(!player.getHasActed()) {
-                        out.write((message+"\n").getBytes());
+                        5   out.write((message+"\n").getBytes());
                         player.setHasActed(true);
                     }else {
                         System.out.println("Wait for your turn");
