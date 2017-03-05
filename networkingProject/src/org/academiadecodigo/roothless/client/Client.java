@@ -232,6 +232,7 @@ public class Client {
 
             case "hp":
                 player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
+                System.out.println(player.getName() + " Health " + player.getHealth());
                 break;
             case "dmg":
                 player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));

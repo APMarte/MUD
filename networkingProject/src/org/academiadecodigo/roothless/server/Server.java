@@ -86,7 +86,7 @@ public class Server {
 
         private Socket clientSocket;
         private BufferedReader in;
-        private String inputMSG;
+        volatile private String inputMSG;
         private String playerName;
         private String playerType;
 
@@ -173,6 +173,15 @@ public class Server {
                         inputMSG = dungeon.checkActions();
                         systemBroadcast();
 
+                        if(inputMSG.contains("/modify")){
+                            try {
+                                Thread.sleep(500);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            inputMSG=dungeon.monsterOutput();
+                            systemBroadcast();
+                        }
                     } else {
                         clientSocket.close();
                     }

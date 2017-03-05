@@ -34,6 +34,7 @@ public class Dungeon {
     private int maxRooms = 1;
     private LinkedBlockingQueue<Strategy> queue;
     volatile private int countAction;
+    volatile private boolean monsterAttack;
 
     public Dungeon(LinkedBlockingQueue queue) {
         this.queue = queue;
@@ -49,7 +50,7 @@ public class Dungeon {
             //double rng = Math.random();
             //if (rng <= 0.33)
             //{
-            System.out.println("entered room "+level);
+            System.out.println("entered room " + level);
             room = new CombatRoom(randomMonster(), randomLoot(), this);
             room.run();
             System.out.println("room cleared");
@@ -132,6 +133,12 @@ public class Dungeon {
 
         String rStrat = null;
 
+       /* if (countAction >= 4 && !monsterAttack) {
+            monsterOutput();
+            monsterAttack = true;
+            return checkActions();
+        }*/
+
         if (countAction <= 4 && room.getMonster() != null) {
             System.out.println("first if / count at " + countAction);
             rStrat = readStrategy();
@@ -139,6 +146,7 @@ public class Dungeon {
 
         if (room.getMonster() == null || countAction >= 4) {
             countAction = 0;
+            //monsterAttack = false;
             if (rStrat != null) {
                 return "/modify hasActed |" + rStrat;
             } else {
