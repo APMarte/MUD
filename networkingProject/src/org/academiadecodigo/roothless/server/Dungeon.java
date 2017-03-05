@@ -27,6 +27,7 @@ public class Dungeon {
     private boolean hasEnded;
     private int maxRooms = 1;
     private LinkedBlockingQueue<Strategy> queue;
+    private int countAction;
 
     public Dungeon(LinkedBlockingQueue queue){
         this.queue = queue;
@@ -95,6 +96,14 @@ public class Dungeon {
         this.room = room;
     }
 
+    public int getCountAction() {
+        return countAction;
+    }
+
+    public void setCountAction(int countAction) {
+        this.countAction = countAction;
+    }
+
     public String readStrategy(){
 
         System.out.println("oix");
@@ -103,5 +112,15 @@ public class Dungeon {
         return str;
     }
 
+    public String checkActions() {
+
+        if(countAction<5){
+            return readStrategy();
+        }else{
+            countAction=0;
+            return "/modify hasActed";
+        }
+
+    }
 }
 

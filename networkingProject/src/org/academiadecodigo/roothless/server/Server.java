@@ -47,6 +47,7 @@ public class Server {
     private LinkedBlockingQueue<Strategy> queue = new LinkedBlockingQueue<Strategy>();
     private Dungeon dungeon = new Dungeon(queue);
 
+
     public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
         return clientHandlersList;
     }
@@ -171,9 +172,12 @@ public class Server {
                     if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         chatBroadcast();
 
+                    } else if (inputMSG != null && inputMSG.split(" ")[0].equals("/w")) {
+                        whispering();
+
                     } else if (inputMSG != null) {
                         queue.add(ServerParser.parseCommand(inputMSG, dungeon));
-                        inputMSG = dungeon.readStrategy();
+                        inputMSG = dungeon.checkActions();
                         System.out.println(inputMSG);
                         systemBroadcast();
 
@@ -193,7 +197,7 @@ public class Server {
 
             try {
 
-                String author = getPlayerName() + " <" + getPlayerType() +"> :";
+                String author = getPlayerName() + " <" + getPlayerType() +">: ";
                 String message = author + inputMSG + "\n";
 
                 for (ClientHandler c : clientHandlersList) { //TODO
@@ -212,12 +216,37 @@ public class Server {
 
             try {
 
-                String message = inputMSG + "\n";
+                String message = inputMSG + "\n"; //.split("[|]")[0] + "\n";
+                //String message2 = inputMSG.split("[|]")[1] + "\n";
+
 
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();
                     out.write(message.getBytes());
                     out.flush();
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            dungeon.setCountAction(dungeon.getCountAction() + 1);
+        }
+
+        private void whispering() {
+
+            try {
+                String nameClient = inputMSG.split(" ")[1];
+
+                String message = getPlayerName() + " <" + getPlayerType() +"> whispered: " + inputMSG.substring(nameClient.length()+4) + "\n";
+                System.out.println(message);
+
+                for (ClientHandler c : clientHandlersList) {
+                    if(c.getPlayerName().equals(nameClient)) {//TODO
+                        OutputStream out = c.getClientSocket().getOutputStream();
+                        out.write(message.getBytes());
+                        out.flush();
+                    }
                 }
 
             } catch (IOException e) {
