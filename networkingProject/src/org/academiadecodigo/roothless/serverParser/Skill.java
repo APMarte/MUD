@@ -27,7 +27,7 @@ public class Skill implements Strategy {
 
         String str = dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg));
 
-        return name + " have attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+        return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
 
     }
 
