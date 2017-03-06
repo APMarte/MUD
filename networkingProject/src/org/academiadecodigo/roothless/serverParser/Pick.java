@@ -9,6 +9,7 @@ import org.academiadecodigo.roothless.server.Dungeon;
 public class Pick implements Strategy{
 
     private Dungeon dungeon;
+    private String name;
 
     @Override
     public Strategy processCommand(String command, Dungeon dungeon) {
@@ -19,7 +20,7 @@ public class Pick implements Strategy{
 
     @Override
     public String run() {
-        System.out.println("oix");
+
         String pick ="/modify ";
 
         pick += dungeon.getRoom().getLoot().getProperty()+" ";
