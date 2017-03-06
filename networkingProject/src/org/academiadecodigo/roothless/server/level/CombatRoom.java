@@ -31,7 +31,7 @@ public class CombatRoom extends Room {
         setLoot(loot);
         System.out.println("loot was set // before while loot");
         //broadcast loot description
-        while (loot != null) {
+        while (getLoot()!= null) {
         }
         System.out.println("loot sucessful");
         getDungeon().getQueue().clear();

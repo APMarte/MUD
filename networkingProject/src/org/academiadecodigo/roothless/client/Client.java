@@ -164,69 +164,67 @@ public class Client {
                 out.flush();
             } else {
 
-                isChating = false;
-                switch (command) {
-                    case "/skill":
-                        if (!player.getHasActed()) {
-                            if (message.split(" ").length == 2 && message.split(" ")[1].matches("[1, 2]")) {
-                                    str = message + " " + player.getChoosenClass() + " " + player.getName() + " " + player.dmgCalc() + "\n";
-                                    System.out.println("---------message sent from client " + str);
-                                    out.write(str.getBytes());
+                if (!player.isDead()) {
+
+                    isChating = false;
+                    switch (command) {
+                        case "/skill":
+                            if (!player.getHasActed()) {
+                                str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + " " + player.getName() + "\n";
+                                out.write(str.getBytes());
+                                player.setHasActed(true);
                             } else {
-                                System.out.println("Invalid /skill command (/skill (1)/(2))");
-                                break;
+                                System.out.println("Wait for your turn");
                             }
-                            player.setHasActed(true);
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/defense":
-                        if (!player.getHasActed()) {
+                            break;
+                        case "/defense":
+                            if (!player.getHasActed()) {
+                                out.write((message + "\n").getBytes());
+                                player.setHasActed(true);
+                                player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
+                                System.out.println(player.getName() + " has gain 10 in Defense " + player.getDefense());
+                            } else {
+                                System.out.println("Wait for your turn");
+                            }
+                            break;
+                        case "/pick":
+                            if (!player.getHasActed()) {
+                                str = message + " " + player.getName() + "\n";
+                                out.write(str.getBytes());
+                            } else {
+                                System.out.println("Wait for your turn");
+                            }
+                            break;
+                        case "/option":
+                            if (player.getHasActed()) {
+                                System.out.println(message);
+                                out.write((message + "\n").getBytes());
+                                player.setHasActed(true);
+                            } else {
+                                System.out.println("Please wait for your turn");
+                            }
+                            break;
+                        case "/w":
                             out.write((message + "\n").getBytes());
-                            player.setHasActed(true);
-                            player.setDefense(player.getdefense() + 10); //TODO: ver se o valor é para manter.
-                            System.out.println(player.getName() + " has gain 10 in Defense " + player.getDefense());
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/pick":
-                        if (!player.getHasActed()) {
-                            out.write((message + "\n").getBytes());
-                        } else {
-                            System.out.println("Wait for your turn");
-                        }
-                        break;
-                    case "/option":
-                        if (player.getHasActed()) {
-                            System.out.println(message);
-                            out.write((message + "\n").getBytes());
-                            player.setHasActed(true);
-                        } else {
-                            System.out.println("Please wait for your turn");
-                        }
-                        break;
-                    case "/w":
-                        out.write((message + "\n").getBytes());
-                        break;
-                    case "/help":
-                        String line = "";
-                        String result = "";
-                        while ((line = reader.readLine()) != null) {
-                            result += line + "\n";
-                        }
-                        System.out.println(result);
-                        reader.close();
-                        break;
-                    default:
-                        System.out.println("Invalid Command");
-                        break;
+                            break;
+                        case "/help":
+                            String line = "";
+                            String result = "";
+                            while ((line = reader.readLine()) != null) {
+                                result += line + "\n";
+                            }
+                            System.out.println(result);
+                            reader.close();
+                            break;
+                        default:
+                            System.out.println("Invalid Command");
+                            break;
+                    }
+                    out.flush();
+                } else {
+                    System.out.println("Not accepted.");
                 }
-                out.flush();
             }
-        } else {
-            System.out.println("Not accepted.");
         }
     }
 
@@ -241,34 +239,38 @@ public class Client {
             case "hp":
                 player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
                 System.out.println(player.getName() + " Health " + player.getHealth());
+                if (player.getHealth() < 0) {
+                    player.setDead(true);
+                    System.out.println("entrei");
+                }
                 break;
             case "dmg":
                 player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " base damage increased to: " + player.getBaseDamage());
+                System.out.println("Your base damage increased to: " + player.getBaseDamage());
                 break;
             case "int":
                 player.setIntelligence(player.getIntelligence() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " intelligence increased to: " + player.getIntelligence());
+                System.out.println("Your intelligence increased to: " + player.getIntelligence());
                 break;
             case "str":
                 player.setStrength(player.getStrength() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " strength increased to: " + player.getStrength());
+                System.out.println("Your strength increased to: " + player.getStrength());
                 break;
             case "def":
                 player.setDefense(player.getDefense() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " defese increased to: " + player.getDefense());
+                System.out.println("Your defese increased to: " + player.getDefense());
                 break;
             case "dex":
                 player.setDexterity(player.getDexterity() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " dexterity increased to: " + player.getDexterity());
+                System.out.println("Your dexterity increased to: " + player.getDexterity());
                 break;
             case "fth":
                 player.setFaith(player.getFaith() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " faith increased to: " + player.getFaith());
+                System.out.println("Your faith increased to: " + player.getFaith());
                 break;
             case "crit":
                 player.setCritChance(player.getCritChance() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " critical chance increased to: " + player.getCritChance());
+                System.out.println("Your critical chance increased to: " + player.getCritChance());
                 break;
             case "hasActed":
                 player.setHasActed(false);

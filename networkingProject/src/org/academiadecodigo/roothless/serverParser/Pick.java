@@ -29,6 +29,6 @@ public class Pick implements Strategy{
 
         dungeon.getRoom().setLoot(null);
 
-        return pick;//dungeon.getRoom().getMonster().monsterHealth(Integer.parseInt(dmg)) + "| has atacked with " + dmg ;
+        return pick;
     }
 }

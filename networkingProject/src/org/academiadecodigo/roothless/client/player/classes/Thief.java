@@ -10,7 +10,7 @@ public class Thief extends Player {
     public Thief(String name) {
         super(name);
         setChoosenClass("thief");
-        setHealth(10);
+        setHealth(100);
         setBaseDamage(10);
         setDefense(10);
         setStrength(10);
