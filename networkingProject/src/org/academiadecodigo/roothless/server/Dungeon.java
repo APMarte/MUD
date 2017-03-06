@@ -35,11 +35,20 @@ public class Dungeon {
     private int maxRooms = 2;
     private LinkedBlockingQueue<Strategy> queue;
     volatile private int countAction;
-    volatile private boolean monsterAttack;
+    volatile private boolean showLoot;
     private String currentLore;
+
+    public boolean isShowLoot() {
+        return showLoot;
+    }
+
+    public void setShowLoot(boolean showLoot) {
+        this.showLoot = showLoot;
+    }
 
     public boolean isPrintDescription() {
         return printDescription;
+
     }
 
     public void setPrintDescription(boolean printDescription) {
@@ -78,28 +87,27 @@ public class Dungeon {
             //double rng = Math.random();
             //if (rng <= 0.33)
             //{
-            currentLore=getLore(level);
+            currentLore = getLore(level);
             System.out.println("entered room " + level);
-            if (level == 1) {
-                room = new CombatRoom(randomMonster(), randomLoot(), this);
-                setStarted(true);
-                setPrintDescription(true);
-                room.run();
-            } else {
-                room = new QuizRoom(new loot1(), this);
-                setStarted(true);
-                setPrintDescription(true);
-                room.run();
+            room = new CombatRoom(randomMonster(), randomLoot(), this);
+            setStarted(true);
+            setPrintDescription(true);
+            room.run();
+            showLoot = true;
+            System.out.println("loot was set // before while loot || show loot -> " + showLoot);
+            //broadcast loot description
+            while (room.getLoot() != null) {
             }
-            System.out.println("room cleared");
-            queue.clear();
+            System.out.println("loot sucessful");
+        }
+        System.out.println("room cleared");
+        queue.clear();
             /*} else if (rng >= 0.34 && rng <= 0.66) {
                 room = new QuizRoom().run();
             } else {
                 room = new MixedRoom().run();
             }*/
-            level++;
-        }
+        level++;
     }
 
     public String getLore(int level) throws IOException {
@@ -205,8 +213,9 @@ public class Dungeon {
             }
             //monsterAttack = false;
             if (rStrat != null) {
+                System.out.println("in rstrat dif null -> " + rStrat);
                 return "/modify hasActed |" + rStrat;
-            }else{
+            } else {
                 return "/modify hasActed";
             }
         } else {

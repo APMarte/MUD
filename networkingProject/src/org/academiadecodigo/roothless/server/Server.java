@@ -152,12 +152,16 @@ public class Server {
                 e.printStackTrace();
             }
 
+            try {
+                in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             while (!clientSocket.isClosed()) {
 
                 try {
 
-                    in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
                    if(descriptionFlag() && dungeon.isStarted()) {
 
@@ -168,12 +172,16 @@ public class Server {
                        systemBroadcast();
                        dungeon.setStarted(false);
                    }
-                    /*if (clientHandlersList.size() == 5 && dungeon.isPrintDescription()) {
-                        inputMSG = dungeon.getRoom().getMonster().getDescription();
+
+                    System.out.println("------------------ pre-if ->" + dungeon.isShowLoot());
+                    if (dungeon.isShowLoot()) {
+                        System.out.println("----- in show loot");
+                        inputMSG = dungeon.getRoom().getLoot().getDescription();
+                        System.out.println("--------------------- item description " + inputMSG);
                         systemBroadcast();
-                        dungeon.setPrintDescription(false);
-                        Thread.sleep(1500);
-                    }*/
+                        dungeon.setShowLoot(false);
+                        Thread.sleep(1000);
+                    }
 
 
                     inputMSG = in.readLine();
@@ -261,9 +269,12 @@ public class Server {
                     OutputStream out = c.getClientSocket().getOutputStream();
                     out.write(message.getBytes());
                     out.flush();
+                    Thread.sleep(200);
                 }
 
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             //System.out.println("oix");

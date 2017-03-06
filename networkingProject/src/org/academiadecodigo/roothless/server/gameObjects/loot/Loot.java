@@ -5,9 +5,9 @@ package org.academiadecodigo.roothless.server.gameObjects.loot;
  */
 public abstract class Loot {
 
-    private String description;
-    private int buff=10;
-    private String property="str";
+    private String description = "This is a loot description placeholder, it gives you +10 STR if picked up";
+    private int buff= 10;
+    private String property= "str";
 
 
     public String getDescription() {

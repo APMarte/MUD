@@ -29,12 +29,6 @@ public class CombatRoom extends Room {
         getDungeon().getQueue().clear();
         System.out.println("queue cleared");
         setLoot(loot);
-        System.out.println("loot was set // before while loot");
-        //broadcast loot description
-        while (getLoot()!= null) {
-        }
-        System.out.println("loot sucessful");
-        getDungeon().getQueue().clear();
         //broadcast your party is moving to the next room*/
     }
 }
