@@ -37,7 +37,119 @@ public class Dungeon {
     volatile private int countAction;
     volatile private boolean showLoot;
     private String currentLore;
+    private boolean started;
 
+
+    public void enterDungeon() throws IOException {
+        monsterArray.add(new TestMonster(this));
+        lootArray.add(new loot1());
+
+        while ((level - 1) < maxRooms) {
+            //double rng = Math.random();
+            //if (rng <= 0.33)
+            //{
+            currentLore = getLore(level);
+            System.out.println("entered room " + level);
+            room = new CombatRoom(randomMonster(), randomLoot(), this);
+            setStarted(true);
+            setPrintDescription(true);
+            room.run();
+            showLoot = true;
+            System.out.println("loot was set // before while loot || show loot -> " + showLoot);
+            //broadcast loot description
+            while (room.getLoot() != null) {
+            }
+            System.out.println("loot sucessful");
+        }
+        System.out.println("room cleared");
+        queue.clear();
+        level++;
+    }
+
+
+
+
+    public Dungeon(LinkedBlockingQueue queue) {
+        this.queue = queue;
+        monsterArray = new LinkedList<>();
+        lootArray = new LinkedList<>();
+
+    }
+
+    public String getCurrentLore() {
+        return currentLore;
+    }
+    public String getLore(int level) throws IOException {
+
+        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore1"));
+
+        String line = "";
+        String result = "";
+
+        while ((line = readLore.readLine()) != null) {
+            result += line + " ";
+        }
+
+        readLore.close();
+        return result;
+
+    }
+
+    public String checkActions() {
+
+        String rStrat = null;
+
+        if (countAction <= 4 && room.getMonster() != null) {
+            System.out.println("first if / count at " + countAction);
+            rStrat = readStrategy();
+        }
+
+        if (room.getMonster() == null || countAction >= 4) {
+            countAction = 0;
+            if (room.getLoot() != null) {
+                return readStrategy();
+            }
+            //monsterAttack = false;
+            if (rStrat != null) {
+                System.out.println("in rstrat dif null -> " + rStrat);
+                return "/modify hasActed |" + rStrat;
+            } else {
+                return "/modify hasActed";
+            }
+        } else {
+            System.out.println("else returning strat / count at " + countAction);
+            countAction++;
+            return rStrat;
+        }
+
+    }
+
+    public String readStrategy() {
+
+        return queue.poll().run();
+    }
+
+    public String monsterOutput() {
+        return room.getMonster().attack();
+    }
+
+    private Monster randomMonster() {
+        int randomIndex = (int) (Math.random() * (monsterArray.size() - 1));
+        Monster returnMonster = monsterArray.get(randomIndex);
+        monsterArray.remove(randomIndex);
+        return returnMonster;
+    }
+
+    private Loot randomLoot() {
+        int randomIndex = (int) (Math.random() * (lootArray.size() - 1));
+        Loot returnLoot = lootArray.get(randomIndex);
+        lootArray.remove(randomIndex);
+        return returnLoot;
+    }
+
+    public LinkedBlockingQueue<Strategy> getQueue() {
+        return queue;
+    }
     public boolean isShowLoot() {
         return showLoot;
     }
@@ -63,71 +175,6 @@ public class Dungeon {
 
     public void setStarted(boolean started) {
         this.started = started;
-    }
-
-    private boolean started;
-
-
-    public Dungeon(LinkedBlockingQueue queue) {
-        this.queue = queue;
-        monsterArray = new LinkedList<>();
-        lootArray = new LinkedList<>();
-
-    }
-
-    public String getCurrentLore() {
-        return currentLore;
-    }
-
-    public void enterDungeon() throws IOException {
-        monsterArray.add(new TestMonster(this));
-        lootArray.add(new loot1());
-
-        while ((level - 1) < maxRooms) {
-            //double rng = Math.random();
-            //if (rng <= 0.33)
-            //{
-            currentLore = getLore(level);
-            System.out.println("entered room " + level);
-            room = new CombatRoom(randomMonster(), randomLoot(), this);
-            setStarted(true);
-            setPrintDescription(true);
-            room.run();
-            showLoot = true;
-            System.out.println("loot was set // before while loot || show loot -> " + showLoot);
-            //broadcast loot description
-            while (room.getLoot() != null) {
-            }
-            System.out.println("loot sucessful");
-        }
-        System.out.println("room cleared");
-        queue.clear();
-            /*} else if (rng >= 0.34 && rng <= 0.66) {
-                room = new QuizRoom().run();
-            } else {
-                room = new MixedRoom().run();
-            }*/
-        level++;
-    }
-
-    public String getLore(int level) throws IOException {
-
-        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore1"));
-
-        String line = "";
-        String result = "";
-
-        while ((line = readLore.readLine()) != null) {
-            result += line + " ";
-        }
-
-        readLore.close();
-        return result;
-
-    }
-
-    public LinkedBlockingQueue<Strategy> getQueue() {
-        return queue;
     }
 
     public List<Monster> getMonsterArray() {
@@ -186,84 +233,5 @@ public class Dungeon {
         this.countAction = countAction;
     }
 
-    public String readStrategy() {
-
-        return queue.poll().run();
-    }
-
-    public String checkActions() {
-
-        String rStrat = null;
-
-       /* if (countAction >= 4 && !monsterAttack) {
-            monsterOutput();
-            monsterAttack = true;
-            return checkActions();
-        }*/
-
-        if (countAction <= 4 && room.getMonster() != null) {
-            System.out.println("first if / count at " + countAction);
-            rStrat = readStrategy();
-        }
-
-        if (room.getMonster() == null || countAction >= 4) {
-            countAction = 0;
-            if (room.getLoot() != null) {
-                return readStrategy();
-            }
-            //monsterAttack = false;
-            if (rStrat != null) {
-                System.out.println("in rstrat dif null -> " + rStrat);
-                return "/modify hasActed |" + rStrat;
-            } else {
-                return "/modify hasActed";
-            }
-        } else {
-            System.out.println("else returning strat / count at " + countAction);
-            countAction++;
-            return rStrat;
-        }
-
-    }
-
-        /*System.out.println("-----------------pre if count action" + countAction);
-
-        if (countAction < 5) {
-            System.out.println("-------------------------post if count action" + countAction);
-            String strategy = readStrategy();
-            System.out.println("--------------- strategy to var");
-            countAction++;
-            if (countAction == 5) {
-                System.out.println("---------------count action if");
-                countAction = 0;
-                return "/modify hasActed\n";
-            }
-            if (room.getMonster() != null) {
-                System.out.println("----------------- returning strategy");
-                return strategy;
-            }
-        }
-        System.out.println("------------------count action reset");
-        countAction = 0;
-        return "/modify hasActed\n";*/
-
-
-    public String monsterOutput() {
-        return room.getMonster().attack();
-    }
-
-    private Monster randomMonster() {
-        int randomIndex = (int) (Math.random() * (monsterArray.size() - 1));
-        Monster returnMonster = monsterArray.get(randomIndex);
-        monsterArray.remove(randomIndex);
-        return returnMonster;
-    }
-
-    private Loot randomLoot() {
-        int randomIndex = (int) (Math.random() * (lootArray.size() - 1));
-        Loot returnLoot = lootArray.get(randomIndex);
-        lootArray.remove(randomIndex);
-        return returnLoot;
-    }
 }
 

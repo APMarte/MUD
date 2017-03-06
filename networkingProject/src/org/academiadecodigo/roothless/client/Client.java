@@ -172,7 +172,6 @@ public class Client {
                             if (!player.getHasActed()) {
                                 if (message.split(" ").length == 2 && message.split(" ")[1].matches("[1, 2]")) {
                                     str = message + " " + player.getChoosenClass() + " " + player.getName() + " " + player.dmgCalc() + "\n";
-                                    System.out.println("---------message sent from client " + str);
                                     out.write(str.getBytes());
                                 } else {
                                     System.out.println("Invalid /skill command (/skill (1)/(2))");
@@ -246,7 +245,7 @@ public class Client {
                 System.out.println(player.getName() + " Health " + player.getHealth());
                 if (player.getHealth() < 0) {
                     player.setDead(true);
-                    System.out.println("entrei");
+                    System.out.println("morri");
                 }
                 break;
             case "dmg":

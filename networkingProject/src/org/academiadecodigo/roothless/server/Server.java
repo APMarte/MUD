@@ -262,9 +262,7 @@ public class Server {
         private void systemBroadcast() {
 
             try {
-                String message = inputMSG + "\n"; //.split("[|]")[0] + "\n";
-                //String message2 = inputMSG.split("[|]")[1] + "\n";
-
+                String message = inputMSG + "\n";
                 for (ClientHandler c : clientHandlersList) { //TODO
                     OutputStream out = c.getClientSocket().getOutputStream();
                     out.write(message.getBytes());

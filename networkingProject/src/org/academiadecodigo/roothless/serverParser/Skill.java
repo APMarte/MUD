@@ -36,16 +36,16 @@ public class Skill implements Strategy {
         if(playerType.equals("archer")) {
             if(attackType.equals("1")) {
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has attacked with " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
             }else{
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg2);
                 System.out.println("Archer 2");
-                return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has attacked with " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
             }
         }else if(playerType.equals("paladin")){
             if(attackType.equals("1")) {
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has attacked with " + dmg + " , damage" + str; //TODO Change You by name player -->command must have player name
             }else{
                 System.out.println("Pally 2");
                 return name + " has defend you all" ; //TODO Change You by name player -->command must have player name
@@ -53,7 +53,7 @@ public class Skill implements Strategy {
         }else if(playerType.equals("priest")){
             if(attackType.equals("1")) {
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has attacked with " + dmg + " , damage" + str; //TODO Change You by name player -->command must have player name
             }else{
                 System.out.println("Priest 2");
                 return "/modify hp " + dmg2 * - 1; //TODO Change You by name player -->command must have player name
@@ -70,11 +70,11 @@ public class Skill implements Strategy {
         }else if(playerType.equals("thief")){
             if(attackType.equals("1")) {
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                return name + " has stolen the monster neckles and deal " + dmg + " damage , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has stolen the monster neckles and deal " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
             }else{
                 System.out.println("Thief 2");
                 String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                return name + " has attacked with " + dmg + " , " + str; //TODO Change You by name player -->command must have player name
+                return name + " has attacked with " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
             }
         }
         return null;

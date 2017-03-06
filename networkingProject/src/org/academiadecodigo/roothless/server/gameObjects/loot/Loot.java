@@ -5,7 +5,20 @@ package org.academiadecodigo.roothless.server.gameObjects.loot;
  */
 public abstract class Loot {
 
-    private String description = "This is a loot description placeholder, it gives you +10 STR if picked up";
+    private String description = "You found a small Katana!\n" +
+            "        It's light and very sharp, ideal for someone with fast and deadly attacks!\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "                       /\\\n" +
+            "            /vvvvvvvvvvvv \\--------------------------------------,\n" +
+            "            `^^^^^^^^^^^^ /=====================================\"\n" +
+            "                        \\/";
     private int buff= 10;
     private String property= "str";
 
