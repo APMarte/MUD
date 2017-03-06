@@ -35,8 +35,7 @@ public abstract class Room {
         this.dungeon = dungeon;
     }
 
-    public Room (String question, Loot loot, Dungeon dungeon) {
-        this.question = question;
+    public Room (Loot loot, Dungeon dungeon) {
         this.loot = loot;
         this.dungeon = dungeon;
     }

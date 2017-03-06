@@ -32,7 +32,7 @@ public class Dungeon {
     volatile private Room room;
     private int level = 1;
     private boolean hasEnded;
-    private int maxRooms = 10;
+    private int maxRooms = 2;
     private LinkedBlockingQueue<Strategy> queue;
     volatile private int countAction;
     volatile private boolean monsterAttack;
@@ -79,14 +79,18 @@ public class Dungeon {
             //if (rng <= 0.33)
             //{
             currentLore=getLore(level);
-
-
-
             System.out.println("entered room " + level);
-            room = new CombatRoom(randomMonster(), randomLoot(), this);
-            setStarted(true);
-            setPrintDescription(true);
-            room.run();
+            if (level == 1) {
+                room = new CombatRoom(randomMonster(), randomLoot(), this);
+                setStarted(true);
+                setPrintDescription(true);
+                room.run();
+            } else {
+                room = new QuizRoom(new loot1(), this);
+                setStarted(true);
+                setPrintDescription(true);
+                room.run();
+            }
             System.out.println("room cleared");
             queue.clear();
             /*} else if (rng >= 0.34 && rng <= 0.66) {
@@ -100,7 +104,7 @@ public class Dungeon {
 
     public String getLore(int level) throws IOException {
 
-        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore" + level));
+        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore1"));
 
         String line = "";
         String result = "";

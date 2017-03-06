@@ -36,21 +36,28 @@ public class QuizRoom extends Room {
 
 
 
-    public QuizRoom(String question, Loot loot, Dungeon dungeon) {
-        super(question, loot, dungeon);
+    public QuizRoom(Loot loot, Dungeon dungeon) {
+        super(loot, dungeon);
     }
 
     @Override
     public void run() {
-        synchronized (getDungeon()) {
-            try {
-                while (getQuestion() != null) {
-                    wait();
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        questionsAndAnswers();
+        Loot loot = getLoot();
+        setLoot(null);
+
+        System.out.println(Q);
+        System.out.println(A);
+        System.out.println(B);
+        System.out.println(C);
+
+
+
+        while (getLoot()!= null) {
         }
+        System.out.println("loot sucessful");
+        getDungeon().getQueue().clear();
+        //broadcast your party is moving to the next room*/
     }
 
     private String[][] getQuestionArray(){
@@ -69,19 +76,17 @@ public class QuizRoom extends Room {
         return random(1, 3);
     }
 
-    private int questionsAndAnswers() throws FileNotFoundException {
+    private int questionsAndAnswers() {
 
         rightAnswerIndex = questionI();
         if (questionsAsked[rightAnswerIndex]){
             questionsAndAnswers();
         }
         else {
-            //System.out.println(q + " " + Q_AND_A[q][0]);
             Q = Q_AND_A[rightAnswerIndex][0];
         }
         int a = answers();
         A = Q_AND_A[rightAnswerIndex][a];
-        //System.out.println(Q_AND_A[q][a]);
         answersShowed[0] = true;
         answersShowed[a] = true;
         for (int i = 0; i < answersShowed.length; i++) {
@@ -98,7 +103,6 @@ public class QuizRoom extends Room {
         }
 
         return rightAnswerIndex;
-        //selectOneAnswer(q);
     }
 
 }
