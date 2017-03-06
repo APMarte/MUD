@@ -11,6 +11,7 @@ import org.academiadecodigo.roothless.server.level.QuizRoom;
 import org.academiadecodigo.roothless.server.level.Room;
 import org.academiadecodigo.roothless.serverParser.Strategy;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -31,18 +32,45 @@ public class Dungeon {
     volatile private Room room;
     private int level = 1;
     private boolean hasEnded;
-    private int maxRooms = 1;
+    private int maxRooms = 10;
     private LinkedBlockingQueue<Strategy> queue;
     volatile private int countAction;
     volatile private boolean monsterAttack;
+    private String currentLore;
+
+    public boolean isPrintDescription() {
+        return printDescription;
+    }
+
+    public void setPrintDescription(boolean printDescription) {
+        this.printDescription = printDescription;
+    }
+
+    private boolean printDescription;
+
+    public boolean isStarted() {
+        return started;
+    }
+
+    public void setStarted(boolean started) {
+        this.started = started;
+    }
+
+    private boolean started;
+
 
     public Dungeon(LinkedBlockingQueue queue) {
         this.queue = queue;
         monsterArray = new LinkedList<>();
         lootArray = new LinkedList<>();
+
     }
 
-    public void enterDungeon() {
+    public String getCurrentLore() {
+        return currentLore;
+    }
+
+    public void enterDungeon() throws IOException {
         monsterArray.add(new TestMonster(this));
         lootArray.add(new loot1());
 
@@ -50,8 +78,14 @@ public class Dungeon {
             //double rng = Math.random();
             //if (rng <= 0.33)
             //{
+            currentLore=getLore(level);
+
+
+
             System.out.println("entered room " + level);
             room = new CombatRoom(randomMonster(), randomLoot(), this);
+            setStarted(true);
+            setPrintDescription(true);
             room.run();
             System.out.println("room cleared");
             queue.clear();
@@ -62,6 +96,22 @@ public class Dungeon {
             }*/
             level++;
         }
+    }
+
+    public String getLore(int level) throws IOException {
+
+        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore" + level));
+
+        String line = "";
+        String result = "";
+
+        while ((line = readLore.readLine()) != null) {
+            result += line + " ";
+        }
+
+        readLore.close();
+        return result;
+
     }
 
     public LinkedBlockingQueue<Strategy> getQueue() {

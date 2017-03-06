@@ -158,8 +158,25 @@ public class Server {
                 try {
 
                     in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                    inputMSG = in.readLine();
 
+                   if(descriptionFlag() && dungeon.isStarted()) {
+
+                       inputMSG = "lore1 " + dungeon.getCurrentLore();
+                       systemBroadcast();
+                       Thread.sleep(5000);
+                       inputMSG = dungeon.getRoom().getMonster().getDescription();
+                       systemBroadcast();
+                       dungeon.setStarted(false);
+                   }
+                    /*if (clientHandlersList.size() == 5 && dungeon.isPrintDescription()) {
+                        inputMSG = dungeon.getRoom().getMonster().getDescription();
+                        systemBroadcast();
+                        dungeon.setPrintDescription(false);
+                        Thread.sleep(1500);
+                    }*/
+
+
+                    inputMSG = in.readLine();
 
                     if (inputMSG != null && inputMSG.split(" ")[0].charAt(0) != '/') {
                         chatBroadcast();
@@ -168,8 +185,10 @@ public class Server {
                         whispering();
 
                     } else if (inputMSG != null) {
+
                         queue.add(ServerParser.parseCommand(inputMSG, dungeon));
                         inputMSG = dungeon.checkActions();
+
                         systemBroadcast();
 
                         if (inputMSG.contains("/modify")) {
@@ -190,10 +209,27 @@ public class Server {
 
                 } catch (IOException e) {
                     e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
             clientHandlersList.remove(this); //TODO
             System.out.println(clientHandlersList.size());
+        }
+
+        private boolean descriptionFlag () {
+            int positiveChecks= 0;
+            for (ClientHandler c: clientHandlersList) {
+                if (c.getPlayerType() != null) {
+                    positiveChecks++;
+                }
+            }
+
+            if (positiveChecks == 5) {
+                return true;
+            }
+
+            return false;
         }
 
         private void chatBroadcast() {

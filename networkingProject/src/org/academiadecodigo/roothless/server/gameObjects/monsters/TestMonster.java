@@ -13,7 +13,7 @@ public class TestMonster extends Monster {
         setHealth(150);
         setBaseDamage(20);
         setDefense(10);
-        setDescription("Bobi");
+        setDescription("Bobi is a feroucious beast, only tammed by the bests.");
         setDead(false);
         setDungeon(dungeon);
         super.lvlScaling();
