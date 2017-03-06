@@ -22,7 +22,6 @@ public class Client {
     private String str;
 
 
-
     private void connect() throws IOException {
 
 
@@ -91,7 +90,7 @@ public class Client {
         int numClass = 0;
         br = new BufferedReader(new InputStreamReader(System.in)); // vai fazer de Scanner
         String name = "";
-        while (name.equals("")){
+        while (name.equals("")) {
             System.out.println("Insert username: "); // aceita se o utilizador nao introduzir nada
             name = scanner.nextLine();
         }
@@ -169,8 +168,14 @@ public class Client {
                 switch (command) {
                     case "/skill":
                         if (!player.getHasActed()) {
-                            str = message + " " + player.dmgCalc() + " " + player.getChoosenClass() + " " + player.getName() + "\n";
-                            out.write(str.getBytes());
+                            if (message.split(" ").length == 2 && message.split(" ")[1].matches("[1, 2]")) {
+                                    str = message + " " + player.getChoosenClass() + " " + player.getName() + " " + player.dmgCalc() + "\n";
+                                    System.out.println("---------message sent from client " + str);
+                                    out.write(str.getBytes());
+                            } else {
+                                System.out.println("Invalid /skill command (/skill (1)/(2))");
+                                break;
+                            }
                             player.setHasActed(true);
                         } else {
                             System.out.println("Wait for your turn");
@@ -188,8 +193,7 @@ public class Client {
                         break;
                     case "/pick":
                         if (!player.getHasActed()) {
-                            str = message + " " + player.getName() + "\n";
-                            out.write(str.getBytes());
+                            out.write((message + "\n").getBytes());
                         } else {
                             System.out.println("Wait for your turn");
                         }
@@ -228,7 +232,7 @@ public class Client {
 
     private void serverParser(String message) {
 
-        if(message.contains("|")){
+        if (message.contains("|")) {
             System.out.println(message.split("[|]")[1]);
         }
 
@@ -240,31 +244,31 @@ public class Client {
                 break;
             case "dmg":
                 player.setBaseDamage(player.getBaseDamage() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your base damage increased to: " + player.getBaseDamage());
+                System.out.println(player.getName() + " base damage increased to: " + player.getBaseDamage());
                 break;
             case "int":
                 player.setIntelligence(player.getIntelligence() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your intelligence increased to: " + player.getIntelligence());
+                System.out.println(player.getName() + " intelligence increased to: " + player.getIntelligence());
                 break;
             case "str":
                 player.setStrength(player.getStrength() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your strength increased to: " + player.getStrength());
+                System.out.println(player.getName() + " strength increased to: " + player.getStrength());
                 break;
             case "def":
                 player.setDefense(player.getDefense() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your defese increased to: " + player.getDefense());
+                System.out.println(player.getName() + " defese increased to: " + player.getDefense());
                 break;
             case "dex":
                 player.setDexterity(player.getDexterity() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your dexterity increased to: " + player.getDexterity());
+                System.out.println(player.getName() + " dexterity increased to: " + player.getDexterity());
                 break;
             case "fth":
                 player.setFaith(player.getFaith() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your faith increased to: " + player.getFaith());
+                System.out.println(player.getName() + " faith increased to: " + player.getFaith());
                 break;
             case "crit":
                 player.setCritChance(player.getCritChance() + Integer.parseInt(message.split(" ")[2]));
-                System.out.println("Your critical chance increased to: " + player.getCritChance());
+                System.out.println(player.getName() + " critical chance increased to: " + player.getCritChance());
                 break;
             case "hasActed":
                 player.setHasActed(false);
