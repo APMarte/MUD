@@ -13,7 +13,7 @@ public class TestMonster extends Monster {
         setHealth(150);
         setBaseDamage(20);
         setDefense(10);
-        setDescription(" You enter a new room...\n" +
+        setDescription("You enter a new room...\n" +
                 "                                    \n" +
                 "                                    You're attacked by a ghoul!\n" +
                 "\u200B\n" +
