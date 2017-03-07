@@ -37,7 +37,7 @@ public class Skill implements Strategy {
 
             String returnString = null;
 
-            if (playerType.equals("archer")) {
+            if (playerType.equals("1.txt")) {
                 if (attackType.equals("1")) {
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
                     returnString = name + " has attacked with " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
@@ -54,7 +54,7 @@ public class Skill implements Strategy {
                     System.out.println("Pally 2");
                     returnString = name + " has defend you all"; //TODO Change You by name player -->command must have player name
                 }
-            } else if (playerType.equals("priest")) {
+            } else if (playerType.equals("3.txt")) {
                 if (attackType.equals("1")) {
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
                     returnString = name + " has attacked with " + dmg + " , damage" + str; //TODO Change You by name player -->command must have player name

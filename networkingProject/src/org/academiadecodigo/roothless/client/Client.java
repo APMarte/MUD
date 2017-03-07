@@ -22,14 +22,14 @@ public class Client {
     private String str;
 
 
-    private void connect() throws IOException {
+    public void connect() throws IOException {
 
 
         scanner = new Scanner(System.in);
         System.out.println("Host:");
-        String host = "localhost";//scanner.nextLine();
+        String host = scanner.nextLine();
         System.out.println("Port:");
-        int port = 8080;//Integer.parseInt(scanner.nextLine());
+        int port=Integer.parseInt(scanner.nextLine());
 
         socket = new Socket(host, port);
         out = new DataOutputStream(socket.getOutputStream());
@@ -38,13 +38,15 @@ public class Client {
 
         Thread thread = new Thread(new ServerListener(new BufferedReader(new InputStreamReader(socket.getInputStream()))));
         thread.start();
+
+        sendMessage();
     }
 
     public Socket getSocket() {
         return socket;
     }
 
-    private void sendMessage() {
+    public void sendMessage() {
 
         while (!socket.isClosed()) {
             try {
@@ -65,7 +67,7 @@ public class Client {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Client client = new Client();
 
         try {
@@ -83,7 +85,7 @@ public class Client {
                 }
             }
         }
-    }
+    }*/
 
     public void createPlayer() {
 
@@ -97,9 +99,14 @@ public class Client {
         do {
             System.out.println("Choose your Class: \n  (1) Archer  (2) Paladin  (3) Priest  (4) Sorcerer" +
                     "  (5) Thief");
+            String line = "";
             try {
 
                 numClass = Integer.parseInt(br.readLine());
+                br=new BufferedReader(new FileReader("resources/classes/" + numClass + ".txt"));
+                while ((line=br.readLine())!=null){
+                    System.out.println(line);
+                }
                 String str = name + " " + identifyClass(numClass) + "\n"; // string auxiliar
                 out.write(str.getBytes());
                 chosePlayerType(numClass, name);

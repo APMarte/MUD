@@ -10,7 +10,7 @@ public class Priest extends Player {
 
     public Priest(String name) {
         super(name);
-        setChoosenClass("priest");
+        setChoosenClass("3.txt");
         setHealth(100);
         setBaseDamage(10);
         setDefense(10);

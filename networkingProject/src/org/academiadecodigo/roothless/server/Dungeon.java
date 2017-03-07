@@ -1,10 +1,13 @@
 
 package org.academiadecodigo.roothless.server;
 
+import org.academiadecodigo.roothless.server.gameObjects.loot.LooType;
 import org.academiadecodigo.roothless.server.gameObjects.loot.loot1;
 import org.academiadecodigo.roothless.server.gameObjects.monsters.Monster;
 import org.academiadecodigo.roothless.server.gameObjects.loot.Loot;
 import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster;
+import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster2;
+import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster3;
 import org.academiadecodigo.roothless.server.level.CombatRoom;
 import org.academiadecodigo.roothless.server.level.MixedRoom;
 import org.academiadecodigo.roothless.server.level.QuizRoom;
@@ -32,7 +35,7 @@ public class Dungeon {
     volatile private Room room;
     private int level = 1;
     private boolean hasEnded;
-    private int maxRooms = 2;
+    private int maxRooms = 3;
     private LinkedBlockingQueue<Strategy> queue;
     volatile private int countAction;
     volatile private boolean showLoot;
@@ -40,9 +43,10 @@ public class Dungeon {
     private boolean started;
 
 
+
+
     public void enterDungeon() throws IOException {
-        monsterArray.add(new TestMonster(this));
-        lootArray.add(new loot1());
+        init();
 
         while ((level - 1) < maxRooms) {
             //double rng = Math.random();
@@ -88,7 +92,7 @@ public class Dungeon {
     }
     public String getLore(int level) throws IOException {
 
-        BufferedReader readLore = new BufferedReader(new FileReader("resources/lore1"));
+        BufferedReader readLore = new BufferedReader(new FileReader("resources/Lore/intro"));
 
         String line = "";
         String result = "";
@@ -141,14 +145,14 @@ public class Dungeon {
     }
 
     private Monster randomMonster() {
-        int randomIndex = (int) (Math.random() * (monsterArray.size() - 1));
+        int randomIndex = (int) (Math.random() * (monsterArray.size()));
         Monster returnMonster = monsterArray.get(randomIndex);
         monsterArray.remove(randomIndex);
         return returnMonster;
     }
 
     private Loot randomLoot() {
-        int randomIndex = (int) (Math.random() * (lootArray.size() - 1));
+        int randomIndex = (int) (Math.random() * (lootArray.size()));
         Loot returnLoot = lootArray.get(randomIndex);
         lootArray.remove(randomIndex);
         return returnLoot;
@@ -238,6 +242,15 @@ public class Dungeon {
 
     public void setCountAction(int countAction) {
         this.countAction = countAction;
+    }
+
+    private void init(){
+        monsterArray.add(new TestMonster(this));
+        monsterArray.add(new TestMonster2(this));
+        monsterArray.add(new TestMonster3(this));
+        lootArray.add(new loot1(LooType.LOOT1));
+        lootArray.add(new loot1(LooType.LOOT2));
+        lootArray.add(new loot1(LooType.LOOT3));
     }
 
 }

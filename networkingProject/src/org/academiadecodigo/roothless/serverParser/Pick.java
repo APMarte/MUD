@@ -23,11 +23,12 @@ public class Pick implements Strategy{
 
         String pick ="/modify ";
 
-        pick += dungeon.getRoom().getLoot().getProperty()+" ";
-        pick += dungeon.getRoom().getLoot().getBuff()+" ";
+        pick += dungeon.getRoom().getLoot().getType().getProperty()+" ";
+        pick += dungeon.getRoom().getLoot().getType().getBuff()+" ";
         System.out.println("----------------------" + pick);
 
         dungeon.getRoom().setLoot(null);
+
 
         return pick;
     }

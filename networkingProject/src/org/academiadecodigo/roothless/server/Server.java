@@ -19,7 +19,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class Server {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
 
         Server server = new Server();
@@ -38,7 +38,7 @@ public class Server {
             }
         }
 
-    }
+    }*/
 
     private CopyOnWriteArrayList<ClientHandler> clientHandlersList = new CopyOnWriteArrayList<>();
     private ServerSocket serverSocket = null;
@@ -54,12 +54,12 @@ public class Server {
 
     private List<String> classesChosen = new LinkedList<>();
 
-    private void listen() throws IOException {
+    public void listen() throws IOException {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Port number:");
 
-        serverSocket = new ServerSocket(8080);//Integer.parseInt(scanner.nextLine()));
+        serverSocket = new ServerSocket(Integer.parseInt(scanner.nextLine()));//Integer.parseInt(scanner.nextLine()));
 
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
@@ -176,7 +176,7 @@ public class Server {
                     System.out.println("------------------ pre-if ->" + dungeon.isShowLoot());
                     if (dungeon.isShowLoot()) {
                         System.out.println("----- in show loot");
-                        inputMSG = dungeon.getRoom().getLoot().getDescription();
+                        inputMSG = dungeon.getRoom().getLoot().getType().getDescription();
                         System.out.println("--------------------- item description " + inputMSG);
                         systemBroadcast();
                         dungeon.setShowLoot(false);
