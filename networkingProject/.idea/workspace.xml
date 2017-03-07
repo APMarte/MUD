@@ -2,38 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fdcb4f3-1daa-42b7-939c-5bdb16454687" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/Client$ServerListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/Client.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/Player.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/PlayerFactory$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/PlayerFactory.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/PlayerType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/classes/Archer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/classes/Paladin.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/classes/Priest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/classes/Sorcerer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/client/player/classes/Thief.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/Dungeon.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/Server$ClientHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/Server.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/gameObjects/loot/Loot.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/gameObjects/monsters/Monster.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/level/CombatRoom.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/level/MixedRoom.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/level/QuizRoom.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/server/level/Room.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/CommandEnum.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Defend.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Option.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Pick.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/ServerParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Situation.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Skill.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/networkingProject/org/academiadecodigo/roothless/serverParser/Strategy.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/DEATH" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/intro" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/intro 2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 10" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 5" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 6" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 7" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 8" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room 9" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room11" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room12" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room13" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room14" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Lore/room15" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/challenges/2 ways" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/challenges/3 doors deeper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/challenges/beetles" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/challenges/donkey" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/challenges/sphinx 2dog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/archer" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/classes characteristics" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/paladin.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/priest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/sorcerer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/classes/thief.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/chest" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/items/Blade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/items/PPAP" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/items/first aid kit" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/items/glove" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/items/shield" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/teachers/Alladin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/teachers/Robin Good" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/teachers/amazon" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/teachers/buddah" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loot/teachers/gandalf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/3minotaurs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/FINAL BOSS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/Joker" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/Valkyrie" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/aborigines" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/alligator" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/armadillos" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/bats" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/canibal" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/cannibal lunatic" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/centaurs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/cobra" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/crawler" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/dwarf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/giant aardvark" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/happy tree friends" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/monsters/skeleton" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/places/bedroom" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/places/revival room" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/places/world map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/questions/questions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java" />
     </list>
     <ignored path="networkingProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,25 +87,15 @@
     <favorites_list name="networkingProject" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1472">
-              <caret line="179" column="58" selection-start-line="179" selection-start-column="58" selection-end-line="179" selection-end-column="58" />
+            <state relative-caret-position="450">
+              <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1272#1282#0" expanded="true" />
-                <element signature="e#1409#1410#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2242#2243#0" expanded="true" />
-                <element signature="e#2751#2752#0" expanded="true" />
-                <element signature="e#2794#2795#0" expanded="true" />
-                <element signature="e#2835#2836#0" expanded="true" />
-                <element signature="e#2876#2877#0" expanded="true" />
-                <element signature="e#2917#2918#0" expanded="true" />
-                <element signature="e#2958#2959#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,36 +104,88 @@
       <file leaf-file-name="Dungeon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-              <folding>
-                <element signature="e#2255#2256#0" expanded="true" />
-                <element signature="e#2289#2290#0" expanded="true" />
-                <element signature="e#2340#2341#0" expanded="true" />
-                <element signature="e#2386#2387#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="240" column="26" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="26" />
-              <folding>
-                <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1328#1329#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1047">
+              <caret line="166" column="68" selection-start-line="166" selection-start-column="68" selection-end-line="166" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
+      <file leaf-file-name="QuizRoom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/QuizRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="-477">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MixedRoom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/MixedRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CombatRoom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/CombatRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestMonster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-330">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/Monster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loot1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/loot/loot1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Loot.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/loot/Loot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -130,9 +204,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java" />
+        <option value="$PROJECT_DIR$/resources/challenges/donkey" />
+        <option value="$PROJECT_DIR$/resources/lore1" />
+        <option value="$PROJECT_DIR$/resources/loot/teachers/Alladin" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java" />
       </list>
     </option>
@@ -143,8 +220,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -171,9 +249,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,6 +287,10 @@
               <option name="myItemId" value="roothless" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverParser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -229,6 +311,92 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roothless" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roothless" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gameObjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monsters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roothless" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gameObjects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loot" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,6 +448,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networkingProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -287,7 +469,12 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js-jscs-nodeInterpreter" value="$PROJECT_DIR$/../../../../../academiacodigo/.nvm/versions/node/v4.4.1/bin/node" />
+    <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/academiacodigo/.nvm/versions/node/v4.4.1/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Client">
     <configuration default="false" name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -544,6 +731,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -709,6 +897,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -746,41 +940,42 @@
       <option name="presentableId" value="Default" />
       <updated>1488563871416</updated>
       <workItem from="1488563874510" duration="14212000" />
+      <workItem from="1488797250744" duration="11879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14212000" />
+    <option name="totallyTimeSpent" value="26091000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3211382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861266" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12193823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -795,56 +990,720 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java">
+    <entry file="file://$PROJECT_DIR$/resources/classes/priest">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#2386#2387#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/player/Player.java">
+    <entry file="file://$PROJECT_DIR$/resources/classes/sorcerer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/classes/thief.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/loot/teachers/Robin Good">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/loot/teachers/buddah">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/loot/teachers/amazon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/intro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/intro 2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 5">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 7">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 8">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 9">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room 10">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room11">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room12">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room13">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room14">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/Lore/room15">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/quizquestions.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/DEATH">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/challenges/beetles">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/challenges/sphinx 2dog">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/challenges/2 ways">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/challenges/donkey">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lore1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.academiadecodigo.roothless">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.academiadecodigo.roothless</OriginalElement>
+          <nodes>
+            <node x="538.4563492063493" y="475.0">org.academiadecodigo.roothless.serverParser.ServerParser</node>
+            <node x="297.30555555555554" y="549.0">org.academiadecodigo.roothless.client.player.Player</node>
+            <node x="40.888888888888914" y="287.0">org.academiadecodigo.roothless.server.Server.ClientHandler</node>
+            <node x="241.5" y="638.0">org.academiadecodigo.roothless.client.player.classes.Sorcerer</node>
+            <node x="487.7777777777778" y="79.0">org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster</node>
+            <node x="233.8888888888889" y="158.0">org.academiadecodigo.roothless.server.level.MixedRoom</node>
+            <node x="660.5984066859069" y="287.0">org.academiadecodigo.roothless.serverParser.Option</node>
+            <node x="319.22222222222223" y="717.0">org.academiadecodigo.roothless.client.player.PlayerFactory</node>
+            <node x="431.5" y="638.0">org.academiadecodigo.roothless.client.player.classes.Archer</node>
+            <node x="605.8484066859069" y="386.0">org.academiadecodigo.roothless.serverParser.Skill</node>
+            <node x="86.0" y="158.0">org.academiadecodigo.roothless.server.level.CombatRoom</node>
+            <node x="55.5" y="638.0">org.academiadecodigo.roothless.client.Client</node>
+            <node x="176.0" y="791.0">org.academiadecodigo.roothless.client.player.PlayerType</node>
+            <node x="524.5" y="638.0">org.academiadecodigo.roothless.client.player.classes.Thief</node>
+            <node x="155.0138888888889" y="386.0">org.academiadecodigo.roothless.server.Server</node>
+            <node x="755.5984066859069" y="287.0">org.academiadecodigo.roothless.serverParser.Situation</node>
+            <node x="553.2777777777778" y="158.0">org.academiadecodigo.roothless.serverParser.Strategy</node>
+            <node x="0.0" y="791.0">org.academiadecodigo.roothless.serverParser.CommandEnum</node>
+            <node x="178.8888888888889" y="287.0">org.academiadecodigo.roothless.server.Dungeon</node>
+            <node x="0.0" y="549.0">org.academiadecodigo.roothless.client.Client.ServerListener</node>
+            <node x="52.44586940836939" y="0.0">org.academiadecodigo.roothless.server.gameObjects.loot.Loot</node>
+            <node x="0.0" y="79.0">org.academiadecodigo.roothless.server.gameObjects.loot.loot1</node>
+            <node x="359.8888888888889" y="158.0">org.academiadecodigo.roothless.server.level.QuizRoom</node>
+            <node x="144.5" y="638.0">org.academiadecodigo.roothless.client.player.classes.Paladin</node>
+            <node x="418.8926948051949" y="0.0">org.academiadecodigo.roothless.server.gameObjects.monsters.Monster</node>
+            <node x="344.5" y="638.0">org.academiadecodigo.roothless.client.player.classes.Priest</node>
+            <node x="451.97007575757584" y="386.0">org.academiadecodigo.roothless.serverParser.Pick</node>
+            <node x="181.99031385281387" y="79.0">org.academiadecodigo.roothless.server.level.Room</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="org.academiadecodigo.roothless.serverParser.Skill" target="org.academiadecodigo.roothless.server.Dungeon">
+              <point x="-14.75" y="-14.5" />
+              <point x="620.5984066859069" y="336.0" />
+              <point x="256.7638888888889" y="336.0" />
+              <point x="33.375" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Paladin">
+              <point x="-46.0" y="-14.5" />
+              <point x="330.72222222222223" y="697.0" />
+              <point x="183.0" y="697.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster" target="org.academiadecodigo.roothless.server.gameObjects.monsters.Monster">
+              <point x="0.0" y="-14.5" />
+              <point x="542.7777777777778" y="59.0" />
+              <point x="491.5176948051949" y="59.0" />
+              <point x="31.125" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Archer">
+              <point x="23.0" y="-14.5" />
+              <point x="399.72222222222223" y="687.0" />
+              <point x="468.0" y="687.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.level.CombatRoom">
+              <point x="-19.77777777777777" y="-14.5" />
+              <point x="203.61111111111114" y="247.0" />
+              <point x="144.5" y="247.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.gameObjects.monsters.Monster" target="org.academiadecodigo.roothless.server.Dungeon">
+              <point x="10.375" y="14.5" />
+              <point x="470.7676948051949" y="49.0" />
+              <point x="477.2777777777778" y="49.0" />
+              <point x="477.2777777777778" y="217.0" />
+              <point x="243.16666666666669" y="217.0" />
+              <point x="19.77777777777777" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Skill" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="14.75" y="-14.5" />
+              <point x="650.0984066859069" y="267.0" />
+              <point x="606.6349206349207" y="267.0" />
+              <point x="11.85714285714289" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Sorcerer" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="283.0" y="618.0" />
+              <point x="326.05555555555554" y="618.0" />
+              <point x="-5.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server" target="org.academiadecodigo.roothless.server.Dungeon">
+              <point x="10.0" y="-14.5" />
+              <point x="200.0138888888889" y="346.0" />
+              <point x="212.2638888888889" y="346.0" />
+              <point x="-11.125" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Paladin" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="183.0" y="608.0" />
+              <point x="314.55555555555554" y="608.0" />
+              <point x="-17.25" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.gameObjects.monsters.Monster">
+              <point x="9.888888888888886" y="-14.5" />
+              <point x="233.2777777777778" y="207.0" />
+              <point x="467.38888888888897" y="207.0" />
+              <point x="467.38888888888897" y="59.0" />
+              <point x="450.0176948051949" y="59.0" />
+              <point x="-10.375" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Option" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="698.0984066859069" y="257.0" />
+              <point x="618.4920634920635" y="257.0" />
+              <point x="23.714285714285666" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.gameObjects.loot.loot1" target="org.academiadecodigo.roothless.server.gameObjects.loot.Loot">
+              <point x="0.0" y="-14.5" />
+              <point x="32.5" y="59.0" />
+              <point x="62.44586940836939" y="59.0" />
+              <point x="-20.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Pick" target="org.academiadecodigo.roothless.server.Dungeon">
+              <point x="-14.5" y="-14.5" />
+              <point x="466.47007575757584" y="346.0" />
+              <point x="234.5138888888889" y="346.0" />
+              <point x="11.125" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="20.0" y="-14.5" />
+              <point x="210.0138888888889" y="356.0" />
+              <point x="445.72007575757584" y="356.0" />
+              <point x="445.72007575757584" y="247.0" />
+              <point x="571.0634920634922" y="247.0" />
+              <point x="-23.714285714285666" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster">
+              <point x="29.666666666666657" y="-14.5" />
+              <point x="253.05555555555557" y="227.0" />
+              <point x="542.7777777777778" y="227.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.CombatRoom" target="org.academiadecodigo.roothless.server.level.Room">
+              <point x="0.0" y="-14.5" />
+              <point x="144.5" y="138.0" />
+              <point x="188.79031385281388" y="138.0" />
+              <point x="-27.2" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.Room" target="org.academiadecodigo.roothless.server.gameObjects.monsters.Monster">
+              <point x="17.0" y="-14.5" />
+              <point x="232.99031385281387" y="59.0" />
+              <point x="429.2676948051949" y="59.0" />
+              <point x="-31.125" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Situation" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="0.0" y="-14.5" />
+              <point x="799.5984066859069" y="247.0" />
+              <point x="630.3492063492064" y="247.0" />
+              <point x="35.571428571428555" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ServerParser" target="org.academiadecodigo.roothless.serverParser.Skill">
+              <point x="-13.5" y="-14.5" />
+              <point x="578.9563492063493" y="435.0" />
+              <point x="635.3484066859069" y="435.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.Pick" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="14.5" y="-14.5" />
+              <point x="495.47007575757584" y="366.0" />
+              <point x="571.3484066859069" y="366.0" />
+              <point x="571.3484066859069" y="267.0" />
+              <point x="594.7777777777778" y="267.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Priest" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="378.0" y="618.0" />
+              <point x="337.55555555555554" y="618.0" />
+              <point x="5.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Thief" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="556.5" y="598.0" />
+              <point x="360.55555555555554" y="598.0" />
+              <point x="28.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client" target="org.academiadecodigo.roothless.client.Client.ServerListener">
+              <point x="-23.0" y="-14.5" />
+              <point x="67.0" y="618.0" />
+              <point x="30.0" y="618.0" />
+              <point x="-30.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.MixedRoom" target="org.academiadecodigo.roothless.server.level.Room">
+              <point x="0.0" y="-14.5" />
+              <point x="286.8888888888889" y="138.0" />
+              <point x="229.59031385281386" y="138.0" />
+              <point x="13.600000000000001" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server.ClientHandler" target="org.academiadecodigo.roothless.server.Server">
+              <point x="39.33333333333337" y="14.5" />
+              <point x="139.22222222222229" y="346.0" />
+              <point x="180.0138888888889" y="346.0" />
+              <point x="-10.0" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="23.0" y="-14.5" />
+              <point x="113.0" y="598.0" />
+              <point x="303.05555555555554" y="598.0" />
+              <point x="-28.75" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ServerParser" target="org.academiadecodigo.roothless.serverParser.Situation">
+              <point x="40.5" y="-14.5" />
+              <point x="632.9563492063493" y="455.0" />
+              <point x="799.5984066859069" y="455.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.gameObjects.loot.Loot">
+              <point x="-29.666666666666657" y="-14.5" />
+              <point x="193.72222222222226" y="257.0" />
+              <point x="75.5" y="257.0" />
+              <point x="75.5" y="59.0" />
+              <point x="82.44586940836939" y="59.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.Room" target="org.academiadecodigo.roothless.server.gameObjects.loot.Loot">
+              <point x="-17.0" y="-14.5" />
+              <point x="198.99031385281387" y="59.0" />
+              <point x="102.44586940836939" y="59.0" />
+              <point x="20.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.classes.Archer" target="org.academiadecodigo.roothless.client.player.Player">
+              <point x="0.0" y="-14.5" />
+              <point x="468.0" y="608.0" />
+              <point x="349.05555555555554" y="608.0" />
+              <point x="17.25" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Sorcerer">
+              <point x="-23.0" y="-14.5" />
+              <point x="353.72222222222223" y="687.0" />
+              <point x="283.0" y="687.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Server" target="org.academiadecodigo.roothless.server.Server.ClientHandler">
+              <point x="-20.0" y="-14.5" />
+              <point x="170.0138888888889" y="356.0" />
+              <point x="99.88888888888891" y="356.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Thief">
+              <point x="46.0" y="-14.5" />
+              <point x="422.72222222222223" y="697.0" />
+              <point x="556.5" y="697.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.QuizRoom" target="org.academiadecodigo.roothless.server.level.Room">
+              <point x="0.0" y="-14.5" />
+              <point x="408.3888888888889" y="128.0" />
+              <point x="243.19031385281386" y="128.0" />
+              <point x="27.200000000000003" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ServerParser" target="org.academiadecodigo.roothless.serverParser.Option">
+              <point x="13.5" y="-14.5" />
+              <point x="605.9563492063493" y="445.0" />
+              <point x="698.0984066859069" y="445.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.player.PlayerFactory" target="org.academiadecodigo.roothless.client.player.classes.Priest">
+              <point x="0.0" y="-14.5" />
+              <point x="376.72222222222223" y="697.0" />
+              <point x="378.0" y="697.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.level.Room" target="org.academiadecodigo.roothless.server.Dungeon">
+              <point x="0.0" y="14.5" />
+              <point x="215.99031385281387" y="128.0" />
+              <point x="223.3888888888889" y="128.0" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.client.Client.ServerListener" target="org.academiadecodigo.roothless.client.Client">
+              <point x="30.0" y="14.5" />
+              <point x="0.0" y="-14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.level.Room">
+              <point x="-9.888888888888886" y="-14.5" />
+              <point x="213.50000000000003" y="138.0" />
+              <point x="202.39031385281388" y="138.0" />
+              <point x="-13.599999999999994" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.server.gameObjects.loot.loot1">
+              <point x="-39.55555555555554" y="-14.5" />
+              <point x="183.83333333333337" y="267.0" />
+              <point x="32.5" y="267.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.serverParser.ServerParser" target="org.academiadecodigo.roothless.serverParser.Pick">
+              <point x="-40.5" y="-14.5" />
+              <point x="551.9563492063493" y="455.0" />
+              <point x="480.97007575757584" y="455.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="org.academiadecodigo.roothless.server.Dungeon" target="org.academiadecodigo.roothless.serverParser.Strategy">
+              <point x="39.55555555555554" y="-14.5" />
+              <point x="262.94444444444446" y="237.0" />
+              <point x="559.2063492063493" y="237.0" />
+              <point x="-35.571428571428555" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.1357142857142857" x="201.32075471698113" y="265.3207547169811" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/help">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="26" column="74" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Strategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/ServerParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/loot/teachers/Alladin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/classes/paladin.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/loot/teachers/gandalf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/serverParser/Situation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/QuizRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-477">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/MixedRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/level/CombatRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/TestMonster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/monsters/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1047">
+          <caret line="166" column="68" selection-start-line="166" selection-start-column="68" selection-end-line="166" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Dungeon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/loot/loot1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
-          <caret line="179" column="58" selection-start-line="179" selection-start-column="58" selection-end-line="179" selection-end-column="58" />
+        <state relative-caret-position="450">
+          <caret line="160" column="46" selection-start-line="160" selection-start-column="46" selection-end-line="160" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1272#1282#0" expanded="true" />
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2242#2243#0" expanded="true" />
-            <element signature="e#2751#2752#0" expanded="true" />
-            <element signature="e#2794#2795#0" expanded="true" />
-            <element signature="e#2835#2836#0" expanded="true" />
-            <element signature="e#2876#2877#0" expanded="true" />
-            <element signature="e#2917#2918#0" expanded="true" />
-            <element signature="e#2958#2959#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/client/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/roothless/server/gameObjects/loot/Loot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="240" column="26" selection-start-line="240" selection-start-column="26" selection-end-line="240" selection-end-column="26" />
-          <folding>
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="109">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

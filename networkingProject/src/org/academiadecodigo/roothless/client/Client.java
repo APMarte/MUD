@@ -164,7 +164,7 @@ public class Client {
                 out.flush();
             } else {
 
-                if (!player.isDead()) {
+                if (!player.isDead()) {     // TODO: 06/03/17 pôr a condição à cabeça para nao estar a identar todo o resto do codigo. O morto devia poder usar /help e /whisper
 
                     isChating = false;
                     switch (command) {

@@ -57,7 +57,7 @@ public class Dungeon {
             showLoot = true;
             System.out.println("loot was set // before while loot || show loot -> " + showLoot);
             //broadcast loot description
-            while (room.getLoot() != null) {
+            while (room.getLoot() != null) {        // TODO: 06/03/17 use a wait
             }
             System.out.println("loot sucessful");
         }
