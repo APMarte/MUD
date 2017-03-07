@@ -20,7 +20,14 @@ public class CombatRoom extends Room {
         setLoot(null);
         System.out.println("----------------entered run");
         //broadcast - > getMonster().getDescription();
-        while (getMonster().getHealth() > 0) {
+        synchronized (getDungeon()) {
+            while (getMonster().getHealth() > 0) {
+                try {
+                    getDungeon().wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         System.out.println("before null");
         setMonster(null);

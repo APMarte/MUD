@@ -57,7 +57,14 @@ public class Dungeon {
             showLoot = true;
             System.out.println("loot was set // before while loot || show loot -> " + showLoot);
             //broadcast loot description
-            while (room.getLoot() != null) {        // TODO: 06/03/17 use a wait
+            synchronized (this) {
+                while (room.getLoot() != null) {
+                    try {
+                        wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
             System.out.println("loot sucessful");
         }
@@ -87,7 +94,7 @@ public class Dungeon {
         String result = "";
 
         while ((line = readLore.readLine()) != null) {
-            result += line + " ";
+            result += line + "\n";
         }
 
         readLore.close();

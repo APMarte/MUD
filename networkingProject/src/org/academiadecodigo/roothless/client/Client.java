@@ -293,11 +293,10 @@ public class Client {
 
         @Override
         public void run() {
+            try {
+                in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            while (!socket.isClosed()) {
-                try {
-                    in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
+                while (!socket.isClosed()) {
                     String serverMSG = in.readLine();
                     if (serverMSG == null) {
                         System.out.println("Server connection is closed.");
@@ -305,15 +304,15 @@ public class Client {
                         break;
                     }
 
-                    if (serverMSG.split(" ")[0].equals("/modify")) {
+                    if (serverMSG.startsWith("/") && serverMSG.split(" ")[0].equals("/modify")) {
                         serverParser(serverMSG);
                     } else {
                         System.out.println(serverMSG);
                     }
 
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
         }
