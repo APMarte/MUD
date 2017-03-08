@@ -14,6 +14,7 @@ created by https://www.gitignore.io/api/macos,linux,windows,intellij+iml,vim,git
 # User-specific stuff:
 .idea/**/workspace.xml
 .idea/**/tasks.xml
+build/*
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/

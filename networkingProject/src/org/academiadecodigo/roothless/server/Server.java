@@ -46,6 +46,7 @@ public class Server {
     private BufferedReader in;
     private LinkedBlockingQueue<Strategy> queue = new LinkedBlockingQueue<Strategy>();
     private Dungeon dungeon = new Dungeon(queue);
+    private boolean gameStart;
 
 
     public CopyOnWriteArrayList<ClientHandler> getClientHandlersList() {
@@ -70,7 +71,7 @@ public class Server {
             pool.submit(clientHandler);
             counter++;
         }
-
+        gameStart=true;
         dungeon.enterDungeon();
         System.out.println("left the dungeon");
 
@@ -119,35 +120,12 @@ public class Server {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 System.out.println("connecting a client...");
 
-               /* do {*/
                 String name = in.readLine();
 
                 playerName = name.split(" ")[0];
                 playerType = name.split(" ")[1];
                 classesChosen.add(playerType);
 
-
-                /////////
-                //try {
-
-                        /*String classCheck = in.readLine();
-                        playerType = classCheck;
-
-                        System.out.println(playerType);
-
-                        out.write("Escolhe essa merda" + "\n");
-                        out.flush();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } while (!classesChosen.contains(playerType));
-                try {
-                    out.write("OK" + "\n");
-                    out.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }*/
-/////////////////////////////////////
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -165,7 +143,7 @@ public class Server {
 
                    if(descriptionFlag() && dungeon.isStarted()) {
 
-                       inputMSG = "lore1 " + dungeon.getCurrentLore();
+                       inputMSG = dungeon.getCurrentLore();
                        systemBroadcast();
                        Thread.sleep(5000);
                        inputMSG = dungeon.getRoom().getMonster().getDescription();

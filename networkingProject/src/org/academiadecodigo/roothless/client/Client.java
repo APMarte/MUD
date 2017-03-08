@@ -1,5 +1,6 @@
 package org.academiadecodigo.roothless.client;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
@@ -18,8 +19,8 @@ public class Client {
     private DataOutputStream out;
     private BufferedReader br;
     private Player player;
-    private boolean isChating; //se esta no chat ou não
-    private String str;
+    private boolean isChating; //se esta no chat ou
+
 
 
     public void connect() throws IOException {
@@ -29,7 +30,7 @@ public class Client {
         System.out.println("Host:");
         String host = scanner.nextLine();
         System.out.println("Port:");
-        int port=Integer.parseInt(scanner.nextLine());
+        int port = Integer.parseInt(scanner.nextLine());
 
         socket = new Socket(host, port);
         out = new DataOutputStream(socket.getOutputStream());
@@ -38,6 +39,7 @@ public class Client {
 
         Thread thread = new Thread(new ServerListener(new BufferedReader(new InputStreamReader(socket.getInputStream()))));
         thread.start();
+
 
         sendMessage();
     }
@@ -67,12 +69,12 @@ public class Client {
         }
     }
 
-    /*public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         Client client = new Client();
 
         try {
             client.connect();
-            client.sendMessage();
+            //client.sendMessage();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -103,8 +105,8 @@ public class Client {
             try {
 
                 numClass = Integer.parseInt(br.readLine());
-                br=new BufferedReader(new FileReader("resources/classes/" + numClass + ".txt"));
-                while ((line=br.readLine())!=null){
+                br = new BufferedReader(new FileReader("resources/classes/" + numClass + ".txt"));
+                while ((line = br.readLine()) != null) {
                     System.out.println(line);
                 }
                 String str = name + " " + identifyClass(numClass) + "\n"; // string auxiliar
@@ -164,7 +166,7 @@ public class Client {
 
             String str;
 
-            if (command.charAt(0) != '/' || command == null) {
+            if (command == null || command.charAt(0) != '/') {
                 isChating = true;
                 message += "\n";
                 out.write(message.getBytes());
@@ -249,7 +251,7 @@ public class Client {
 
             case "hp":
                 player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + " Health " + player.getHealth());
+                System.out.println(player.getName() + "I'll eat you alive! Your health decrease to: " + player.getHealth());
                 if (player.getHealth() < 0) {
                     player.setDead(true);
                     System.out.println("morri");
