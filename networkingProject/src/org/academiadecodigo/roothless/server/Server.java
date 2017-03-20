@@ -148,6 +148,8 @@ public class Server {
                        Thread.sleep(5000);
                        inputMSG = dungeon.getRoom().getMonster().getDescription();
                        systemBroadcast();
+                       inputMSG = "/modify hasActed";
+                       systemBroadcast();
                        dungeon.setStarted(false);
                    }
 

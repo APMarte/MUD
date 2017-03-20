@@ -21,15 +21,20 @@ public class Pick implements Strategy{
     @Override
     public String run() {
 
-        String pick ="/modify ";
+        String pick;
 
-        pick += dungeon.getRoom().getLoot().getType().getProperty()+" ";
-        pick += dungeon.getRoom().getLoot().getType().getBuff()+" ";
-        System.out.println("----------------------" + pick);
+        synchronized (dungeon) {
+            pick = "/modify ";
 
-        dungeon.getRoom().setLoot(null);
+            pick += dungeon.getRoom().getLoot().getType().getProperty() + " ";
+            pick += dungeon.getRoom().getLoot().getType().getBuff() + " ";
+            System.out.println("----------------------" + pick);
 
+            dungeon.getRoom().setLoot(null);
+            dungeon.notifyAll();
 
-        return pick;
+            return pick;
+        }
+
     }
 }

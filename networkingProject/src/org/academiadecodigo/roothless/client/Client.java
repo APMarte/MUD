@@ -1,12 +1,11 @@
 package org.academiadecodigo.roothless.client;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import org.academiadecodigo.roothless.client.player.Player;
 import org.academiadecodigo.roothless.client.player.PlayerFactory;
 import org.academiadecodigo.roothless.client.player.PlayerType;
-
 import java.io.*;
 import java.net.Socket;
+import java.net.URL;
 import java.util.Scanner;
 
 /**
@@ -105,12 +104,14 @@ public class Client {
             try {
 
                 numClass = Integer.parseInt(br.readLine());
-                br = new BufferedReader(new FileReader("resources/classes/" + numClass + ".txt"));
+                String path = "resources/classes/" + numClass + ".txt";
+                URL resource = getClass().getResource(path.startsWith("/") ? path : "/" + path);
+                br = new BufferedReader(new InputStreamReader(resource.openStream()));
                 while ((line = br.readLine()) != null) {
                     System.out.println(line);
                 }
-                String str = name + " " + identifyClass(numClass) + "\n"; // string auxiliar
-                out.write(str.getBytes());
+                String playerName = name + " " + identifyClass(numClass) + "\n"; // string auxiliar
+                out.write(playerName.getBytes());
                 chosePlayerType(numClass, name);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid operation!");
@@ -162,7 +163,9 @@ public class Client {
     private void parseClient(String message) throws IOException {
         if (!message.equals("")) {
             String command = message.split(" ")[0];
-            BufferedReader reader = new BufferedReader(new FileReader("resources/help"));
+            String path = ("resources/help");
+            URL resource = getClass().getResource(path.startsWith("/") ? path : "/" + path);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(resource.openStream()));
 
             String str;
 
@@ -251,7 +254,7 @@ public class Client {
 
             case "hp":
                 player.setHealth(player.getHealth() - Integer.parseInt(message.split(" ")[2]));
-                System.out.println(player.getName() + "I'll eat you alive! Your health decrease to: " + player.getHealth());
+                System.out.println(player.getName() + " I'll eat you alive! Your health decrease to: " + player.getHealth());
                 if (player.getHealth() < 0) {
                     player.setDead(true);
                     System.out.println("morri");

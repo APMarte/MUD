@@ -9,12 +9,11 @@ import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster;
 import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster2;
 import org.academiadecodigo.roothless.server.gameObjects.monsters.TestMonster3;
 import org.academiadecodigo.roothless.server.level.CombatRoom;
-import org.academiadecodigo.roothless.server.level.MixedRoom;
-import org.academiadecodigo.roothless.server.level.QuizRoom;
 import org.academiadecodigo.roothless.server.level.Room;
 import org.academiadecodigo.roothless.serverParser.Strategy;
 
 import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -43,9 +42,8 @@ public class Dungeon {
     private boolean started;
 
 
-
-
     public void enterDungeon() throws IOException {
+
         init();
 
         while ((level - 1) < maxRooms) {
@@ -71,10 +69,10 @@ public class Dungeon {
                 }
             }
             System.out.println("loot sucessful");
+            System.out.println("room cleared");
+            queue.clear();
+            level++;
         }
-        System.out.println("room cleared");
-        queue.clear();
-        level++;
     }
 
 
@@ -90,10 +88,12 @@ public class Dungeon {
     public String getCurrentLore() {
         return currentLore;
     }
+
     public String getLore(int level) throws IOException {
-
-        BufferedReader readLore = new BufferedReader(new FileReader("resources/Lore/intro"));
-
+        //BufferedReader readLore = new BufferedReader(new FileReader("resources/lore/room1"));
+        String path = ("resources/lore/room" + level);
+        URL resource = getClass().getResource(path.startsWith("/") ? path : "/" + path);
+        BufferedReader readLore = new BufferedReader(new InputStreamReader(resource.openStream()));
         String line = "";
         String result = "";
 
@@ -188,45 +188,10 @@ public class Dungeon {
         this.started = started;
     }
 
-    public List<Monster> getMonsterArray() {
-        return monsterArray;
-    }
-
-    public void setMonsterArray(ArrayList<Monster> monsterArray) {
-        this.monsterArray = monsterArray;
-    }
-
-    public List<Loot> getLootArray() {
-        return lootArray;
-    }
-
-    public void setLootArray(List<Loot> lootArray) {
-        this.lootArray = lootArray;
-    }
-
-    public String[] getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(String[] questions) {
-        this.questions = questions;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
     public int getLevel() {
         return level;
     }
 
-    public boolean isHasEnded() {
-        return hasEnded;
-    }
-
-    public void setHasEnded(boolean hasEnded) {
-        this.hasEnded = hasEnded;
-    }
 
     public Room getRoom() {
         return room;
@@ -236,21 +201,15 @@ public class Dungeon {
         this.room = room;
     }
 
-    public int getCountAction() {
-        return countAction;
-    }
 
-    public void setCountAction(int countAction) {
-        this.countAction = countAction;
-    }
-
-    private void init(){
+    private void init() throws IOException {
         monsterArray.add(new TestMonster(this));
         monsterArray.add(new TestMonster2(this));
         monsterArray.add(new TestMonster3(this));
         lootArray.add(new loot1(LooType.LOOT1));
         lootArray.add(new loot1(LooType.LOOT2));
         lootArray.add(new loot1(LooType.LOOT3));
+
     }
 
 }

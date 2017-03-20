@@ -17,27 +17,29 @@ But anyway, here's the list of all the commands:
  /revive                         => you can only REVIVE in specific situations (and if you're dead of course - yes your ghost will keep on watching everything). 
  /quit                           => why would you want to QUIT the game? Do that and everybody will hate you! 
  
- ---------- SKILLS LIST ---------- (to be used as an argument after /a 
+ ---------- SKILLS LIST ---------- (to be used as an argument after /skill
+
+ (MOSTLY UNIMPLEMENTED)
  
 * ARCHER * 
- /a                              => normal ATTACK to the current enemy/ies
- /weaken                         => WEAKEN the current enemie(s) by shooting arrows to their weak points. 
+ 1                               => normal ATTACK to the current enemy/ies
+ 2                               => WEAKEN the current enemie(s) by shooting arrows to their weak points.
  
 * PALADIN * 
- /a                              => heavy ATTACK to the current enemy/ies 
- /taunt                          => TAUNT the enemie(s), so that you'll be attacked instead of your colleagues (Paladins can endure much more damage) . 
+ 1                               => normal ATTACK to the current enemy/ies
+ 2                               => TAUNT the enemie(s), so that you'll be attacked instead of your colleagues (Paladins can endure much more damage) .
  
 * PRIEST * 
- /heal [playerName]              => HEAL a player of your choice. 
- /all                            => HEAL ALL the other players by a little bit. 
+ 1                               => normal ATTACK to the current enemy/ies
+ 2                               => HEAL ALL players by a little bit.
  
 * SORCERER * 
- /a                              => heaviest ATTACK to the current enemy/ies, but it consumes a bit of your . 
- /stun                           => STUN the current enemy/ies (can only be used once every 3 turns) 
+ 1                               => normal ATTACK to the current enemy/ies
+ 2                               => STUN the current enemy/ies (can only be used once every 3 turns)
  
 * THIEF * 
- /a                              => ATTACK (lightly) the current enemie(s) 
- /crit                           => try to deal a CRITICAL HIT. It may fail and backfire a bit, but it may also reduce the enemy/ies health greatly!
+ 1                               => normal ATTACK to the current enemy/ies
+ 2                               => try to deal a CRITICAL HIT. It may fail and backfire a bit, but it may also reduce the enemy/ies health greatly!
 
 
 /==============>>>A=N=T=O=N=I=O=======>>>J=O=A=O========>>>L=U=I=S========>>>>P=E=D=R=O==========>>>>>R=U=I=========================================/

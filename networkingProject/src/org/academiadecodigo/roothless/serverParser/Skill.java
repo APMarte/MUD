@@ -65,7 +65,7 @@ public class Skill implements Strategy {
             } else if (playerType.equals("sorcerer")) {
                 if (attackType.equals("1")) {
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                    returnString = name + " has transformed monster into a cow and deal " + dmg + "  damage, " + str; //TODO Change You by name player -->command must have player name
+                    returnString = name + " has transformed monster into a cow and dealt " + dmg + "  damage, " + str; //TODO Change You by name player -->command must have player name
                 } else {
                     System.out.println("Sorc 2");
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg2);
@@ -74,7 +74,7 @@ public class Skill implements Strategy {
             } else if (playerType.equals("thief")) {
                 if (attackType.equals("1")) {
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg);
-                    returnString = name + " has stolen the monster neckles and deal " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
+                    returnString = name + " has stolen the monster's necklace and dealt " + dmg + " damage, " + str; //TODO Change You by name player -->command must have player name
                 } else {
                     System.out.println("Thief 2");
                     String str = dungeon.getRoom().getMonster().monsterHealth(dmg);

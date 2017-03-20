@@ -38,14 +38,11 @@ public class Main {
             e.printStackTrace();
         } finally {
             try {
-                if (server.getServerSocket() != null) {
-
+                if (server != null) {
                     server.getServerSocket().close();
                 }
-                if (client.getSocket() != null) {
-
+                if (client != null) {
                     client.getSocket().close();
-
                 }
             } catch (IOException e) {
                 e.printStackTrace();
